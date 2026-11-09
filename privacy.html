@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy & Telemetry Governance | 49Caliber Labs, Inc.</title>
+  <link rel="icon" type="image/svg+xml" href="./assets/49caliber_logo_crosshairs_animated.svg">
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans antialiased">
+  <header class="bg-white border-b border-slate-200">
+    <div class="max-w-4xl mx-auto px-6 h-20 flex items-center justify-between">
+      <a href="./index.html" class="flex items-center gap-3">
+        <img src="./assets/49caliber_logo_crosshairs_animated.svg" alt="49Caliber Labs" class="w-10 h-10 rounded-xl border border-sky-200 object-cover" />
+        <div>
+          <span class="font-extrabold text-lg text-slate-900">49CALIBER</span>
+          <span class="font-light text-lg text-sky-600">LABS</span>
+        </div>
+      </a>
+      <a href="./index.html" class="text-sm font-semibold text-sky-600 hover:text-sky-800">&larr; Back to Main Portal</a>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-6 py-12">
+    <div class="bg-white rounded-2xl border border-slate-200 p-8 sm:p-10 shadow-sm space-y-6">
+      <div class="border-b border-slate-200 pb-6">
+        <span class="text-xs font-mono uppercase tracking-wider text-sky-600 font-semibold">Legal & Play Store Compliance</span>
+        <h1 class="text-3xl font-extrabold text-slate-900 mt-1">Privacy Policy & Offline Telemetry Governance</h1>
+        <p class="text-xs text-slate-500 mt-2">Effective Date: November 9, 2026 &bull; 49Caliber Labs, Inc. (Solano County, California)</p>
+      </div>
+
+      <section class="space-y-2">
+        <h2 class="text-lg font-bold text-slate-900">1. Edge-First, Zero-Tracking Architecture</h2>
+        <p class="text-sm text-slate-600 leading-relaxed">
+          49Caliber Labs, Inc. builds offline-first mobile applications (including <strong>BiteWindow</strong>) and open-source sub-GHz mesh telemetry protocols (<strong>MeshMule-Core</strong>). We do not sell, rent, or monetize personal user data, location histories, or behavioral telemetry.
+        </p>
+      </section>
+
+      <section class="space-y-2">
+        <h2 class="text-lg font-bold text-slate-900">2. Hardware Permissions (Bluetooth LE, USB OTG, & Location)</h2>
+        <ul class="list-disc list-inside text-sm text-slate-600 space-y-1.5">
+          <li><strong>Bluetooth Low Energy (BLE GATT) & USB-Serial OTG:</strong> Used strictly on-device to pair with local 902–928 MHz / 868 MHz LoRa transceivers and barometric sensors.</li>
+          <li><strong>Geolocation & Barometric Sensors:</strong> Processed locally on the user's device to compute environmental pressure gradients (&nabla;P), tidal harmonics, and local mesh coordinates. Coordinates are only transmitted over RF mesh when explicitly initiated by the operator.</li>
+        </ul>
+      </section>
+
+      <section class="space-y-2">
+        <h2 class="text-lg font-bold text-slate-900">3. Data Retention & Local Storage</h2>
+        <p class="text-sm text-slate-600 leading-relaxed">
+          Field logs, waypoints, and sensor snapshots are persisted locally on your device (`IndexedDB` / SQLite). Uninstalling the application or clearing local storage permanently removes all on-device data.
+        </p>
+      </section>
+
+      <section class="space-y-2">
+        <h2 class="text-lg font-bold text-slate-900">4. Contact Information</h2>
+        <p class="text-sm text-slate-600 leading-relaxed">
+          For privacy, security, or compliance inquiries regarding 49Caliber Labs applications or hardware:<br>
+          <strong>49Caliber Labs, Inc.</strong> &bull; Solano County, Vallejo, CA &bull; <a href="https://github.com/49Caliber-Labs" class="text-sky-600 underline">github.com/49Caliber-Labs</a>
+        </p>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
