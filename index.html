@@ -237,12 +237,16 @@
     /* Mesh Canvas styling */
     #mesh-canvas {
       width: 100%;
-      height: 380px;
+      height: 480px;
       border-radius: var(--rounded-lg);
-      background: radial-gradient(circle at 50% 50%, #ffffff 0%, #f8fafc 100%);
-      border: 1px solid #cbd5e1;
+      background: #07111f;
+      border: 1px solid #334155;
+      box-shadow: inset 0 0 36px rgba(14, 165, 233, 0.14);
       display: block;
-      cursor: crosshair;
+      cursor: grab;
+    }
+    #mesh-canvas:active {
+      cursor: grabbing;
     }
 
     /* Custom Form styling */
@@ -352,17 +356,17 @@
     <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
       <div class="flex items-center gap-3">
         <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-cyan-400/20 text-cyan-200 border border-cyan-300/30 font-semibold tracking-wide uppercase text-[10px]">
-          <span class="text-[9px] text-cyan-300 font-bold font-mono tracking-widest">[ONLINE]</span>
-          Solano County R&D Lab
+          <span class="text-[9px] text-cyan-300 font-bold font-mono tracking-widest">[PUBLIC ASSIST]</span>
+          MeshMule-Core Open Source
         </span>
-        <span class="hidden sm:inline text-sky-100">49Caliber Labs, Inc. | California C Corp &bull; Defense & Commercial Dual-Use Tech</span>
+        <span class="hidden sm:inline text-sky-100">49Caliber Labs, Inc. | Free-Payload Backcountry, Angler, Remote Park &amp; Ag Telemetry + Deep-Tech R&amp;D</span>
       </div>
       <div class="flex items-center gap-4 text-sky-200 text-[11px]">
-        <span>CAGE / SAM.gov Ready</span>
+        <span>$0 Subscription 915 MHz ISM</span>
         <span class="text-sky-400">&bull;</span>
-        <span>CA DGS DVBE Small Business Pathway</span>
+        <span>Hiker / Biker / Angler Mesh</span>
         <span class="text-sky-400">&bull;</span>
-        <span class="text-cyan-300 font-semibold">SBIR/STTR Phase I/II/III Architecture</span>
+        <span class="text-cyan-300 font-semibold">Solano County R&amp;D Lab (TRL 3–4)</span>
       </div>
     </div>
   </div>
@@ -378,30 +382,30 @@
             <span class="font-extrabold text-xl tracking-tight text-slate-900 font-['Inter_Tight']">49CALIBER</span>
             <span class="font-light text-xl tracking-wider text-sky-600 font-['Inter_Tight']">LABS</span>
           </div>
-          <span class="text-[10px] tracking-widest font-semibold uppercase text-slate-500 font-mono">Autonomous RF & Edge AI Mesh</span>
+          <span class="text-[10px] tracking-widest font-semibold uppercase text-slate-500 font-mono">MeshMule-Core Public Assist &amp; RF R&amp;D</span>
         </div>
       </div>
 
       <!-- Desktop Nav Menu -->
       <nav class="hidden lg:flex items-center gap-1 xl:gap-2">
-        <a href="#overview" class="nav-link">Overview</a>
-        <a href="#capabilities" class="nav-link">RF & Mesh Systems</a>
-        <a href="#architecture" class="nav-link">Dual-Use Architecture</a>
-        <a href="#simulator" class="nav-link">Tactical Mesh Lab</a>
-        <a href="#procurement" class="nav-link">SB/DVBE Direct Award</a>
-        <a href="#rd-tax" class="nav-link">R&D Governance</a>
+        <a href="#overview" class="nav-link">Outdoor &amp; Public Assist</a>
+        <a href="#capabilities" class="nav-link">MeshMule-Core</a>
+        <a href="#architecture" class="nav-link">4-Tier Stack</a>
+        <a href="#simulator" class="nav-link">Canyon &amp; Park Simulator</a>
+        <a href="#rd-trajectories" class="nav-link">Long-Horizon R&amp;D</a>
+        <a href="#procurement" class="nav-link">Grant &amp; SB/DVBE</a>
         <a href="#collaboration" class="nav-link">Contact</a>
       </nav>
 
       <!-- Action Button -->
       <div class="flex items-center gap-3">
         <button onclick="scrollToSection('simulator')" class="hidden sm:inline-flex btn-secondary-coastal text-xs py-2 px-3.5">
-          <i data-lucide="activity" class="w-4 h-4 text-sky-600"></i>
-          Test Mesh Lab
+          <i data-lucide="compass" class="w-4 h-4 text-sky-600"></i>
+          Canyon &amp; Ag Sim
         </button>
         <button onclick="scrollToSection('collaboration')" class="btn-primary-coastal text-xs sm:text-sm py-2 px-4">
           <i data-lucide="send" class="w-4 h-4"></i>
-          Partner With Us
+          Collaborate
         </button>
       </div>
     </div>
@@ -419,100 +423,120 @@
       <div class="headline-stack max-w-4xl mx-auto mb-10">
         <div class="flex justify-center mb-4">
           <span class="coastal-pill-badge">
-            <i data-lucide="shield-check" class="w-3.5 h-3.5 text-sky-600"></i>
-            Dual-Use Defense & Mission-Critical Communications
+            <i data-lucide="compass" class="w-3.5 h-3.5 text-sky-600"></i>
+            Free-Payload Public Assist &bull; Hikers, Bikers, Anglers, Remote Parks &amp; Ag
           </span>
         </div>
         <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight">
-          Next-Generation RF Mesh Intelligence & Tactical Edge Data Fusion
+          Open-Source Backcountry Mesh &amp; Offline Environmental Intelligence
         </h1>
         <p class="lede text-slate-600 text-lg sm:text-xl font-normal mt-5 leading-relaxed">
-          49Caliber Labs designs ruggedized, self-healing wireless mesh nodes, dynamic RF architectures, and edge AI integration software that break down dangerous data silos in contested environments and complex municipal infrastructure.
+          Built first for <strong>hikers, mountain bikers, coastal &amp; canyon anglers, remote park researchers, and foothill agriculture</strong>. 49Caliber Labs develops <strong>MeshMule-Core</strong>—an open-source protocol turning affordable $35 off-the-shelf 915 MHz LoRa radios into a zero-subscription weather, trail-safety, and environmental sensing mesh where cellular bars don't exist.
         </p>
       </div>
 
       <!-- Quick Action Buttons -->
       <div class="flex flex-wrap items-center justify-center gap-4 mb-16">
         <button onclick="scrollToSection('simulator')" class="btn-primary-coastal text-sm py-3 px-6 shadow-md">
-          <i data-lucide="radio" class="w-4 h-4"></i>
-          Launch Interactive Mesh Simulator
-        </button>
-        <button onclick="scrollToSection('procurement')" class="btn-secondary-coastal text-sm py-3 px-6 shadow-sm">
-          <i data-lucide="file-check" class="w-4 h-4 text-sky-600"></i>
-          California SB/DVBE Direct Acquisition ($250k / $484k)
+          <i data-lucide="mountain" class="w-4 h-4"></i>
+          Launch Canyon, Park &amp; Ag Mesh Simulator
         </button>
         <a href="https://github.com/49Caliber-Labs/MeshMule-core" target="_blank" rel="noopener noreferrer" class="btn-secondary-coastal text-sm py-3 px-6 shadow-sm">
           <i data-lucide="code-2" class="w-4 h-4 text-cyan-600"></i>
-          MeshMule-Core Open Source (GitHub)
+          MeshMule-Core Free Public Repo (MIT)
         </a>
+        <button onclick="scrollToSection('rd-trajectories')" class="btn-secondary-coastal text-sm py-3 px-6 shadow-sm">
+          <i data-lucide="flask-conical" class="w-4 h-4 text-sky-600"></i>
+          Explore Long-Horizon Tactical &amp; SAR R&amp;D
+        </button>
       </div>
 
       <!-- Key Performance Highlights Grid (Showroom Bento Figures) -->
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
         <div class="pearl-tile text-center">
-          <div class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-1 font-mono">Primary RF Band</div>
-          <div class="text-3xl sm:text-4xl font-extrabold text-sky-600 font-['Inter_Tight']">915 / 868 MHz</div>
-          <p class="text-xs text-slate-500 mt-1">Sub-GHz ISM LoRa mesh telemetry</p>
+          <div class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-1 font-mono">Public Payload Cost</div>
+          <div class="text-3xl sm:text-4xl font-extrabold text-emerald-600 font-['Inter_Tight']">$0 / mo</div>
+          <p class="text-xs text-slate-500 mt-1">License-free 915 MHz ISM band &amp; MIT code</p>
+        </div>
+
+        <div class="pearl-tile text-center">
+          <div class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-1 font-mono">COTS Pocket Radio</div>
+          <div class="text-3xl sm:text-4xl font-extrabold text-sky-600 font-['Inter_Tight']">~$35 Node</div>
+          <p class="text-xs text-slate-500 mt-1">Heltec V3 / RAK4631 / T-Echo compatible</p>
         </div>
 
         <div class="pearl-tile text-center">
           <div class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-1 font-mono">Open-Source Core</div>
           <div class="text-3xl sm:text-4xl font-extrabold text-slate-900 font-['Inter_Tight']">23 Modules</div>
-          <p class="text-xs text-slate-500 mt-1">Public MIT repository (MeshMule-Core)</p>
+          <p class="text-xs text-slate-500 mt-1">Barometric &nabla;P, RF tomography &amp; SAR math</p>
         </div>
 
         <div class="pearl-tile text-center">
-          <div class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-1 font-mono">Hardware Bridge</div>
-          <div class="text-3xl sm:text-4xl font-extrabold text-cyan-600 font-['Inter_Tight']">BLE &amp; USB OTG</div>
-          <p class="text-xs text-slate-500 mt-1">COTS LoRa transceiver interface</p>
-        </div>
-
-        <div class="pearl-tile text-center">
-          <div class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-1 font-mono">Engineering Maturity</div>
-          <div class="text-3xl sm:text-4xl font-extrabold text-emerald-600 font-['Inter_Tight']">TRL 3–4</div>
-          <p class="text-xs text-slate-500 mt-1">Algorithmic &amp; bench prototype phase</p>
+          <div class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-1 font-mono">R&amp;D Stage</div>
+          <div class="text-3xl sm:text-4xl font-extrabold text-cyan-600 font-['Inter_Tight']">TRL 3–4</div>
+          <p class="text-xs text-slate-500 mt-1">Public outdoor core + deep-tech R&amp;D track</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SECTION 1: COMPANY OVERVIEW & CORE THESIS -->
+  <!-- SECTION 1: PUBLIC-ASSIST OUTDOOR, PARKS & AG FOUNDATION -->
   <section id="overview" class="section-band">
     <div class="page-container">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
         <div class="lg:col-span-6 space-y-6">
-          <div class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-sky-700 bg-sky-100 px-3 py-1 rounded-full">
-            <i data-lucide="cpu" class="w-3.5 h-3.5"></i>
-            Company Foundation &amp; R&amp;D Mandate
+          <div class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-emerald-800 bg-emerald-100 px-3 py-1 rounded-full">
+            <i data-lucide="trees" class="w-3.5 h-3.5"></i>
+            Mission First: Free-Payload Public Assist &amp; Citizen Science
           </div>
           <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 font-['Inter_Tight']">
-            Open-Source Sub-GHz Mesh Protocols &amp; Offline Edge Telemetry
+            Built for Deep Canyons, Coastlines, Remote Parks, and Working Ranches
           </h2>
           <p class="text-slate-600 leading-relaxed">
-            In maritime, backcountry, and disaster-impacted environments, <strong>cloud-dependent telemetry fails the moment cellular backhaul drops</strong>. Barometric sensors, handheld GPS units, and off-the-shelf LoRa radios frequently operate as isolated gadgets with incompatible data formats.
+            When you drop into a steep granite river gorge, pedal miles past the last trailhead, fish an offshore kelp bed, or manage a 2,000-acre foothill ranch, <strong>cellular coverage vanishes and satellite messenger subscriptions charge per-byte</strong>.
           </p>
           <p class="text-slate-600 leading-relaxed">
-            <strong>49Caliber Labs, Inc.</strong> is an early-stage California R&amp;D lab developing open-source sub-GHz mesh telemetry protocols (<strong>MeshMule-Core</strong>) and commercial offline-first environmental software (<strong>BiteWindow</strong>). We focus on compact binary framing, distributed barometric pressure-gradient modeling (&nabla;P), and direct Bluetooth Low Energy (BLE GATT) / USB-Serial integration with commercial off-the-shelf (COTS) 915 MHz transceivers.
+            <strong>MeshMule-Core</strong> (our open-source MIT protocol) and <strong>BiteWindow</strong> (our offline-first coastal and backcountry companion app) bridge everyday smartphones to inexpensive $35 915 MHz LoRa pocket transceivers over Bluetooth Low Energy (BLE GATT) and USB-OTG. Every hiker on a ridge, angler on the water, or solar weather post in a state park becomes a cooperative node that relays free environmental telemetry and safety check-ins across the terrain.
           </p>
 
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-            <div class="flex items-start gap-3 p-3 rounded-xl bg-white border border-slate-200">
-              <div class="p-2 rounded-lg bg-sky-50 text-sky-600 shrink-0">
-                <i data-lucide="refresh-cw" class="w-5 h-5"></i>
+            <div class="flex items-start gap-3 p-3.5 rounded-xl bg-white border border-slate-200 shadow-sm">
+              <div class="p-2 rounded-lg bg-emerald-50 text-emerald-600 shrink-0">
+                <i data-lucide="compass" class="w-5 h-5"></i>
               </div>
               <div>
-                <h3 class="text-sm font-semibold text-slate-900">COTS LoRa Radio Bridge</h3>
-                <p class="text-xs text-slate-500 mt-0.5">Direct BLE GATT &amp; USB-Serial framing for 902–928 MHz / 868 MHz transceivers.</p>
+                <h3 class="text-sm font-semibold text-slate-900">Hikers, Bikers &amp; Anglers</h3>
+                <p class="text-xs text-slate-500 mt-0.5">Free group breadcrumbs, canyon-to-rim check-ins, offline NOAA tides, and barometric squall alerts with $0 monthly fees.</p>
               </div>
             </div>
 
-            <div class="flex items-start gap-3 p-3 rounded-xl bg-white border border-slate-200">
-              <div class="p-2 rounded-lg bg-cyan-50 text-cyan-600 shrink-0">
-                <i data-lucide="layers" class="w-5 h-5"></i>
+            <div class="flex items-start gap-3 p-3.5 rounded-xl bg-white border border-slate-200 shadow-sm">
+              <div class="p-2 rounded-lg bg-sky-50 text-sky-600 shrink-0">
+                <i data-lucide="mountain-snow" class="w-5 h-5"></i>
               </div>
               <div>
-                <h3 class="text-sm font-semibold text-slate-900">Barometric Phased-Array (&nabla;P)</h3>
-                <p class="text-xs text-slate-500 mt-0.5">Least-squares spatial pressure-gradient vectors computed across peer nodes.</p>
+                <h3 class="text-sm font-semibold text-slate-900">Remote Parks &amp; Watersheds</h3>
+                <p class="text-xs text-slate-500 mt-0.5">Low-cost solar trailhead repeaters and micro-climate stations tracking canyon humidity, fuel moisture, and pressure fronts.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3 p-3.5 rounded-xl bg-white border border-slate-200 shadow-sm">
+              <div class="p-2 rounded-lg bg-amber-50 text-amber-600 shrink-0">
+                <i data-lucide="sprout" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h3 class="text-sm font-semibold text-slate-900">Precision Ag &amp; Ranch Mesh</h3>
+                <p class="text-xs text-slate-500 mt-0.5">Multi-mile 915 MHz telemetry for vineyard frost pockets, soil moisture probes, headgate flow, and remote stock tanks.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3 p-3.5 rounded-xl bg-white border border-slate-200 shadow-sm">
+              <div class="p-2 rounded-lg bg-cyan-50 text-cyan-600 shrink-0">
+                <i data-lucide="flask-conical" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h3 class="text-sm font-semibold text-slate-900">Deep-Tech R&amp;D Incubator</h3>
+                <p class="text-xs text-slate-500 mt-0.5">Proving grounds in harsh outdoor terrain directly feed our long-horizon SAR and dual-use tactical R&amp;D algorithms.</p>
               </div>
             </div>
           </div>
@@ -523,48 +547,48 @@
           <div class="pearl-tile bg-white border border-slate-200/90 shadow-md p-6 sm:p-8">
             <div class="flex items-center justify-between pb-4 border-b border-slate-200">
               <div>
-                <span class="text-xs font-mono font-semibold uppercase text-sky-600">Architectural Comparison</span>
-                <h3 class="text-lg font-bold text-slate-900">Cloud-Tethered Telemetry vs. MeshMule-Core</h3>
+                <span class="text-xs font-mono font-semibold uppercase text-emerald-700">Why Public-Assist Mesh Works</span>
+                <h3 class="text-lg font-bold text-slate-900">Subscription Trackers vs. MeshMule-Core</h3>
               </div>
-              <span class="coastal-pill-badge">Open-Source Core</span>
+              <span class="coastal-pill-badge">Free Payload &bull; MIT</span>
             </div>
 
             <div class="space-y-4 my-6">
               <!-- Comparison Row 1 -->
               <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
-                <div class="text-xs font-semibold text-slate-500 uppercase font-mono mb-1">LoRa Packet Payload Overhead (Air-Time Efficiency)</div>
+                <div class="text-xs font-semibold text-slate-500 uppercase font-mono mb-1">LoRa Air-Time Efficiency (Binary Frame Packing)</div>
                 <div class="flex items-center justify-between text-sm">
                   <span class="text-slate-600 flex items-center gap-1.5"><i data-lucide="x-circle" class="w-4 h-4 text-red-500"></i> Verbose JSON: ~420 Bytes</span>
-                  <span class="font-bold text-sky-700 flex items-center gap-1.5"><i data-lucide="check-circle" class="w-4 h-4 text-emerald-500"></i> Compact Binary Frame: 24–38 Bytes</span>
+                  <span class="font-bold text-sky-700 flex items-center gap-1.5"><i data-lucide="check-circle" class="w-4 h-4 text-emerald-500"></i> MeshMule Frame: 24–38 Bytes</span>
                 </div>
                 <div class="w-full bg-slate-200 h-2 rounded-full mt-2 overflow-hidden flex">
                   <div class="bg-red-400 h-full w-[88%]"></div>
-                  <div class="bg-sky-500 h-full w-[12%]"></div>
+                  <div class="bg-emerald-500 h-full w-[12%]"></div>
                 </div>
               </div>
 
               <!-- Comparison Row 2 -->
               <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
-                <div class="text-xs font-semibold text-slate-500 uppercase font-mono mb-1">Infrastructure Dependence</div>
+                <div class="text-xs font-semibold text-slate-500 uppercase font-mono mb-1">Recurring Cost to Hikers, Parks &amp; Growers</div>
                 <div class="flex items-center justify-between text-sm">
-                  <span class="text-slate-600 flex items-center gap-1.5"><i data-lucide="x-circle" class="w-4 h-4 text-red-500"></i> Requires cellular / cloud API</span>
-                  <span class="font-bold text-sky-700 flex items-center gap-1.5"><i data-lucide="check-circle" class="w-4 h-4 text-emerald-500"></i> Offline Sub-GHz 915 MHz LoRa Mesh</span>
+                  <span class="text-slate-600 flex items-center gap-1.5"><i data-lucide="x-circle" class="w-4 h-4 text-red-500"></i> $15–$65/mo per device subscription</span>
+                  <span class="font-bold text-sky-700 flex items-center gap-1.5"><i data-lucide="check-circle" class="w-4 h-4 text-emerald-500"></i> $0/mo License-Free 915 MHz ISM</span>
                 </div>
               </div>
 
               <!-- Comparison Row 3 -->
               <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
-                <div class="text-xs font-semibold text-slate-500 uppercase font-mono mb-1">Environmental Pressure Modeling</div>
+                <div class="text-xs font-semibold text-slate-500 uppercase font-mono mb-1">Canyon &amp; Micro-Climate Weather Awareness</div>
                 <div class="flex items-center justify-between text-sm">
-                  <span class="text-slate-600 flex items-center gap-1.5"><i data-lucide="x-circle" class="w-4 h-4 text-red-500"></i> Isolated single-device barometer</span>
-                  <span class="font-bold text-sky-700 flex items-center gap-1.5"><i data-lucide="check-circle" class="w-4 h-4 text-emerald-500"></i> Multi-Node Spatial Gradient (&nabla;P)</span>
+                  <span class="text-slate-600 flex items-center gap-1.5"><i data-lucide="x-circle" class="w-4 h-4 text-red-500"></i> Regional radar blind in deep gorges</span>
+                  <span class="font-bold text-sky-700 flex items-center gap-1.5"><i data-lucide="check-circle" class="w-4 h-4 text-emerald-500"></i> Peer-to-Peer Barometric Array (&nabla;P)</span>
                 </div>
               </div>
             </div>
 
             <div class="bg-sky-50 rounded-xl p-3.5 flex items-center justify-between text-xs text-sky-900 border border-sky-100">
-              <span class="font-medium">Inspect the public MIT source code in 49Caliber-Labs/MeshMule-core.</span>
-              <a href="https://github.com/49Caliber-Labs/MeshMule-core" target="_blank" rel="noopener noreferrer" class="text-sky-700 font-bold hover:underline">View Repo &rarr;</a>
+              <span class="font-medium">100% open-source citizen-science core in 49Caliber-Labs/MeshMule-core.</span>
+              <a href="https://github.com/49Caliber-Labs/MeshMule-core" target="_blank" rel="noopener noreferrer" class="text-sky-700 font-bold hover:underline">Inspect Code &rarr;</a>
             </div>
           </div>
         </div>
@@ -666,19 +690,19 @@
     </div>
   </section>
 
-  <!-- SECTION 3: DUAL-USE AI & MESH ARCHITECTURE -->
+  <!-- SECTION 3: 4-TIER MESHMULE-CORE & EDGE STACK -->
   <section id="architecture" class="section-band">
     <div class="page-container">
       <div class="headline-stack">
         <span class="coastal-pill-badge">
           <i data-lucide="git-merge" class="w-3.5 h-3.5 text-sky-600"></i>
-          Modular 4-Tier Edge &amp; Mesh Stack
+          Modular 4-Tier Public-Assist &amp; R&amp;D Stack
         </span>
         <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900">
-          The 49Caliber Dual-Use Software & AI Architecture
+          From $35 Pocket Radios to Distributed Canyon &amp; Ag Intelligence
         </h2>
         <p class="lede">
-          A four-tier modular stack that ingests heterogeneous analog and digital sensor streams, executes localized neural inference at the edge, and relays fused telemetry across multi-domain C2 networks.
+          A four-tier modular architecture designed to run on affordable citizen hardware today—bridging pocket LoRa transceivers, remote park weather stations, and agricultural soil probes into an offline-first environmental mesh.
         </p>
       </div>
 
@@ -688,38 +712,38 @@
         <div class="lg:col-span-5 space-y-3" id="arch-layers-list">
           <div onclick="selectArchLayer(1)" id="arch-tile-1" class="pearl-tile interactive border-l-4 border-l-sky-600 bg-sky-50/60 p-4 cursor-pointer">
             <div class="flex items-center justify-between">
-              <span class="text-xs font-mono font-bold text-sky-700 uppercase">Tier 1 &bull; Ingestion & Physical Hardware</span>
+              <span class="text-xs font-mono font-bold text-sky-700 uppercase">Tier 1 &bull; COTS Radio &amp; Sensor Hardware</span>
               <i data-lucide="radio-tower" class="w-4 h-4 text-sky-600"></i>
             </div>
-            <h3 class="font-bold text-slate-900 text-base mt-1">Multimodal Sensor & Radio Ingestion</h3>
-            <p class="text-xs text-slate-600 mt-1">RF antennas, gigabit RJ45, IP cameras, thermal FLIR, SIGINT RF sniffers, and radiation monitors.</p>
+            <h3 class="font-bold text-slate-900 text-base mt-1">Pocket LoRa Nodes, Park Posts &amp; Ag Probes</h3>
+            <p class="text-xs text-slate-600 mt-1">915 MHz SX1262 pocket radios (BLE GATT / USB-OTG), MEMS barometers, park fuel-moisture sensors, and soil probes.</p>
           </div>
 
           <div onclick="selectArchLayer(2)" id="arch-tile-2" class="pearl-tile interactive border-l-4 border-l-transparent p-4 cursor-pointer">
             <div class="flex items-center justify-between">
-              <span class="text-xs font-mono font-bold text-slate-500 uppercase">Tier 2 &bull; Mesh Transport</span>
+              <span class="text-xs font-mono font-bold text-slate-500 uppercase">Tier 2 &bull; Free-Payload Mesh Transport</span>
               <i data-lucide="share-2" class="w-4 h-4 text-slate-400"></i>
             </div>
-            <h3 class="font-bold text-slate-900 text-base mt-1">Autonomous Ad-Hoc WMN Routing</h3>
-            <p class="text-xs text-slate-600 mt-1">Self-forming, self-healing multi-hop dynamic mesh with latency-optimized backhaul routing.</p>
+            <h3 class="font-bold text-slate-900 text-base mt-1">Compact 24–38 Byte Binary LoRa Framing</h3>
+            <p class="text-xs text-slate-600 mt-1">Zero-subscription 915 MHz ISM multi-hop relay from deep canyon floors to rim repeaters with CRC-16 integrity.</p>
           </div>
 
           <div onclick="selectArchLayer(3)" id="arch-tile-3" class="pearl-tile interactive border-l-4 border-l-transparent p-4 cursor-pointer">
             <div class="flex items-center justify-between">
-              <span class="text-xs font-mono font-bold text-slate-500 uppercase">Tier 3 &bull; Edge AI Core</span>
+              <span class="text-xs font-mono font-bold text-slate-500 uppercase">Tier 3 &bull; Distributed Environmental Math</span>
               <i data-lucide="brain-circuit" class="w-4 h-4 text-slate-400"></i>
             </div>
-            <h3 class="font-bold text-slate-900 text-base mt-1">Distributed Edge Fusion & Neural Inference</h3>
-            <p class="text-xs text-slate-600 mt-1">Quantized neural nets running on microcontroller nodes for target tracking and RF anomaly detection.</p>
+            <h3 class="font-bold text-slate-900 text-base mt-1">Barometric Phased-Array (&nabla;P) &amp; RF Tomography</h3>
+            <p class="text-xs text-slate-600 mt-1">Peer-to-peer spatial pressure-gradient vectors, squall-front velocity, and RSSI/SNR moisture attenuation modeling.</p>
           </div>
 
           <div onclick="selectArchLayer(4)" id="arch-tile-4" class="pearl-tile interactive border-l-4 border-l-transparent p-4 cursor-pointer">
             <div class="flex items-center justify-between">
-              <span class="text-xs font-mono font-bold text-slate-500 uppercase">Tier 4 &bull; Command & Presentation</span>
+              <span class="text-xs font-mono font-bold text-slate-500 uppercase">Tier 4 &bull; Field &amp; Research Interfaces</span>
               <i data-lucide="monitor" class="w-4 h-4 text-slate-400"></i>
             </div>
-            <h3 class="font-bold text-slate-900 text-base mt-1">Common Operational Picture (COP) & ATAK</h3>
-            <p class="text-xs text-slate-600 mt-1">Zero-rekeying integration with Android Tactical Assault Kit (ATAK), web GIS, and legacy C2 displays.</p>
+            <h3 class="font-bold text-slate-900 text-base mt-1">BiteWindow Offline App, Park GIS &amp; SAR Overlays</h3>
+            <p class="text-xs text-slate-600 mt-1">Offline trail/coastal maps, angler bite &amp; tide windows, agricultural frost alerts, and experimental SAR trilateration.</p>
           </div>
         </div>
 
@@ -733,63 +757,64 @@
     </div>
   </section>
 
-  <!-- SECTION 4: INTERACTIVE TACTICAL MESH NETWORK SIMULATOR & LINK BUDGET TOOL -->
+  <!-- SECTION 4: INTERACTIVE CANYON, REMOTE PARK & AG MESH TOPOGRAPHIC SIMULATOR -->
   <section id="simulator" class="section-band pinstripe-tech-bg relative overflow-hidden">
     <div class="chrome-accent-bar mb-10"></div>
     <div class="page-container">
-      <div class="headline-stack text-center max-w-3xl mx-auto">
+      <div class="headline-stack text-center max-w-4xl mx-auto">
         <span class="coastal-pill-badge mx-auto metric-badge-chrome shadow-sm">
-          <i data-lucide="cpu" class="w-3.5 h-3.5 text-cyan-600"></i>
-          Analytical RF Link Budget Workbench
+          <i data-lucide="mountain" class="w-3.5 h-3.5 text-cyan-600"></i>
+          Topographic Canyon, Park &amp; Ag Propagation Workbench
         </span>
         <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 mt-2 font-['Inter_Tight']">
-          RF Link Budget &amp; Mesh Propagation Simulator
+          Deep-Canyon, Remote Park &amp; Agricultural Mesh Simulator
         </h2>
         <p class="lede text-slate-600 mt-3">
-          Analytical Friis / Log-Distance path loss model for evaluating sub-GHz (915 MHz) vs. 2.4/5.8 GHz link margins, fade thresholds, and multi-hop relay placement across varying terrain profiles.
+          Explore how 915 MHz sub-GHz LoRa frames overcome steep canyon walls by bouncing off elevated ridge solar relays, how remote park stations track barometric fronts (&nabla;P), and how foothill ranches monitor frost &amp; soil moisture across multi-mile terrain.
         </p>
       </div>
 
       <!-- Simulator Interactive Workstation -->
-      <div class="titanium-chrome-card reticle-corner-box rounded-xl p-6 sm:p-8 mt-8 border border-slate-300">
+      <div class="titanium-chrome-card reticle-corner-box rounded-xl p-5 sm:p-7 mt-8 border border-slate-300">
         <!-- Top Toolbar & Scenario Presets -->
-        <div class="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-slate-200">
-          <div class="flex items-center gap-3">
-            <span class="text-xs font-mono font-semibold uppercase text-slate-500">Propagation Presets:</span>
-            <button onclick="applySimPreset('inl')" class="px-3 py-1 text-xs rounded-full bg-sky-50 text-sky-700 font-semibold border border-sky-200 hover:bg-sky-100 transition-colors">
-              Coastal / Open Water LOS (915 MHz)
+        <div class="flex flex-wrap items-center justify-between gap-3 pb-5 border-b border-slate-200">
+          <div class="flex flex-wrap items-center gap-2">
+            <span class="text-xs font-mono font-semibold uppercase text-slate-500 mr-1">Field Trajectories:</span>
+            <button id="preset-btn-inl" onclick="applySimPreset('inl')" class="px-3 py-1.5 text-xs rounded-full bg-sky-600 text-white font-semibold border border-sky-600 shadow-sm transition-all">
+              1. Deep Canyon Hiker / Biker &amp; Angler
             </button>
-            <button onclick="applySimPreset('afwerx')" class="px-3 py-1 text-xs rounded-full bg-slate-100 text-slate-700 font-semibold border border-slate-200 hover:bg-slate-200 transition-colors">
-              Urban Multipath Clutter (2.4 GHz)
+            <button id="preset-btn-park" onclick="applySimPreset('park')" class="px-3 py-1.5 text-xs rounded-full bg-white text-slate-700 font-semibold border border-slate-300 hover:border-sky-500 transition-all">
+              2. Remote Park Watershed &amp; Wildfire Array
             </button>
-            <button onclick="applySimPreset('urban')" class="px-3 py-1 text-xs rounded-full bg-slate-100 text-slate-700 font-semibold border border-slate-200 hover:bg-slate-200 transition-colors">
-              Forested / Canyon SAR (915 MHz)
+            <button id="preset-btn-ag" onclick="applySimPreset('ag')" class="px-3 py-1.5 text-xs rounded-full bg-white text-slate-700 font-semibold border border-slate-300 hover:border-sky-500 transition-all">
+              3. Foothill Ag &amp; Vineyard Frost Mesh
+            </button>
+            <button id="preset-btn-urban" onclick="applySimPreset('urban')" class="px-3 py-1.5 text-xs rounded-full bg-white text-slate-700 font-semibold border border-slate-300 hover:border-sky-500 transition-all">
+              4. R&amp;D: Canyon SAR Trilateration (TRL 3)
             </button>
           </div>
-          <div class="flex items-center gap-2 text-xs font-mono text-emerald-600 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">
-            <span class="text-[10px] text-emerald-700 font-bold font-mono tracking-wider">[MODEL]</span>
-            Analytical Friis / Hata Path Loss
+          <div class="flex items-center gap-2">
+            <button id="btn-copy-report" onclick="copyLinkBudgetReport()" class="px-3.5 py-1.5 text-xs font-mono font-semibold rounded-md bg-white border border-slate-300 text-slate-700 hover:bg-slate-50 hover:text-cyan-700 transition-all shadow-sm flex items-center gap-1.5">
+              <i data-lucide="clipboard-copy" class="w-3.5 h-3.5 text-slate-500"></i>
+              Export Telemetry Log
+            </button>
           </div>
-          <button id="btn-copy-report" onclick="copyLinkBudgetReport()" class="px-3.5 py-1.5 text-xs font-mono font-semibold rounded-md bg-white border border-slate-300 text-slate-700 hover:bg-slate-50 hover:text-cyan-700 transition-all shadow-sm flex items-center gap-1.5">
-            <i data-lucide="clipboard-copy" class="w-3.5 h-3.5 text-slate-500"></i>
-            Export Link Budget Log
-          </button>
         </div>
 
-        <!-- Simulation Grid: Controls + Canvas + Live Telemetry -->
+        <!-- Simulation Grid: Controls (3) + Topographic & Cross-Section Canvas (6) + Live Readouts (3) -->
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 mt-6 items-start">
           <!-- Left: Simulation Controls -->
-          <div class="lg:col-span-4 space-y-5">
+          <div class="lg:col-span-3 space-y-4">
             <!-- Node Separation Slider -->
             <div>
               <div class="flex justify-between text-xs font-semibold text-slate-700 mb-1">
-                <span>Node Separation Distance (LOS)</span>
-                <span id="val-distance" class="font-mono text-sky-700 font-bold">1,800 ft</span>
+                <span>Canyon / Valley Span</span>
+                <span id="val-distance" class="font-mono text-sky-700 font-bold">2,400 ft</span>
               </div>
-              <input type="range" id="input-distance" min="300" max="4500" step="50" value="1800" oninput="updateSimulation()" class="w-full">
+              <input type="range" id="input-distance" min="500" max="15000" step="100" value="2400" oninput="updateSimulation()" class="w-full">
               <div class="flex justify-between text-[10px] text-slate-400 font-mono mt-0.5">
-                <span>300 ft (Tactical Close)</span>
-                <span>4,500 ft (Extreme Fringe)</span>
+                <span>500 ft (Gorge Bend)</span>
+                <span>15,000 ft (2.8 mi Valley)</span>
               </div>
             </div>
 
@@ -797,101 +822,106 @@
             <div>
               <label for="input-frequency" class="block text-xs font-semibold text-slate-700 mb-1">Operating RF Band</label>
               <select id="input-frequency" onchange="updateSimulation()" class="form-select text-xs">
-                <option value="915">915 MHz UHF (Sub-GHz High Penetration)</option>
-                <option value="2400" selected>2.4 GHz ISM Tactical Band (Balanced)</option>
-                <option value="5800">5.8 GHz High-Throughput Video Backhaul</option>
+                <option value="915" selected>915 MHz ISM LoRa (Canyon &amp; Canopy Penetration)</option>
+                <option value="868">868 MHz EU ISM LoRa (Long-Range Telemetry)</option>
+                <option value="2400">2.4 GHz ISM (High-Rate / Line-of-Sight Only)</option>
               </select>
             </div>
 
             <!-- RF Terrain / Obstacle Environment -->
             <div>
-              <label for="input-terrain" class="block text-xs font-semibold text-slate-700 mb-1">Tactical Environment</label>
+              <label for="input-terrain" class="block text-xs font-semibold text-slate-700 mb-1">Topographic Relief Profile</label>
               <select id="input-terrain" onchange="updateSimulation()" class="form-select text-xs">
-                <option value="los" selected>Open Field / Flight Line (Direct LOS)</option>
-                <option value="urban">Dense Urban / Hangar Complex (Multi-path)</option>
-                <option value="austere">Industrial / Subterranean (High Attenuation)</option>
+                <option value="canyon" selected>Deep Granite River Gorge (2,850 ft Rim Walls)</option>
+                <option value="los">Remote Park Ridge-to-Valley (Elevated Solar Relay)</option>
+                <option value="ag">Terraced Foothill Vineyard &amp; Ranch Contour</option>
+                <option value="austere">Dense Redwood / Conifer Canopy + Steep Ravine</option>
               </select>
             </div>
 
-            <!-- Jamming / Electronic Warfare Contestation -->
+            <!-- Atmospheric / Foilage / Noise Floor Rise -->
             <div>
               <div class="flex justify-between text-xs font-semibold text-slate-700 mb-1">
-                <span>Electronic Contestation / Jamming</span>
-                <span id="val-jamming" class="font-mono text-amber-600 font-bold">Low (10%)</span>
+                <span>Squall Rain / Canopy / RF Noise</span>
+                <span id="val-jamming" class="font-mono text-amber-600 font-bold">15%</span>
               </div>
-              <input type="range" id="input-jamming" min="0" max="90" step="5" value="10" oninput="updateSimulation()" class="w-full">
+              <input type="range" id="input-jamming" min="0" max="90" step="5" value="15" oninput="updateSimulation()" class="w-full">
             </div>
 
-            <!-- Active Data Streams -->
-            <div class="pt-2 border-t border-slate-200">
-              <span class="block text-xs font-semibold text-slate-700 mb-2">Simulated Tactical Data Payloads</span>
-              <div class="space-y-1.5 text-xs text-slate-600">
+            <!-- Active Free-Payload Streams -->
+            <div class="pt-3 border-t border-slate-200">
+              <span class="block text-xs font-semibold text-slate-700 mb-2">Active Free-Payload Telemetry Frames</span>
+              <div class="space-y-2 text-xs text-slate-600">
                 <label class="flex items-center gap-2 cursor-pointer">
                   <input type="checkbox" id="stream-video" checked onchange="updateSimulation()" class="rounded text-sky-600">
-                  <span>VGA IP Video (4x 640x480 @ 30fps)</span>
+                  <span>Hiker / Biker / Angler Trail Breadcrumbs (28 B)</span>
                 </label>
                 <label class="flex items-center gap-2 cursor-pointer">
                   <input type="checkbox" id="stream-rad" checked onchange="updateSimulation()" class="rounded text-sky-600">
-                  <span>Radiation / CBRN Sniffer Telemetry</span>
+                  <span>Barometric &nabla;P &amp; Park Micro-Climate (34 B)</span>
                 </label>
                 <label class="flex items-center gap-2 cursor-pointer">
                   <input type="checkbox" id="stream-sigint" onchange="updateSimulation()" class="rounded text-sky-600">
-                  <span>Wideband RF SIGINT Spectrum Snaps</span>
+                  <span>Ag Soil-Moisture / Frost &amp; SAR Beacon (38 B)</span>
                 </label>
               </div>
             </div>
+
+            <div class="p-3 rounded-xl bg-slate-100 border border-slate-200 text-[11px] text-slate-600 leading-relaxed">
+              <strong class="text-slate-800 font-mono">Interactive Tip:</strong> Drag any node on the topographic map—watch how moving the <strong>Rim Solar Repeater</strong> restores Fresnel clearance between the deep canyon floor and the trailhead!
+            </div>
           </div>
 
-          <!-- Middle: Dynamic 2D Mesh Topography Visualizer Canvas -->
-          <div class="lg:col-span-5 space-y-2">
-            <div class="flex items-center justify-between text-xs text-slate-500 font-mono">
-              <span>Dynamic Topography Canvas</span>
-              <span id="canvas-status">Live Interactive Canvas &bull; 5 Active Nodes</span>
+          <!-- Middle: High-Detail Topographic Contour & Elevation Profile Canvas -->
+          <div class="lg:col-span-6 space-y-2">
+            <div class="flex flex-wrap items-center justify-between text-xs text-slate-600 font-mono px-1">
+              <span id="sim-scenario-title" class="font-bold text-slate-800">TOPOGRAPHIC VIEW: DEEP CANYON &amp; RIDGE RELAY</span>
+              <span id="canvas-status" class="text-sky-700 font-semibold">Drag Nodes to Test Canyon Ridge Diffraction</span>
             </div>
             <div class="relative">
               <canvas id="mesh-canvas"></canvas>
-              <!-- Legend Overlay -->
-              <div class="absolute bottom-2 left-2 right-2 bg-white/90 backdrop-blur-sm p-2 rounded-lg border border-slate-200/80 flex flex-wrap items-center justify-between text-[11px] text-slate-600">
-                <div class="flex items-center gap-1.5">
-                  <span class="w-2.5 h-2.5 rounded-full bg-sky-600 inline-block"></span> Base ECN Node
-                </div>
-                <div class="flex items-center gap-1.5">
-                  <span class="w-2.5 h-2.5 rounded-full bg-cyan-500 inline-block"></span> Body Tactical Nodes
-                </div>
-                <div class="flex items-center gap-1.5">
-                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 inline-block"></span> Drop Relay Nodes
-                </div>
+            </div>
+            <!-- Legend Bar -->
+            <div class="bg-slate-900 text-slate-300 px-3 py-2 rounded-lg border border-slate-700 flex flex-wrap items-center justify-between gap-2 text-[11px] font-mono">
+              <div class="flex items-center gap-1.5">
+                <span class="w-2.5 h-2.5 rounded-full bg-sky-400 inline-block"></span> Trailhead / Ranger / Ranch Base
+              </div>
+              <div class="flex items-center gap-1.5">
+                <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 inline-block"></span> High-Ridge Solar Repeater
+              </div>
+              <div class="flex items-center gap-1.5">
+                <span class="w-2.5 h-2.5 rounded-full bg-cyan-300 inline-block"></span> Canyon Angler / Hiker / Ag Nodes
+              </div>
+              <div class="flex items-center gap-1.5">
+                <span class="w-2.5 h-2.5 rounded-full bg-amber-400 inline-block"></span> Barometric &nabla;P / Frost Vector
               </div>
             </div>
-            <p class="text-[11px] text-slate-400 italic text-center">
-              Click canvas to reposition tactical drop relay node and re-evaluate link paths.
-            </p>
           </div>
 
           <!-- Right: Live Telemetry & Computed Output KPIs -->
           <div class="lg:col-span-3 space-y-3">
             <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
-              <div class="text-[11px] font-mono uppercase text-slate-400 font-semibold">Calculated RSSI Link Budget</div>
-              <div id="metric-rssi" class="text-2xl font-extrabold text-sky-700 font-mono">-68 dBm</div>
-              <div class="text-[11px] text-slate-500 mt-0.5" id="metric-rssi-status">Optimal Margin (+18 dB fade margin)</div>
+              <div class="text-[11px] font-mono uppercase text-slate-400 font-semibold">Canyon-to-Rim Link Budget</div>
+              <div id="metric-rssi" class="text-2xl font-extrabold text-sky-700 font-mono">-74 dBm</div>
+              <div class="text-[11px] text-slate-500 mt-0.5" id="metric-rssi-status">Clear Rim Relay (+46 dB LoRa margin)</div>
             </div>
 
             <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
-              <div class="text-[11px] font-mono uppercase text-slate-400 font-semibold">Packet Delivery Rate (PDR)</div>
-              <div id="metric-pdr" class="text-2xl font-extrabold text-emerald-600 font-mono">98.4%</div>
-              <div class="text-[11px] text-slate-500 mt-0.5" id="metric-pdr-status">Zero critical packet starvation</div>
+              <div class="text-[11px] font-mono uppercase text-slate-400 font-semibold">Frame Delivery Reliability</div>
+              <div id="metric-pdr" class="text-2xl font-extrabold text-emerald-600 font-mono">99.2%</div>
+              <div class="text-[11px] text-slate-500 mt-0.5" id="metric-pdr-status">32-byte binary frame + CRC-16</div>
             </div>
 
             <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
-              <div class="text-[11px] font-mono uppercase text-slate-400 font-semibold">One-Way Network Latency</div>
-              <div id="metric-latency" class="text-2xl font-extrabold text-slate-900 font-mono">11.2 ms</div>
-              <div class="text-[11px] text-slate-500 mt-0.5">Sustains real-time video surveillance</div>
+              <div class="text-[11px] font-mono uppercase text-slate-400 font-semibold">Multi-Hop LoRa Time-on-Air</div>
+              <div id="metric-latency" class="text-2xl font-extrabold text-slate-900 font-mono">68.4 ms</div>
+              <div class="text-[11px] text-slate-500 mt-0.5">SF7/SF9 sub-GHz chirp relay</div>
             </div>
 
             <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
-              <div class="text-[11px] font-mono uppercase text-slate-400 font-semibold">Projected Battery Life</div>
-              <div id="metric-battery" class="text-2xl font-extrabold text-cyan-700 font-mono">4.8 Hours</div>
-              <div class="text-[11px] text-slate-500 mt-0.5">Dual-cell internal pack (extendable to 14h)</div>
+              <div class="text-[11px] font-mono uppercase text-slate-400 font-semibold">Pocket / Solar Node Endurance</div>
+              <div id="metric-battery" class="text-2xl font-extrabold text-cyan-700 font-mono">42.0 Hours</div>
+              <div class="text-[11px] text-slate-500 mt-0.5">2000 mAh pocket cell / indefinite on solar</div>
             </div>
           </div>
         </div>
@@ -899,88 +929,94 @@
     </div>
   </section>
 
-  <!-- SECTION 5: DEFENSE & COMMERCIAL APPLICATION PATHWAYS -->
-  <section class="section-band">
+  <!-- SECTION 5: PUBLIC-ASSIST DEPLOYMENT TRAJECTORIES FIRST, LONG-HORIZON TACTICAL R&D SECOND -->
+  <section id="rd-trajectories" class="section-band">
     <div class="page-container">
       <div class="headline-stack">
         <span class="coastal-pill-badge">
           <i data-lucide="compass" class="w-3.5 h-3.5 text-sky-600"></i>
-          Dual-Market Strategic Alignment
+          Deployment &amp; Research Roadmap
         </span>
         <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900">
-          Defense Deployments & Critical Infrastructure Pathways
+          Public-Assist Outdoor Utility Today &bull; Deep-Tech Tactical R&amp;D Tomorrow
         </h2>
         <p class="lede">
-          Our core technological IP is specifically engineered to meet both rigorous Department of Defense tactical mission requirements and mission-critical civil municipal demands.
+          We lead with free-payload, low-cost public utility for hikers, bikers, anglers, parks, and agriculture—using real-world canyon, coastal, and rural terrain as the proving ground for our longer-horizon tactical and search-and-rescue R&amp;D.
         </p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10">
-        <!-- Defense Pillar Card -->
-        <div class="pearl-tile bg-white border border-slate-200 p-8 flex flex-col justify-between">
+        <!-- Pillar 1: Public Assist, Parks & Ag (PRIMARY / ACTIVE TRL 3-4) -->
+        <div class="pearl-tile bg-white border-2 border-emerald-500/40 p-8 flex flex-col justify-between shadow-md">
           <div>
-            <div class="flex items-center gap-3 mb-4">
-              <div class="w-10 h-10 rounded-xl bg-sky-100 text-sky-700 flex items-center justify-center font-bold">
-                <i data-lucide="shield" class="w-5 h-5"></i>
+            <div class="flex items-center justify-between gap-3 mb-4">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold">
+                  <i data-lucide="trees" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <span class="text-xs font-mono font-semibold uppercase text-emerald-700">Primary Track &bull; Active TRL 3–4</span>
+                  <h3 class="text-xl font-bold text-slate-900">Outdoor Public Assist, Remote Parks &amp; Ag Mesh</h3>
+                </div>
               </div>
-              <div>
-                <span class="text-xs font-mono font-semibold uppercase text-sky-600">Defense & National Security</span>
-                <h3 class="text-xl font-bold text-slate-900">DoD Tactical & Base Security Ecosystem</h3>
-              </div>
+              <span class="px-2.5 py-1 rounded-full text-[11px] font-mono font-bold bg-emerald-100 text-emerald-800">$0 Payload</span>
             </div>
 
             <ul class="space-y-4 text-sm text-slate-600 my-6">
               <li class="flex items-start gap-3">
-                <i data-lucide="check" class="w-5 h-5 text-sky-600 shrink-0 mt-0.5"></i>
-                <span><strong>AFWERX & Air Force Base Security:</strong> Unifying radars, counter-UAS systems, and Security Forces flight line patrols into a real-time common operating picture without proprietary vendor lock-in.</span>
+                <i data-lucide="check" class="w-5 h-5 text-emerald-600 shrink-0 mt-0.5"></i>
+                <span><strong>Hikers, Mountain Bikers &amp; Canyon Anglers:</strong> Open-source <strong>MeshMule-Core</strong> and <strong>BiteWindow</strong> pair smartphones to $35 915 MHz LoRa radios for free trail position sharing, river-gorge weather alerts, and offline tide/bite intelligence without monthly satellite fees.</span>
               </li>
               <li class="flex items-start gap-3">
-                <i data-lucide="check" class="w-5 h-5 text-sky-600 shrink-0 mt-0.5"></i>
-                <span><strong>Army SIGINT Phase III Transition:</strong> Integration of third-party radio frequency (RF) sensors and spectrum analytics tools into lightweight Expeditionary Command Nodes (ECNs).</span>
+                <i data-lucide="check" class="w-5 h-5 text-emerald-600 shrink-0 mt-0.5"></i>
+                <span><strong>Remote Park Systems &amp; Watershed Research:</strong> Solar-backed ridge repeaters and micro-climate stations for State/National Parks—tracking canyon barometric gradients (&nabla;P), fuel moisture, and stream levels across dead-zone backcountry valleys.</span>
               </li>
               <li class="flex items-start gap-3">
-                <i data-lucide="check" class="w-5 h-5 text-sky-600 shrink-0 mt-0.5"></i>
-                <span><strong>Waterside & Port Maritime Security:</strong> Expanding data fusion to patrol craft, shore radar, and autonomous surface vessels for perimeter denial.</span>
+                <i data-lucide="check" class="w-5 h-5 text-emerald-600 shrink-0 mt-0.5"></i>
+                <span><strong>Foothill Agriculture &amp; Ranch Telemetry:</strong> Zero-subscription sub-GHz sensor loops for vineyard frost pockets, orchard soil-moisture probes, irrigation headgates, and remote pasture water troughs.</span>
               </li>
             </ul>
           </div>
 
-          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-500">
-            <strong>Key Procurement Vehicle:</strong> Phase I, II, & III SBIR/STTR and Sole-Source Transition under 15 U.S.C. § 638.
+          <div class="p-4 rounded-xl bg-emerald-50/70 border border-emerald-200 text-xs text-emerald-950">
+            <strong>Current Availability:</strong> Open-source protocol modules live today in <a href="https://github.com/49Caliber-Labs/MeshMule-core" target="_blank" class="underline font-semibold">49Caliber-Labs/MeshMule-core</a> (MIT) + BiteWindow Android BLE/USB hardware bridge.
           </div>
         </div>
 
-        <!-- Commercial / Civic Pillar Card -->
+        <!-- Pillar 2: Deeply Entrenched Long-Horizon R&D (SECONDARY / TRL 2-3 RESEARCH) -->
         <div class="pearl-tile bg-white border border-slate-200 p-8 flex flex-col justify-between">
           <div>
-            <div class="flex items-center gap-3 mb-4">
-              <div class="w-10 h-10 rounded-xl bg-cyan-100 text-cyan-700 flex items-center justify-center font-bold">
-                <i data-lucide="building-2" class="w-5 h-5"></i>
+            <div class="flex items-center justify-between gap-3 mb-4">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-sky-100 text-sky-700 flex items-center justify-center font-bold">
+                  <i data-lucide="flask-conical" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <span class="text-xs font-mono font-semibold uppercase text-sky-600">Secondary Track &bull; Entrenched R&amp;D (TRL 2–3)</span>
+                  <h3 class="text-xl font-bold text-slate-900">Long-Horizon SAR &amp; Dual-Use Tactical Research</h3>
+                </div>
               </div>
-              <div>
-                <span class="text-xs font-mono font-semibold uppercase text-cyan-600">Commercial & Civic Resilience</span>
-                <h3 class="text-xl font-bold text-slate-900">Critical Infrastructure & Emergency Response</h3>
-              </div>
+              <span class="px-2.5 py-1 rounded-full text-[11px] font-mono font-bold bg-sky-100 text-sky-800">R&amp;D Lab Phase</span>
             </div>
 
             <ul class="space-y-4 text-sm text-slate-600 my-6">
               <li class="flex items-start gap-3">
-                <i data-lucide="check" class="w-5 h-5 text-cyan-600 shrink-0 mt-0.5"></i>
-                <span><strong>Disaster Recovery & Hurricane/Wildfire Comms:</strong> Deploying rapid ad-hoc mesh networks when cellular and power infrastructure are destroyed (Katrina & Bay St. Louis operational model).</span>
+                <i data-lucide="microscope" class="w-5 h-5 text-sky-600 shrink-0 mt-0.5"></i>
+                <span><strong>GPS-Denied Canyon SAR Trilateration (Algorithmic R&amp;D):</strong> Investigating weighted nonlinear least-squares (WNLLS) RSSI ranging fused with barometric altitude locking to localize missing hikers or responders when steep canyon walls block GNSS satellites.</span>
               </li>
               <li class="flex items-start gap-3">
-                <i data-lucide="check" class="w-5 h-5 text-cyan-600 shrink-0 mt-0.5"></i>
-                <span><strong>Nuclear & HAZMAT Emergency Response:</strong> Continuous transmission of low-bandwidth radiation detector instruments alongside body-worn video for decontamination crews.</span>
+                <i data-lucide="microscope" class="w-5 h-5 text-sky-600 shrink-0 mt-0.5"></i>
+                <span><strong>Wildland Fire-Line Barometric Micro-Fronts (Experimental):</strong> Researching how ad-hoc drop nodes deployed around a wildfire perimeter can detect sudden pressure-gradient (&nabla;P) wind reversals before they reach crews in deep ravines.</span>
               </li>
               <li class="flex items-start gap-3">
-                <i data-lucide="check" class="w-5 h-5 text-cyan-600 shrink-0 mt-0.5"></i>
-                <span><strong>Industrial IoT & Remote Facilities:</strong> High-bandwidth telemetry mesh across mining complexes, pipeline pumping stations, and rail terminals.</span>
+                <i data-lucide="microscope" class="w-5 h-5 text-sky-600 shrink-0 mt-0.5"></i>
+                <span><strong>Dual-Use Resilient Mesh &amp; C2 Interop (Future SBIR/STTR Track):</strong> Early-stage protocol research into contested-spectrum sub-GHz link resilience and lightweight Cursor-on-Target (CoT) bridging for civil defense and tactical edge evaluation.</span>
               </li>
             </ul>
           </div>
 
-          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-500">
-            <strong>Key Procurement Vehicle:</strong> California SB/DVBE Direct Award, Municipal Master Agreements, and Cal OES Emergency Grants.
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-600">
+            <strong>R&amp;D Funding &amp; Exploration Vehicles:</strong> Open-source public-interest grants (NLnet NGI Zero), NSF SBIR Phase I deep-tech research pitches, and California SB/DVBE R&amp;D prototyping.
           </div>
         </div>
       </div>
@@ -1445,9 +1481,9 @@
     // DATA & APPLICATION STATE MANAGEMENT
     // ==========================================
     const DEFAULT_APP_STATE = {
-      simDistance: 1800,
-      simFrequency: "2400",
-      simTerrain: "los",
+      simDistance: 2400,
+      simFrequency: "915",
+      simTerrain: "canyon",
       simJamming: 10,
       streams: { video: true, rad: true, sigint: false },
       dvbeType: "it-software",
@@ -1516,43 +1552,43 @@
     // Architecture Layer Data
     const ARCHITECTURE_DATA = {
       1: {
-        title: "Tier 1: Physical Sensor & Radio Ingestion Layer",
-        badge: "Raw Signal Ingestion",
-        details: "Ingests raw digital and analog telemetry from edge hardware: EO/IR cameras, FLIR pods, unattended ground sensors (UGS), CBRN detectors, and software-defined radios (SDRs). Connects through ruggedized M8/M12 industrial connectors and military RJ45 Ethernet ports.",
+        title: "Tier 1: COTS 915 MHz Pocket Radios & Environmental Sensors",
+        badge: "Public-Assist Hardware Bridge",
+        details: "Pairs ordinary Android/iOS smartphones or solar field enclosures with ~$35 commercial off-the-shelf 915 MHz / 868 MHz LoRa transceivers (Semtech SX1262 / nRF52840 / ESP32-S3) over Bluetooth Low Energy (BLE GATT) or USB-Serial OTG. Ingests smartphone MEMS barometers alongside external I2C BMP280/BME680 atmospheric, soil-moisture, and leaf-wetness probes.",
         specs: [
-          { label: "Data Protocols", val: "RTSP, GigE Vision, CoT (Cursor-on-Target), Serial NMEA" },
-          { label: "Sampling Rate", val: "Up to 1.2 GSPS across SDR receiver slices" },
-          { label: "Ingestion Latency", val: "&lt; 1.8 ms from sensor aperture to node buffer" }
+          { label: "Hardware Interfaces", val: "BLE GATT (WebBluetooth / Android) & USB-Serial OTG (115200 bps)" },
+          { label: "Target Radio Silicon", val: "COTS 915 MHz US ISM / 868 MHz EU LoRa (SX1262, up to +22 dBm)" },
+          { label: "Sensor Inputs", val: "Phone MEMS Barometer, I2C BMP280/BME680, Capacitive Soil/Frost Probes" }
         ]
       },
       2: {
-        title: "Tier 2: Autonomous Ad-Hoc Mesh Transport Layer",
-        badge: "Dynamic Multi-Hop Backhaul",
-        details: "Our proprietary dynamic mesh protocol executes decentralized neighbor discovery and link metric evaluation. Packets route around obstructed paths without centralized master-node bottlenecks, sustaining communications through walls, hangars, and complex shipboard bulkheads.",
+        title: "Tier 2: Compact 24–38 Byte Free-Payload LoRa Mesh Transport",
+        badge: "Zero-Subscription Sub-GHz Relay",
+        details: "Verbose JSON strings quickly saturate low-bitrate LoRa channels. MeshMule-Core packs coordinates, barometric altitude, pressure, and sensor flags into deterministic 24–38 byte binary frames protected by CRC-16/CCITT verification. High-elevation solar rim repeaters relay packets out of steep river gorges with zero cellular or satellite airtime fees ($0/mo).",
         specs: [
-          { label: "Routing Protocol", val: "49-Mesh Optimized Link State + Latency Vector" },
-          { label: "Hop Limit", val: "Up to 16 hops with sub-25ms cumulative jitter" },
-          { label: "Healing Time", val: "&lt; 380 ms upon sudden relay node termination" }
+          { label: "Binary Frame Size", val: "24 to 38 Bytes (Fixed-Point Bitwise Encoding + CRC-16/CCITT)" },
+          { label: "Multi-Hop Discipline", val: "Deterministic Packet Deduplication Cache & Hop-Count TTL" },
+          { label: "Subscription Cost", val: "$0/month over Unlicensed Part 15 ISM 902–928 MHz Spectrum" }
         ]
       },
       3: {
-        title: "Tier 3: Distributed Edge AI & Data Fusion Engine",
-        badge: "Localized Neural Inference",
-        details: "High-level neural networks are compressed via 8-bit integer quantization (INT8) and knowledge distillation to run directly on power-constrained ARM Cortex and RISC-V edge processors. Performs automatic video target detection, sensor fusion, and anomalous RF beacon identification.",
+        title: "Tier 3: Barometric Phased-Array (\u2207P) & RF Moisture Tomography",
+        badge: "Distributed Physics Solvers (TRL 3–4)",
+        details: "Synchronizes barometric readings across 3+ dispersed hiker, park, or vineyard nodes using hypsometric elevation normalization to solve the horizontal pressure gradient vector (\u2207P) via least-squares plane fitting. Simultaneously evaluates peer-to-peer RSSI/SNR link attenuation against free-space baselines to infer localized rain-squall or canopy moisture corridors.",
         specs: [
-          { label: "Inference Engine", val: "ONNX Runtime & TensorRT-Edge Optimized" },
-          { label: "Power Budget", val: "Under 4.5 Watts during continuous real-time inference" },
-          { label: "Fusion Algorithm", val: "Adaptive Extended Kalman Filter (EKF) Multi-Target" }
+          { label: "Pressure Gradient Solver", val: "Hypsometric Normalization + Planar Least-Squares (\u2202P/\u2202x, \u2202P/\u2202y in hPa/km)" },
+          { label: "RF Tomography Model", val: "ITU-R P.838-3 Specific Attenuation & Log-Distance Baseline Differencing" },
+          { label: "R&D Localization (TRL 2–3)", val: "Weighted Nonlinear Least-Squares (WNLLS) Range-Ring Trilateration" }
         ]
       },
       4: {
-        title: "Tier 4: Command & Presentation Layer (COP & ATAK)",
-        badge: "Common Operational Picture",
-        details: "Eliminates operator silos by formatting all fused tracks into standardized military and civil formats. Feeds directly into Android Tactical Assault Kit (ATAK), Windows Tactical Assault Kit (WinTAK), browser-based geospatial dashboards, and military command networks.",
+        title: "Tier 4: Offline Field, Park, Ag & R&D SAR Overlays",
+        badge: "BiteWindow & Open GeoJSON Feeds",
+        details: "Presents live peer waypoints, canyon-rim relay health, barometric squall vectors, and agricultural frost-inversion alerts inside offline-first mobile maps (BiteWindow) or exports standard GeoJSON and Cursor-on-Target (CoT) feeds for park rangers, agricultural co-ops, and wilderness search-and-rescue teams.",
         specs: [
-          { label: "Output Formats", val: "Cursor-on-Target (CoT), JSON-REST, WebRTC Video" },
-          { label: "Map Interop", val: "Vector Tiles, GeoJSON, NATO STANAG 4586 Feeds" },
-          { label: "Payload Integrity", val: "CRC-16/CCITT Frame Verification + AES-256 Channel Keying" }
+          { label: "Public-Assist App", val: "BiteWindow Offline Tidal, Swell, Canyon & Barometric Field HUD" },
+          { label: "Park & Ag Exports", val: "Offline GeoJSON Contours, CSV Telemetry Logs & Frost Threshold Alerts" },
+          { label: "R&D Interop (TRL 2–3)", val: "Experimental Cursor-on-Target (CoT) XML & WNLLS Covariance Ellipses" }
         ]
       }
     };
@@ -1683,41 +1719,97 @@
     }
 
     // ==========================================
-    // TACTICAL MESH SIMULATOR CANVAS & MATH
+    // TOPOGRAPHIC CANYON, PARK & AG MESH SIMULATOR
     // ==========================================
     let canvas, ctx;
+    let activePreset = 'inl';
+    let latestRssiDbm = -76;
+    let latestSnrDb = 11.4;
+    let latestLinkMarginDb = 44.0;
+    let latestHopCount = 2;
+
+    // Normalized node layout (nx, ny in [0..1] within the upper 73% topographic map viewport)
     let simNodes = [
-      { id: "base", name: "Base ECN Node", x: 60, y: 190, type: "base" },
-      { id: "relay1", name: "Relay Node A", x: 170, y: 100, type: "drop" },
-      { id: "relay2", name: "Relay Node B", x: 260, y: 260, type: "drop" },
-      { id: "body1", name: "Patrol Alpha", x: 360, y: 130, type: "body" },
-      { id: "body2", name: "Patrol Bravo", x: 440, y: 230, type: "body" }
+      { id: "base", name: "Trailhead Kiosk Base", role: "GATEWAY", nx: 0.13, ny: 0.72, x: 75, y: 245, type: "base", elev: 1180 },
+      { id: "relay1", name: "Granite Rim Solar Relay", role: "2,880' RIM REPEATER", nx: 0.36, ny: 0.22, x: 210, y: 78, type: "drop", elev: 2880 },
+      { id: "relay2", name: "South Saddle Solar Node", role: "2,240' RIDGE RELAY", nx: 0.68, ny: 0.80, x: 395, y: 272, type: "drop", elev: 2240 },
+      { id: "body1", name: "Gorge Angler Pocket Node", role: "440' CANYON FLOOR", nx: 0.52, ny: 0.54, x: 300, y: 185, type: "body", elev: 440 },
+      { id: "body2", name: "Switchback Hiker / MTB", role: "1,640' BENCH TRAIL", nx: 0.82, ny: 0.36, x: 475, y: 125, type: "body", elev: 1640 }
     ];
     let selectedNode = null;
     let animFrame = null;
     let pulseOffset = 0;
+
+    // Procedural Canyon / Ridge / Terrace Digital Elevation Model (DEM) in feet MSL (400 ft gorge to 3,050 ft granite rim)
+    function sampleTerrainElevation(nx, ny, mode) {
+      // River gorge centerline winds diagonally from top-left (0.06, 0.16) through (0.50, 0.54) to (0.94, 0.86)
+      const riverY = 0.16 + 0.70 * nx + 0.07 * Math.sin(nx * Math.PI * 2.2);
+      const distToGorge = Math.abs(ny - riverY);
+
+      if (mode === 'ag') {
+        // Foothill terraced vineyard & frost drainage basin (520 ft basin up to 1,850 ft foothill bench)
+        const raw = 520 + Math.pow(Math.min(1, distToGorge * 2.4), 0.82) * 1350 + 90 * Math.cos(nx * 5.0);
+        // Quantize slightly to reflect terraced vineyard contour benches
+        return Math.round(raw / 60) * 60;
+      }
+
+      // Steep V-shaped river gorge rising to North Granite Rim (ny < riverY) and South Saddle Ridge (ny > riverY)
+      const canyonWall = Math.pow(Math.min(1, distToGorge * 2.85), 0.72) * 2420;
+      const ridgeMod = 180 * Math.sin(nx * Math.PI * 2.6 + 0.6) + (ny < riverY ? 160 : -60);
+      return Math.round(Math.max(410, Math.min(3120, 420 + canyonWall + ridgeMod)));
+    }
+
+    function syncNodePixelPositions(w, mapH) {
+      for (let n of simNodes) {
+        if (selectedNode !== n) {
+          n.x = n.nx * w;
+          n.y = n.ny * mapH;
+        } else {
+          n.nx = Math.max(0.06, Math.min(0.94, n.x / w));
+          n.ny = Math.max(0.10, Math.min(0.90, n.y / mapH));
+        }
+        n.elev = sampleTerrainElevation(n.nx, n.ny, activePreset);
+      }
+    }
 
     function initMeshCanvas() {
       canvas = document.getElementById('mesh-canvas');
       if (!canvas) return;
       ctx = canvas.getContext('2d');
 
-      // Set proper canvas resolution for retina displays
       const dpr = window.devicePixelRatio || 1;
       const rect = canvas.getBoundingClientRect();
       canvas.width = rect.width * dpr;
       canvas.height = rect.height * dpr;
       ctx.scale(dpr, dpr);
 
-      // Mouse drag handlers
+      const mapH = rect.height * 0.73;
+      syncNodePixelPositions(rect.width, mapH);
+
+      // Mouse & Touch drag handlers
       canvas.addEventListener('mousedown', onCanvasMouseDown);
       window.addEventListener('mouseup', onCanvasMouseUp);
-      canvas.addEventListener('mousemove', onCanvasMouseMove);
+      window.addEventListener('mousemove', onCanvasMouseMove);
+
+      canvas.addEventListener('touchstart', (e) => {
+        if (e.touches.length === 1) {
+          const t = e.touches[0];
+          onCanvasMouseDown({ clientX: t.clientX, clientY: t.clientY, preventDefault: () => e.preventDefault() });
+        }
+      }, { passive: false });
+      window.addEventListener('touchmove', (e) => {
+        if (selectedNode && e.touches.length === 1) {
+          const t = e.touches[0];
+          onCanvasMouseMove({ clientX: t.clientX, clientY: t.clientY });
+        }
+      }, { passive: true });
+      window.addEventListener('touchend', onCanvasMouseUp);
 
       startSimRenderLoop();
     }
 
     function onCanvasMouseDown(e) {
+      if (!canvas) return;
       const rect = canvas.getBoundingClientRect();
       const mouseX = e.clientX - rect.x;
       const mouseY = e.clientY - rect.y;
@@ -1725,18 +1817,23 @@
       for (let n of simNodes) {
         const dx = mouseX - n.x;
         const dy = mouseY - n.y;
-        if (Math.sqrt(dx*dx + dy*dy) < 18) {
+        if (Math.sqrt(dx * dx + dy * dy) < 22) {
           selectedNode = n;
+          if (e.preventDefault) e.preventDefault();
           break;
         }
       }
     }
 
     function onCanvasMouseMove(e) {
-      if (!selectedNode) return;
+      if (!selectedNode || !canvas) return;
       const rect = canvas.getBoundingClientRect();
-      selectedNode.x = Math.max(30, Math.min(rect.width - 30, e.clientX - rect.x));
-      selectedNode.y = Math.max(30, Math.min(rect.height - 30, e.clientY - rect.y));
+      const mapH = rect.height * 0.73;
+      selectedNode.x = Math.max(36, Math.min(rect.width - 36, e.clientX - rect.x));
+      selectedNode.y = Math.max(28, Math.min(mapH - 22, e.clientY - rect.y));
+      selectedNode.nx = selectedNode.x / rect.width;
+      selectedNode.ny = selectedNode.y / mapH;
+      selectedNode.elev = sampleTerrainElevation(selectedNode.nx, selectedNode.ny, activePreset);
       updateSimulationMetricsOnly();
     }
 
@@ -1747,36 +1844,277 @@
     function startSimRenderLoop() {
       function render() {
         drawSimCanvas();
-        pulseOffset += 0.05;
+        pulseOffset += 0.018;
         animFrame = requestAnimationFrame(render);
       }
       render();
     }
 
+    // Evaluates whether terrain ridge blocks direct line-of-sight between n1 and n2
+    function evaluateLinkTerrainClearance(n1, n2) {
+      let maxObstructionFt = -9999;
+      const samples = 14;
+      for (let s = 1; s < samples; s++) {
+        const t = s / samples;
+        const sx = n1.nx + (n2.nx - n1.nx) * t;
+        const sy = n1.ny + (n2.ny - n1.ny) * t;
+        const terrainZ = sampleTerrainElevation(sx, sy, activePreset);
+        const losZ = n1.elev + (n2.elev - n1.elev) * t;
+        const diff = terrainZ - losZ;
+        if (diff > maxObstructionFt) maxObstructionFt = diff;
+      }
+      return maxObstructionFt; // Positive means terrain rises above direct LOS chord
+    }
+
     function drawSimCanvas() {
       if (!ctx || !canvas) return;
       const rect = canvas.getBoundingClientRect();
-      ctx.clearRect(0, 0, rect.width, rect.height);
+      const w = rect.width;
+      const h = rect.height;
+      const mapH = Math.floor(h * 0.73);
+      const profY = mapH;
+      const profH = h - mapH;
 
-      // Draw faint background grid
-      ctx.strokeStyle = "#e2e8f0";
-      ctx.lineWidth = 0.8;
-      const gridSize = 40;
-      for (let x = 0; x < rect.width; x += gridSize) {
+      syncNodePixelPositions(w, mapH);
+      ctx.clearRect(0, 0, w, h);
+
+      // =====================================================
+      // 1. UPPER VIEWPORT: TOPOGRAPHIC GIS & TELEMETRY MAP
+      // =====================================================
+      const bgGrad = ctx.createLinearGradient(0, 0, w, mapH);
+      if (activePreset === 'ag') {
+        bgGrad.addColorStop(0, "#09191f");
+        bgGrad.addColorStop(0.5, "#07141c");
+        bgGrad.addColorStop(1, "#0b1d19");
+      } else {
+        bgGrad.addColorStop(0, "#06101e");
+        bgGrad.addColorStop(0.5, "#09172a");
+        bgGrad.addColorStop(1, "#071222");
+      }
+      ctx.fillStyle = bgGrad;
+      ctx.fillRect(0, 0, w, mapH);
+
+      // Subtle UTM / Coordinate Graticule Grid
+      ctx.strokeStyle = "rgba(56, 189, 248, 0.06)";
+      ctx.lineWidth = 0.75;
+      const gridStep = 48;
+      for (let gx = gridStep; gx < w; gx += gridStep) {
         ctx.beginPath();
-        ctx.moveTo(x, 0);
-        ctx.lineTo(x, rect.height);
+        ctx.moveTo(gx, 0);
+        ctx.lineTo(gx, mapH);
         ctx.stroke();
       }
-      for (let y = 0; y < rect.height; y += gridSize) {
+      for (let gy = gridStep; gy < mapH; gy += gridStep) {
         ctx.beginPath();
-        ctx.moveTo(0, y);
-        ctx.lineTo(rect.width, y);
+        ctx.moveTo(0, gy);
+        ctx.lineTo(w, gy);
         ctx.stroke();
       }
 
-      // Draw dynamic link lines between nodes within threshold
-      const maxLinkDist = 240;
+      // Helper for River Gorge Centerline Y(x)
+      const getRiverY = (px) => {
+        const nx = px / w;
+        return (0.16 + 0.70 * nx + 0.07 * Math.sin(nx * Math.PI * 2.2)) * mapH;
+      };
+
+      // Topographic Elevation Contour Lines Flanking the Canyon Gorge (North & South Walls)
+      const contourOffsets = [
+        { offset: 0.08, elev: "800'", major: false },
+        { offset: 0.16, elev: "1,400'", major: true },
+        { offset: 0.25, elev: "2,100'", major: false },
+        { offset: 0.35, elev: "2,850' RIM", major: true },
+        { offset: 0.45, elev: "3,100'", major: false }
+      ];
+
+      contourOffsets.forEach((c, idx) => {
+        [-1, 1].forEach((side) => {
+          ctx.beginPath();
+          let labelX = 0, labelY = 0;
+          for (let px = 0; px <= w; px += 12) {
+            const nx = px / w;
+            const ry = getRiverY(px);
+            const wave = Math.sin(nx * 9.5 + idx * 1.3 + side) * 7 + Math.cos(nx * 4.2 - idx) * 5;
+            const cy = ry + side * (c.offset * mapH) + wave;
+            if (px === 0) ctx.moveTo(px, cy);
+            else ctx.lineTo(px, cy);
+
+            if (side === -1 && Math.abs(px - w * (0.22 + idx * 0.14)) < 7) {
+              labelX = px;
+              labelY = cy;
+            }
+          }
+          if (activePreset === 'ag') {
+            ctx.strokeStyle = c.major ? "rgba(52, 211, 153, 0.24)" : "rgba(52, 211, 153, 0.11)";
+          } else {
+            ctx.strokeStyle = c.major ? "rgba(56, 189, 248, 0.23)" : "rgba(148, 163, 184, 0.11)";
+          }
+          ctx.lineWidth = c.major ? 1.25 : 0.75;
+          ctx.stroke();
+
+          if (c.major && labelY > 18 && labelY < mapH - 18) {
+            ctx.fillStyle = activePreset === 'ag' ? "rgba(110, 231, 183, 0.65)" : "rgba(125, 211, 252, 0.6)";
+            ctx.font = "600 8.5px 'JetBrains Mono', monospace";
+            ctx.textAlign = "left";
+            ctx.fillText(c.elev, labelX + 4, labelY - 3);
+          }
+        });
+      });
+
+      // Shaded Granite Ridge Crest Line (North Canyon Rim)
+      ctx.save();
+      ctx.beginPath();
+      for (let px = 0; px <= w; px += 16) {
+        const nx = px / w;
+        const ry = getRiverY(px) - 0.34 * mapH + Math.sin(nx * 5.2) * 8;
+        if (px === 0) ctx.moveTo(px, ry);
+        else ctx.lineTo(px, ry);
+      }
+      ctx.strokeStyle = "rgba(251, 191, 36, 0.28)";
+      ctx.lineWidth = 2;
+      ctx.setLineDash([3, 5]);
+      ctx.stroke();
+      ctx.restore();
+
+      // Deep River Gorge Channel (Outer Bank Glow + Inner Thalweg + Flow Chevrons)
+      ctx.save();
+      ctx.beginPath();
+      for (let px = 0; px <= w; px += 8) {
+        const ry = getRiverY(px);
+        if (px === 0) ctx.moveTo(px, ry);
+        else ctx.lineTo(px, ry);
+      }
+      ctx.strokeStyle = "rgba(2, 132, 199, 0.22)";
+      ctx.lineWidth = 22;
+      ctx.lineCap = "round";
+      ctx.stroke();
+
+      ctx.strokeStyle = "rgba(14, 165, 233, 0.45)";
+      ctx.lineWidth = 7;
+      ctx.stroke();
+
+      ctx.strokeStyle = "#38bdf8";
+      ctx.lineWidth = 2;
+      ctx.stroke();
+      ctx.restore();
+
+      // Gorge Label along river channel
+      ctx.fillStyle = "rgba(125, 211, 252, 0.72)";
+      ctx.font = "600 9px 'JetBrains Mono', monospace";
+      ctx.textAlign = "left";
+      ctx.fillText(
+        activePreset === 'ag' ? "COLD-AIR DRAINAGE CREEK (520' MSL)" : "AMERICAN / FEATHER CANYON GORGE (420' MSL)",
+        w * 0.48,
+        getRiverY(w * 0.52) + 18
+      );
+
+      // Backcountry Switchback Trail / Ranch Access Road
+      ctx.save();
+      ctx.beginPath();
+      const baseNode = simNodes[0];
+      const rimNode = simNodes[1];
+      const gorgeNode = simNodes[3];
+      const hikerNode = simNodes[4];
+      ctx.moveTo(baseNode.x, baseNode.y);
+      ctx.quadraticCurveTo(w * 0.18, mapH * 0.42, rimNode.x, rimNode.y);
+      ctx.bezierCurveTo(w * 0.44, mapH * 0.28, w * 0.41, mapH * 0.46, gorgeNode.x, gorgeNode.y);
+      ctx.quadraticCurveTo(w * 0.69, mapH * 0.48, hikerNode.x, hikerNode.y);
+      ctx.strokeStyle = "rgba(245, 158, 11, 0.48)";
+      ctx.lineWidth = 1.5;
+      ctx.setLineDash([4, 4]);
+      ctx.stroke();
+      ctx.restore();
+
+      // =====================================================
+      // 2. SCENARIO-SPECIFIC SCIENTIFIC & FIELD OVERLAYS
+      // =====================================================
+      if (activePreset === 'park') {
+        // Remote Park Watershed Boundary & Barometric Phased-Array (Nabla-P) Isobar Front Vectors
+        ctx.save();
+        ctx.strokeStyle = "rgba(16, 185, 129, 0.35)";
+        ctx.lineWidth = 1.2;
+        ctx.setLineDash([8, 4]);
+        ctx.strokeRect(18, 28, w - 36, mapH - 42);
+        ctx.setLineDash([]);
+
+        ctx.fillStyle = "rgba(52, 211, 153, 0.85)";
+        ctx.font = "600 8.5px 'JetBrains Mono', monospace";
+        ctx.textAlign = "left";
+        ctx.fillText("PARK WATERSHED RESEARCH BOUNDARY | BAROMETRIC PHASED-ARRAY (\u2207P = -1.9 hPa/km NW)", 26, 41);
+
+        // Animated Barometric Pressure Front Isobar & Wind Vectors
+        const frontShift = (pulseOffset * 18) % 90;
+        for (let k = 0; k < 3; k++) {
+          const fx = w * 0.18 + k * 130 + frontShift * 0.6;
+          ctx.beginPath();
+          ctx.moveTo(fx - 35, 36);
+          ctx.quadraticCurveTo(fx + 10, mapH * 0.5, fx - 25, mapH - 20);
+          ctx.strokeStyle = `rgba(56, 189, 248, ${0.28 - k * 0.06})`;
+          ctx.lineWidth = 1.4;
+          ctx.stroke();
+
+          // Pressure tags
+          ctx.fillStyle = "rgba(125, 211, 252, 0.75)";
+          ctx.fillText(`${1008 + k * 2} hPa`, fx - 18, 52 + k * 14);
+        }
+        ctx.restore();
+      } else if (activePreset === 'ag') {
+        // Foothill Ag & Vineyard Frost-Inversion Microclimate Zones
+        ctx.save();
+        const blocks = [
+          { x: w * 0.24, y: mapH * 0.16, bw: w * 0.24, bh: mapH * 0.22, label: "UPPER BENCH VINEYARD (41.8°F | 24% VWC)", color: "rgba(16, 185, 129, 0.14)", stroke: "rgba(16, 185, 129, 0.45)" },
+          { x: w * 0.42, y: mapH * 0.44, bw: w * 0.25, bh: mapH * 0.22, label: "FROST DRAINAGE BASIN (31.4°F INV ALERT)", color: "rgba(56, 189, 248, 0.16)", stroke: "rgba(56, 189, 248, 0.55)" }
+        ];
+        blocks.forEach(b => {
+          ctx.fillStyle = b.color;
+          ctx.strokeStyle = b.stroke;
+          ctx.lineWidth = 1;
+          ctx.fillRect(b.x, b.y, b.bw, b.bh);
+          ctx.strokeRect(b.x, b.y, b.bw, b.bh);
+          ctx.fillStyle = "#e2e8f0";
+          ctx.font = "600 8px 'JetBrains Mono', monospace";
+          ctx.textAlign = "left";
+          ctx.fillText(b.label, b.x + 6, b.y + 13);
+        });
+        ctx.restore();
+      } else if (activePreset === 'urban') {
+        // R&D Mode (TRL 3): GPS-Denied Canyon SAR WNLLS Range Rings & Covariance Ellipse around Gorge Beacon
+        const target = simNodes[3];
+        const anchors = [simNodes[0], simNodes[1], simNodes[2]];
+        ctx.save();
+        anchors.forEach((anc) => {
+          const r = Math.hypot(target.x - anc.x, target.y - anc.y);
+          ctx.beginPath();
+          ctx.arc(anc.x, anc.y, r, 0, Math.PI * 2);
+          ctx.strokeStyle = "rgba(245, 158, 11, 0.22)";
+          ctx.lineWidth = 1;
+          ctx.setLineDash([4, 4]);
+          ctx.stroke();
+        });
+        ctx.setLineDash([]);
+
+        // Pulsing 95% Uncertainty Covariance Ellipse around target
+        const pulseScale = 1 + 0.15 * Math.sin(pulseOffset * 4);
+        ctx.translate(target.x, target.y);
+        ctx.rotate(-0.38);
+        ctx.beginPath();
+        ctx.ellipse(0, 0, 32 * pulseScale, 19 * pulseScale, 0, 0, Math.PI * 2);
+        ctx.fillStyle = "rgba(245, 158, 11, 0.16)";
+        ctx.fill();
+        ctx.strokeStyle = "rgba(251, 191, 36, 0.85)";
+        ctx.lineWidth = 1.5;
+        ctx.stroke();
+        ctx.restore();
+
+        ctx.fillStyle = "#fbbf24";
+        ctx.font = "700 8.5px 'JetBrains Mono', monospace";
+        ctx.textAlign = "center";
+        ctx.fillText("WNLLS COVARIANCE ELLIPSE (\u00b114m CEP | BARO-LOCKED)", target.x, target.y - 26);
+      }
+
+      // =====================================================
+      // 3. TERRAIN-AWARE RF LINKS & MULTI-HOP RELAY PATHS
+      // =====================================================
+      const maxLinkDist = w * 0.56;
       for (let i = 0; i < simNodes.length; i++) {
         for (let j = i + 1; j < simNodes.length; j++) {
           const n1 = simNodes[i];
@@ -1784,46 +2122,106 @@
           const dist = Math.hypot(n1.x - n2.x, n1.y - n2.y);
 
           if (dist < maxLinkDist) {
-            const alpha = Math.max(0.15, 1 - (dist / maxLinkDist));
-            ctx.strokeStyle = `rgba(2, 132, 199, ${alpha})`;
-            ctx.lineWidth = 2;
-            ctx.setLineDash([6, 4]);
-            ctx.lineDashOffset = -pulseOffset * 10;
-            ctx.beginPath();
-            ctx.moveTo(n1.x, n1.y);
-            ctx.lineTo(n2.x, n2.y);
-            ctx.stroke();
-            ctx.setLineDash([]); // reset
+            const ridgeDiff = evaluateLinkTerrainClearance(n1, n2);
+            const isRimRelayLink = (n1.type === 'drop' || n2.type === 'drop');
+            const isShadowedByWall = !isRimRelayLink && ridgeDiff > 180;
 
-            // Link packet particle pulse
-            const t = (pulseOffset % 1);
-            const px = n1.x + (n2.x - n1.x) * t;
-            const py = n1.y + (n2.y - n1.y) * t;
-            ctx.fillStyle = "#06b6d4";
-            ctx.beginPath();
-            ctx.arc(px, py, 3, 0, Math.PI * 2);
-            ctx.fill();
+            if (isShadowedByWall) {
+              // Direct Canyon-Floor-to-Base link blocked by granite canyon wall
+              ctx.save();
+              ctx.strokeStyle = "rgba(248, 113, 113, 0.42)";
+              ctx.lineWidth = 1.4;
+              ctx.setLineDash([3, 5]);
+              ctx.beginPath();
+              ctx.moveTo(n1.x, n1.y);
+              ctx.lineTo(n2.x, n2.y);
+              ctx.stroke();
+              ctx.restore();
+
+              const mx = (n1.x + n2.x) * 0.5;
+              const my = (n1.y + n2.y) * 0.5;
+              ctx.fillStyle = "rgba(127, 29, 29, 0.85)";
+              ctx.fillRect(mx - 48, my - 8, 96, 15);
+              ctx.fillStyle = "#fca5a5";
+              ctx.font = "600 8px 'JetBrains Mono', monospace";
+              ctx.textAlign = "center";
+              ctx.fillText("RIDGE SHADOWED", mx, my + 2.5);
+            } else {
+              // Active Sub-GHz LoRa Link clearing or relaying across the rim
+              const alpha = Math.max(0.28, 1 - (dist / (maxLinkDist * 1.15)));
+              const linkColor = isRimRelayLink ? `rgba(16, 185, 129, ${alpha})` : `rgba(56, 189, 248, ${alpha})`;
+
+              // Faint 1st Fresnel Zone envelope glow
+              ctx.save();
+              ctx.strokeStyle = isRimRelayLink ? "rgba(16, 185, 129, 0.12)" : "rgba(56, 189, 248, 0.10)";
+              ctx.lineWidth = 8;
+              ctx.beginPath();
+              ctx.moveTo(n1.x, n1.y);
+              ctx.lineTo(n2.x, n2.y);
+              ctx.stroke();
+
+              // Animated dashed LoRa carrier
+              ctx.strokeStyle = linkColor;
+              ctx.lineWidth = 2.0;
+              ctx.setLineDash([7, 4]);
+              ctx.lineDashOffset = -pulseOffset * 42;
+              ctx.beginPath();
+              ctx.moveTo(n1.x, n1.y);
+              ctx.lineTo(n2.x, n2.y);
+              ctx.stroke();
+              ctx.restore();
+
+              // Animated 28-byte binary frame pulse packet
+              const t = (pulseOffset * 1.4 + (i + j) * 0.23) % 1;
+              const px = n1.x + (n2.x - n1.x) * t;
+              const py = n1.y + (n2.y - n1.y) * t;
+              ctx.fillStyle = isRimRelayLink ? "#34d399" : "#38bdf8";
+              ctx.beginPath();
+              ctx.arc(px, py, 3.4, 0, Math.PI * 2);
+              ctx.fill();
+
+              // Link dBm badge on primary rim-to-gorge hop
+              if ((n1.id === 'relay1' && n2.id === 'body1') || (n1.id === 'base' && n2.id === 'relay1')) {
+                const mx = (n1.x + n2.x) * 0.5;
+                const my = (n1.y + n2.y) * 0.5;
+                const hopRssi = n2.id === 'body1' ? latestRssiDbm : Math.min(-58, latestRssiDbm + 6);
+                ctx.fillStyle = "rgba(15, 23, 42, 0.85)";
+                ctx.strokeStyle = "rgba(52, 211, 153, 0.45)";
+                ctx.lineWidth = 1;
+                ctx.fillRect(mx - 36, my - 9, 72, 15);
+                ctx.strokeRect(mx - 36, my - 9, 72, 15);
+                ctx.fillStyle = "#6ee7b7";
+                ctx.font = "600 8px 'JetBrains Mono', monospace";
+                ctx.textAlign = "center";
+                ctx.fillText(`${hopRssi} dBm LOS`, mx, my + 1.5);
+              }
+            }
           }
         }
       }
 
-      // Draw Nodes
+      // =====================================================
+      // 4. DRAW INTERACTIVE MESH NODES WITH ELEVATION TAGS
+      // =====================================================
       for (let n of simNodes) {
-        // Outer glow circle
+        const isSelected = (selectedNode === n);
+        const radius = isSelected ? 10 : 8;
+
+        // Outer RF coverage halo
         ctx.beginPath();
-        ctx.arc(n.x, n.y, 16, 0, Math.PI * 2);
+        ctx.arc(n.x, n.y, isSelected ? 22 : 17, 0, Math.PI * 2);
         if (n.type === 'base') {
-          ctx.fillStyle = "rgba(2, 132, 199, 0.2)";
+          ctx.fillStyle = "rgba(14, 165, 233, 0.24)";
         } else if (n.type === 'drop') {
-          ctx.fillStyle = "rgba(16, 185, 129, 0.2)";
+          ctx.fillStyle = "rgba(16, 185, 129, 0.26)";
         } else {
-          ctx.fillStyle = "rgba(6, 182, 212, 0.2)";
+          ctx.fillStyle = "rgba(34, 211, 238, 0.24)";
         }
         ctx.fill();
 
-        // Node Core Circle
+        // Core transceiver node
         ctx.beginPath();
-        ctx.arc(n.x, n.y, 8, 0, Math.PI * 2);
+        ctx.arc(n.x, n.y, radius, 0, Math.PI * 2);
         if (n.type === 'base') {
           ctx.fillStyle = "#0284c7";
         } else if (n.type === 'drop') {
@@ -1832,24 +2230,193 @@
           ctx.fillStyle = "#06b6d4";
         }
         ctx.fill();
-        ctx.strokeStyle = "#ffffff";
-        ctx.lineWidth = 2;
+        ctx.strokeStyle = isSelected ? "#fbbf24" : "#f8fafc";
+        ctx.lineWidth = isSelected ? 2.5 : 1.8;
         ctx.stroke();
 
-        // Label
-        ctx.fillStyle = "#1e293b";
-        ctx.font = "10px Inter, sans-serif";
+        // Node Title & Live Elevation Pill
+        const labelText = `${n.name} (${n.elev.toLocaleString()}')`;
+        ctx.font = "600 9.5px 'Inter', sans-serif";
+        const textW = ctx.measureText(labelText).width + 10;
+        const boxX = n.x - textW / 2;
+        const boxY = n.y + 12;
+
+        ctx.fillStyle = "rgba(7, 17, 31, 0.86)";
+        ctx.strokeStyle = "rgba(148, 163, 184, 0.28)";
+        ctx.lineWidth = 1;
+        ctx.fillRect(boxX, boxY, textW, 16);
+        ctx.strokeRect(boxX, boxY, textW, 16);
+
+        ctx.fillStyle = "#f1f5f9";
         ctx.textAlign = "center";
-        ctx.fillText(n.name, n.x, n.y + 24);
+        ctx.fillText(labelText, n.x, boxY + 11.5);
       }
+
+      // Top-Left HUD Header Bar on Map
+      ctx.fillStyle = "rgba(7, 17, 31, 0.84)";
+      ctx.fillRect(10, 8, Math.min(w - 20, 395), 20);
+      ctx.fillStyle = "#38bdf8";
+      ctx.font = "600 9px 'JetBrains Mono', monospace";
+      ctx.textAlign = "left";
+      ctx.fillText("TOPOGRAPHIC DEM: SIERRA / COASTAL CANYON (915 MHz FREE-PAYLOAD MESH)", 16, 21);
+
+      // =====================================================
+      // 5. LOWER VIEWPORT: VERTICAL TERRAIN CROSS-SECTION
+      // =====================================================
+      ctx.fillStyle = "#050d1a";
+      ctx.fillRect(0, profY, w, profH);
+
+      ctx.strokeStyle = "#1e293b";
+      ctx.lineWidth = 1.5;
+      ctx.beginPath();
+      ctx.moveTo(0, profY);
+      ctx.lineTo(w, profY);
+      ctx.stroke();
+
+      // Elevation reference gridlines inside profile (1,000 ft, 2,000 ft, 3,000 ft)
+      const padL = 44;
+      const padR = 24;
+      const plotW = w - padL - padR;
+      const topPad = profY + 22;
+      const botPad = h - 16;
+      const plotH = Math.max(40, botPad - topPad);
+
+      const elevToY = (ft) => {
+        const clamped = Math.max(300, Math.min(3300, ft));
+        return botPad - ((clamped - 300) / 3000) * plotH;
+      };
+
+      [1000, 2000, 3000].forEach(elevFt => {
+        const gy = elevToY(elevFt);
+        ctx.strokeStyle = "rgba(148, 163, 184, 0.14)";
+        ctx.lineWidth = 0.75;
+        ctx.beginPath();
+        ctx.moveTo(padL, gy);
+        ctx.lineTo(w - padR, gy);
+        ctx.stroke();
+
+        ctx.fillStyle = "#64748b";
+        ctx.font = "600 8px 'JetBrains Mono', monospace";
+        ctx.textAlign = "right";
+        ctx.fillText(`${elevFt}'`, padL - 6, gy + 3);
+      });
+
+      // Cross-Section Nodes: Base (left) -> Granite Rim Solar Relay (peak) -> Gorge Node (canyon floor) -> Far Switchback (right)
+      const nBase = simNodes[0];
+      const nRim = simNodes[1];
+      const nGorge = simNodes[3];
+      const nFar = simNodes[4];
+
+      const xBase = padL + 0.06 * plotW;
+      const xRim = padL + 0.36 * plotW;
+      const xGorge = padL + 0.68 * plotW;
+      const xFar = padL + 0.94 * plotW;
+
+      const yBase = elevToY(nBase.elev);
+      const yRim = elevToY(nRim.elev);
+      const yGorge = elevToY(nGorge.elev);
+      const yFar = elevToY(nFar.elev);
+
+      // Draw Shaded Granite Canyon Cross-Section Polygon
+      ctx.beginPath();
+      ctx.moveTo(padL, botPad);
+      ctx.lineTo(padL, yBase + 4);
+      ctx.lineTo(xBase, yBase);
+      ctx.quadraticCurveTo((xBase + xRim) * 0.5, yRim + 10, xRim, yRim);
+      ctx.bezierCurveTo(xRim + plotW * 0.12, yRim + 8, xGorge - plotW * 0.10, yGorge - 4, xGorge, yGorge);
+      ctx.quadraticCurveTo((xGorge + xFar) * 0.5, yFar + 12, xFar, yFar);
+      ctx.lineTo(w - padR, yFar - 3);
+      ctx.lineTo(w - padR, botPad);
+      ctx.closePath();
+
+      const terrGrad = ctx.createLinearGradient(0, topPad, 0, botPad);
+      terrGrad.addColorStop(0, "rgba(30, 58, 138, 0.55)");
+      terrGrad.addColorStop(1, "rgba(15, 23, 42, 0.92)");
+      ctx.fillStyle = terrGrad;
+      ctx.fill();
+
+      ctx.strokeStyle = "rgba(56, 189, 248, 0.5)";
+      ctx.lineWidth = 1.5;
+      ctx.stroke();
+
+      // Blocked Direct Path Line (Base directly through Granite Wall to Gorge Floor)
+      ctx.save();
+      ctx.strokeStyle = "rgba(248, 113, 113, 0.5)";
+      ctx.lineWidth = 1.2;
+      ctx.setLineDash([4, 4]);
+      ctx.beginPath();
+      ctx.moveTo(xBase, yBase);
+      ctx.lineTo(xGorge, yGorge);
+      ctx.stroke();
+      ctx.restore();
+
+      // Active Multi-Hop 1st Fresnel Zone Clearance Arcs: Base -> Rim Solar Repeater -> Gorge Node -> Switchback
+      const hops = [
+        [xBase, yBase, xRim, yRim],
+        [xRim, yRim, xGorge, yGorge],
+        [xGorge, yGorge, xFar, yFar]
+      ];
+      hops.forEach(([x1, y1, x2, y2], idx) => {
+        const midX = (x1 + x2) * 0.5;
+        const midY = (y1 + y2) * 0.5 - 8;
+
+        // 1st Fresnel Zone Envelope
+        ctx.save();
+        ctx.beginPath();
+        ctx.moveTo(x1, y1);
+        ctx.quadraticCurveTo(midX, midY - 7, x2, y2);
+        ctx.quadraticCurveTo(midX, midY + 7, x1, y1);
+        ctx.fillStyle = idx < 2 ? "rgba(16, 185, 129, 0.18)" : "rgba(56, 189, 248, 0.16)";
+        ctx.fill();
+
+        // Center RF Ray
+        ctx.beginPath();
+        ctx.moveTo(x1, y1);
+        ctx.quadraticCurveTo(midX, midY, x2, y2);
+        ctx.strokeStyle = idx < 2 ? "#10b981" : "#38bdf8";
+        ctx.lineWidth = 1.8;
+        ctx.stroke();
+        ctx.restore();
+      });
+
+      // Draw Profile Node Markers
+      [
+        { x: xBase, y: yBase, c: "#0284c7", lbl: "BASE" },
+        { x: xRim, y: yRim, c: "#10b981", lbl: `RIM RELAY (${nRim.elev}')` },
+        { x: xGorge, y: yGorge, c: "#06b6d4", lbl: `GORGE (${nGorge.elev}')` },
+        { x: xFar, y: yFar, c: "#38bdf8", lbl: `TRAIL (${nFar.elev}')` }
+      ].forEach(pt => {
+        ctx.beginPath();
+        ctx.arc(pt.x, pt.y, 4.5, 0, Math.PI * 2);
+        ctx.fillStyle = pt.c;
+        ctx.fill();
+        ctx.strokeStyle = "#ffffff";
+        ctx.lineWidth = 1.2;
+        ctx.stroke();
+
+        ctx.fillStyle = "#cbd5e1";
+        ctx.font = "600 8px 'JetBrains Mono', monospace";
+        ctx.textAlign = "center";
+        ctx.fillText(pt.lbl, pt.x, Math.max(profY + 13, pt.y - 7));
+      });
+
+      // Profile Header Caption
+      ctx.fillStyle = "#94a3b8";
+      ctx.font = "600 8.5px 'JetBrains Mono', monospace";
+      ctx.textAlign = "left";
+      ctx.fillText(
+        `VERTICAL ELEVATION & 1ST FRESNEL PROFILE | ${latestHopCount}-HOP RIM RELAY MARGIN: +${latestLinkMarginDb} dB`,
+        padL,
+        profY + 13
+      );
     }
 
-    // Mathematical Link Budget & Physics Calculation
+    // Mathematical Link Budget & Sub-GHz LoRa Physics Calculation
     function updateSimulation() {
-      const distance = parseInt(document.getElementById('input-distance').value);
-      const freq = parseInt(document.getElementById('input-frequency').value);
-      const terrain = document.getElementById('input-terrain').value;
-      const jamming = parseInt(document.getElementById('input-jamming').value);
+      const distance = parseInt(document.getElementById('input-distance').value) || 2400;
+      const freq = parseInt(document.getElementById('input-frequency').value) || 915;
+      const terrain = document.getElementById('input-terrain').value || 'canyon';
+      const jamming = parseInt(document.getElementById('input-jamming').value) || 0;
 
       const hasVideo = document.getElementById('stream-video').checked;
       const hasRad = document.getElementById('stream-rad').checked;
@@ -1866,72 +2433,75 @@
       document.getElementById('val-distance').textContent = distance.toLocaleString() + ' ft';
       document.getElementById('val-jamming').textContent = jamming + '%';
 
-      // Upgraded RF Engineering Link Budget Model
-      // d in meters, f in Hz
-      const dMeters = Math.max(10, distance * 0.3048);
+      // Analytical RF Link Budget Model (Friis + Canyon Knife-Edge Diffraction / Foliage Clutter)
+      const dMeters = Math.max(20, distance * 0.3048);
       const fHz = freq * 1e6;
-      
-      // Free Space Path Loss (Friis): FSPL (dB) = 20*log10(d) + 20*log10(f) + 20*log10(4*pi/c)
-      let fspl = 20 * Math.log10(dMeters) + 20 * Math.log10(fHz) - 147.55;
 
-      // Multipath & Terrain Clutter Model
+      // Free Space Path Loss (Friis): FSPL (dB) = 20*log10(d) + 20*log10(f) - 147.55
+      const fspl = 20 * Math.log10(dMeters) + 20 * Math.log10(fHz) - 147.55;
+
+      // Sub-GHz penetration advantage vs 2.4 GHz in canyon / canopy clutter
+      const freqPenetrationPenalty = freq > 1000 ? 8.5 : 0.0;
+
+      // Terrain & Canopy Clutter Attenuation (dB)
       let envLoss = 0;
-      if (terrain === 'urban') {
-        // Hata-like urban diffraction loss
-        envLoss = 12.0 + (6.0 * Math.log10(Math.max(1, dMeters / 100)));
+      if (terrain === 'canyon') {
+        // Granite canyon walls mitigated by high-elevation Rim Solar Repeater
+        envLoss = 9.5 + (5.2 * Math.log10(Math.max(1, dMeters / 100))) + freqPenetrationPenalty;
+      } else if (terrain === 'ag') {
+        // Foothill terraced orchard / vineyard canopy
+        envLoss = 6.0 + (4.0 * Math.log10(Math.max(1, dMeters / 100))) + (freqPenetrationPenalty * 0.7);
       } else if (terrain === 'austere') {
-        // Heavy subterranean / dense forest obstacle attenuation
-        envLoss = 22.0 + (9.5 * Math.log10(Math.max(1, dMeters / 100)));
+        // Severe non-LOS ravine + wet redwood/conifer canopy (ITU-R P.833 foliage + knife-edge diffraction)
+        envLoss = 19.5 + (8.8 * Math.log10(Math.max(1, dMeters / 100))) + (freqPenetrationPenalty * 1.4);
+      } else {
+        // Ridge-to-Valley Line-of-Sight
+        envLoss = 2.0 + (1.8 * Math.log10(Math.max(1, dMeters / 100)));
       }
 
-      // Electronic Warfare / Active Jamming Noise Floor Elevation (dB)
-      const jammingRise = (jamming / 100) * 28.0;
+      // Atmospheric / Multipath / RF Noise Floor Rise (dB)
+      const jammingRise = (jamming / 100) * 24.0;
 
-      // RF Frontend Parameters
-      const txPowerDbm = 27.0; // 500 mW calibrated Cal-Node V2 output
-      const txAntennaGainDbi = 6.0; // Tactical wideband blade
-      const rxAntennaGainDbi = 4.5;
+      // COTS Sub-GHz LoRa Transceiver Parameters (+22 dBm SX1262 + 3.0 dBi whip + 5.5 dBi Rim Fiberglass Omni)
+      const txPowerDbm = 22.0;
+      const txAntennaGainDbi = 3.0;
+      const rxAntennaGainDbi = 5.5;
       const eirpDbm = txPowerDbm + txAntennaGainDbi;
 
       // Received Signal Strength Indicator (RSSI)
       const totalPathLoss = fspl + envLoss;
-      const rssiDbm = eirpDbm + rxAntennaGainDbi - totalPathLoss - (jammingRise * 0.4);
+      const rssiDbm = eirpDbm + rxAntennaGainDbi - totalPathLoss - (jammingRise * 0.35);
       const roundedRssi = Math.round(rssiDbm);
 
-      // Thermal Noise Floor: N = -174 dBm/Hz + 10*log10(BW) + NF
-      const channelBwHz = 10e6; // 10 MHz channel bandwidth
-      const noiseFigureDb = 5.0; // Low-noise amplifier figure
-      const thermalNoiseFloorDbm = -174 + (10 * Math.log10(channelBwHz)) + noiseFigureDb; // -99 dBm
-      const effectiveNoiseFloor = thermalNoiseFloorDbm + jammingRise;
+      // LoRa 125 kHz Bandwidth Thermal Noise Floor: N = -174 + 10*log10(125000) + 6 dB NF = -117 dBm
+      const isLoRaSubGhz = freq < 1000;
+      const sensitivityThresholdDbm = isLoRaSubGhz ? -120.0 : -98.0;
+      const effectiveNoiseFloor = (isLoRaSubGhz ? -117.0 : -101.0) + jammingRise;
 
-      // Signal to Noise Ratio (SNR dB)
-      const snrDb = Math.max(-10, Math.min(38, rssiDbm - effectiveNoiseFloor));
+      const snrDb = Math.max(-15, Math.min(24, rssiDbm - effectiveNoiseFloor));
+      const linkMarginNum = rssiDbm - sensitivityThresholdDbm;
+      const linkMarginDb = linkMarginNum.toFixed(1);
 
-      // Link Margin above sensitivity threshold (-92 dBm)
-      const sensitivityThresholdDbm = -92.0;
-      const linkMarginDb = (rssiDbm - sensitivityThresholdDbm).toFixed(1);
+      latestRssiDbm = roundedRssi;
+      latestSnrDb = snrDb;
+      latestLinkMarginDb = linkMarginDb;
 
-      // Shannon Channel Capacity: C = BW * log2(1 + 10^(SNR/10))
-      const snrLinear = Math.pow(10, snrDb / 10);
-      const shannonCapacityMbps = (channelBwHz * Math.log2(1 + snrLinear)) / 1e6;
-      // Practical spectral efficiency factor (0.42 for tactical COFDM mesh)
-      let effectiveThroughputMbps = shannonCapacityMbps * 0.42;
-      effectiveThroughputMbps = Math.max(0.15, Math.min(28.4, effectiveThroughputMbps));
+      // Packet Delivery Rate (PDR %) for compact 24–38 byte CRC-16 frames
+      let pdr = 100 - Math.max(0, (-rssiDbm - (isLoRaSubGhz ? 96 : 78)) * 1.45) - (jamming * 0.32);
+      pdr = Math.max(24.0, Math.min(99.9, pdr));
 
-      // Packet Delivery Rate (PDR %)
-      let pdr = 100 - Math.max(0, (-rssiDbm - 72) * 1.8) - (jamming * 0.45);
-      pdr = Math.max(22.0, Math.min(99.9, pdr));
+      // Multi-Hop LoRa Time-on-Air & Relay Latency (ms) for 28-byte binary frame (SF7/SF8)
+      const hopCount = (terrain === 'los' || terrain === 'ag') ? 2 : 3;
+      latestHopCount = hopCount;
+      const frameBytes = 24 + (hasVideo ? 6 : 0) + (hasRad ? 6 : 0) + (hasSigint ? 8 : 0);
+      const perHopToaMs = isLoRaSubGhz ? (frameBytes * 1.35) : (frameBytes * 0.45);
+      let latency = (hopCount * perHopToaMs) + (jamming * 0.65);
+      latency = Math.max(18.0, latency);
 
-      // Multi-Hop Mesh Latency (ms) with dynamically queued payload weight
-      const payloadWeight = (hasVideo ? 3.5 : 0.6) + (hasSigint ? 2.0 : 0.4);
-      const hopCount = terrain === 'los' ? 2 : 4;
-      let latency = (hopCount * 3.2) + payloadWeight + (jamming * 0.18) + (Math.max(0, -rssiDbm - 78) * 0.7);
-      latency = Math.max(4.2, latency);
-
-      // Battery Life (Hours) on 45 Wh tactical pack
-      let currentDrawWatts = 4.2 + (hasVideo ? 2.4 : 0.4) + (hasSigint ? 2.8 : 0) + (jamming > 40 ? 1.8 : 0.6);
-      let batteryHours = (45.0 / currentDrawWatts);
-      batteryHours = Math.max(1.8, Math.min(12.5, batteryHours));
+      // Pocket / Solar Node Battery Endurance (Hours on 2,000 mAh / 7.4 Wh Li-Ion cell at 1% duty cycle)
+      const avgDrawMilliwatts = 145 + (hasVideo ? 35 : 0) + (hasRad ? 25 : 0) + (hasSigint ? 45 : 0) + (jamming * 0.8);
+      let batteryHours = (7400 / avgDrawMilliwatts);
+      batteryHours = Math.max(14.0, Math.min(48.0, batteryHours));
 
       // DOM Updates
       const elRssi = document.getElementById('metric-rssi');
@@ -1943,34 +2513,34 @@
 
       if (elRssi) {
         elRssi.textContent = roundedRssi + ' dBm';
-        if (roundedRssi > -75) {
-          elRssiStatus.textContent = `Excellent Margin (${linkMarginDb} dB above -92 dBm)`;
+        if (linkMarginNum > 28) {
+          elRssiStatus.textContent = `Strong Link (+${linkMarginDb} dB above ${sensitivityThresholdDbm} dBm floor)`;
           elRssi.className = 'text-2xl font-extrabold text-sky-700 font-mono';
-        } else if (roundedRssi > -85) {
-          elRssiStatus.textContent = `Acceptable Margin (${linkMarginDb} dB above -92 dBm)`;
+        } else if (linkMarginNum > 12) {
+          elRssiStatus.textContent = `Moderate Canyon Margin (+${linkMarginDb} dB above ${sensitivityThresholdDbm} dBm)`;
           elRssi.className = 'text-2xl font-extrabold text-amber-600 font-mono';
         } else {
-          elRssiStatus.textContent = `Fringe Margin (${linkMarginDb} dB above -92 dBm)`;
+          elRssiStatus.textContent = `Diffraction Fringe (${linkMarginDb} dB vs ${sensitivityThresholdDbm} dBm floor)`;
           elRssi.className = 'text-2xl font-extrabold text-red-600 font-mono';
         }
       }
 
       if (elPdr) {
         elPdr.textContent = pdr.toFixed(1) + '%';
-        if (pdr > 90) {
+        if (pdr > 92) {
           elPdr.className = 'text-2xl font-extrabold text-emerald-600 font-mono';
-          elPdrStatus.textContent = 'Optimal Telemetry & Video Throughput';
-        } else if (pdr > 75) {
+          elPdrStatus.textContent = `Clean ${frameBytes}-Byte Binary CRC-16 Relay ($0/mo)`;
+        } else if (pdr > 78) {
           elPdr.className = 'text-2xl font-extrabold text-amber-600 font-mono';
-          elPdrStatus.textContent = 'Occasional Video Frame Drops';
+          elPdrStatus.textContent = 'Multi-Hop Rim Relay Active (1 Retry Typical)';
         } else {
           elPdr.className = 'text-2xl font-extrabold text-red-600 font-mono';
-          elPdrStatus.textContent = 'Degraded: Automated Text Fallback Engaged';
+          elPdrStatus.textContent = 'Heavy Canyon Shadowing — Elevate Rim Relay';
         }
       }
 
       if (elLatency) {
-        elLatency.textContent = latency.toFixed(1) + ' ms';
+        elLatency.textContent = latency.toFixed(0) + ' ms';
       }
 
       if (elBattery) {
@@ -1984,7 +2554,6 @@
       updateSimulation();
     }
 
-    
     // Engineering Link Budget Report Generator for Technical Sponsors
     function copyLinkBudgetReport() {
       const dist = document.getElementById('input-distance').value;
@@ -1998,19 +2567,20 @@
 
       const report = `=====================================================
 49CALIBER LABS, INC. | ANALYTICAL RF LINK BUDGET LOG
-Sub-GHz & ISM Mesh Propagation Model (Friis / Hata)
+MeshMule-Core Sub-GHz Canyon, Park & Ag Propagation
 =====================================================
-Operating Frequency:  ${freq} MHz
+Scenario Trajectory:  ${activePreset.toUpperCase()}
+Operating Frequency:  ${freq} MHz (Free-Payload Part 15 ISM)
 Link Distance:        ${dist} ft (${(dist * 0.3048).toFixed(1)} m)
 Terrain Clutter:      ${terrain.toUpperCase()}
 Noise Floor Rise:     ${jamming}%
 -----------------------------------------------------
-MODELED RF METRICS:
-* Modeled RSSI:       ${rssi}
+MODELED RF & TELEMETRY METRICS:
+* Modeled RSSI:       ${rssi} (Margin: +${latestLinkMarginDb} dB)
 * Est. Delivery Rate: ${pdr}
-* Est. Hop Latency:   ${lat}
-* Est. Battery Life:  ${bat}
-* Model Basis:        Analytical Friis / Log-Distance Path Loss
+* Multi-Hop Latency:  ${lat} (${latestHopCount} Hops via Rim Relay)
+* Pocket Node Life:   ${bat} (2,000 mAh COTS LoRa Node)
+* Model Basis:        Analytical Friis + Canyon Diffraction / ITU Foliage
 =====================================================`;
 
       navigator.clipboard.writeText(report).then(() => {
@@ -2027,30 +2597,102 @@ MODELED RF METRICS:
     }
 
     function applySimPreset(preset) {
+      activePreset = preset;
+
+      // Update active button pill styles
+      const presetBtns = [
+        { id: 'preset-btn-canyon', key: 'inl', activeClass: "px-3.5 py-1.5 rounded-full text-xs font-semibold bg-sky-600 text-white border border-sky-600 shadow-sm transition-all" },
+        { id: 'preset-btn-park', key: 'park', activeClass: "px-3.5 py-1.5 rounded-full text-xs font-semibold bg-sky-600 text-white border border-sky-600 shadow-sm transition-all" },
+        { id: 'preset-btn-ag', key: 'ag', activeClass: "px-3.5 py-1.5 rounded-full text-xs font-semibold bg-sky-600 text-white border border-sky-600 shadow-sm transition-all" },
+        { id: 'preset-btn-sar', key: 'urban', activeClass: "px-3.5 py-1.5 rounded-full text-xs font-semibold bg-amber-600 text-white border border-amber-600 shadow-sm transition-all" }
+      ];
+      presetBtns.forEach(b => {
+        const el = document.getElementById(b.id);
+        if (!el) return;
+        if (b.key === preset) {
+          el.className = b.activeClass;
+        } else if (b.key === 'urban') {
+          el.className = "px-3.5 py-1.5 rounded-full text-xs font-semibold bg-amber-50 text-amber-900 border border-amber-300 hover:bg-amber-100 transition-all";
+        } else {
+          el.className = "px-3.5 py-1.5 rounded-full text-xs font-semibold bg-white text-slate-700 border border-slate-300 hover:border-sky-500 transition-all";
+        }
+      });
+
+      const titleEl = document.getElementById('sim-scenario-title');
+
       if (preset === 'inl') {
-        document.getElementById('input-distance').value = 3000;
-        document.getElementById('input-frequency').value = "2400";
-        document.getElementById('input-terrain').value = "los";
-        document.getElementById('input-jamming').value = 0;
+        // 1. Deep Canyon Hiker / Biker & Angler (Public-Assist $0/mo Mesh)
+        document.getElementById('input-distance').value = 2400;
+        document.getElementById('input-frequency').value = "915";
+        document.getElementById('input-terrain').value = "canyon";
+        document.getElementById('input-jamming').value = 10;
         document.getElementById('stream-video').checked = true;
         document.getElementById('stream-rad').checked = true;
         document.getElementById('stream-sigint').checked = false;
-      } else if (preset === 'afwerx') {
-        document.getElementById('input-distance').value = 2200;
-        document.getElementById('input-frequency').value = "5800";
-        document.getElementById('input-terrain').value = "urban";
-        document.getElementById('input-jamming').value = 25;
-        document.getElementById('stream-video').checked = true;
-        document.getElementById('stream-rad').checked = false;
-        document.getElementById('stream-sigint').checked = true;
-      } else if (preset === 'urban') {
-        document.getElementById('input-distance').value = 850;
+        if (titleEl) titleEl.textContent = "Scenario 1: Deep Canyon Hiker, MTB & Angler Public-Assist Mesh ($0/mo Free Payload)";
+        simNodes = [
+          { id: "base", name: "Trailhead Kiosk Base", nx: 0.13, ny: 0.72, x: 75, y: 245, type: "base", elev: 1180 },
+          { id: "relay1", name: "Granite Rim Solar Relay", nx: 0.36, ny: 0.22, x: 210, y: 78, type: "drop", elev: 2880 },
+          { id: "relay2", name: "South Saddle Solar Node", nx: 0.68, ny: 0.80, x: 395, y: 272, type: "drop", elev: 2240 },
+          { id: "body1", name: "Gorge Angler Pocket Node", nx: 0.52, ny: 0.54, x: 300, y: 185, type: "body", elev: 440 },
+          { id: "body2", name: "Switchback Hiker / MTB", nx: 0.82, ny: 0.36, x: 475, y: 125, type: "body", elev: 1640 }
+        ];
+      } else if (preset === 'park') {
+        // 2. Remote Park Watershed & Wildfire Weather Array
+        document.getElementById('input-distance').value = 3400;
         document.getElementById('input-frequency').value = "915";
-        document.getElementById('input-terrain').value = "austere";
-        document.getElementById('input-jamming').value = 40;
+        document.getElementById('input-terrain').value = "los";
+        document.getElementById('input-jamming').value = 15;
+        document.getElementById('stream-video').checked = true;
+        document.getElementById('stream-rad').checked = true;
+        document.getElementById('stream-sigint').checked = false;
+        if (titleEl) titleEl.textContent = "Scenario 2: Remote Park Watershed & Microclimate Barometric Array (\u2207P Front Solver)";
+        simNodes = [
+          { id: "base", name: "Ranger Station Gateway", nx: 0.12, ny: 0.68, x: 70, y: 230, type: "base", elev: 1320 },
+          { id: "relay1", name: "Fire Lookout Solar Relay", nx: 0.40, ny: 0.19, x: 235, y: 68, type: "drop", elev: 2960 },
+          { id: "relay2", name: "Watershed Ridge Collector", nx: 0.74, ny: 0.26, x: 430, y: 92, type: "drop", elev: 2540 },
+          { id: "body1", name: "Creek Gauge & Baro Node", nx: 0.48, ny: 0.52, x: 280, y: 178, type: "body", elev: 460 },
+          { id: "body2", name: "Canopy Fuel-Moisture Node", nx: 0.80, ny: 0.68, x: 465, y: 232, type: "body", elev: 1480 }
+        ];
+      } else if (preset === 'ag') {
+        // 3. Foothill Ag & Vineyard Frost-Inversion Mesh
+        document.getElementById('input-distance').value = 2100;
+        document.getElementById('input-frequency').value = "915";
+        document.getElementById('input-terrain').value = "ag";
+        document.getElementById('input-jamming').value = 5;
         document.getElementById('stream-video').checked = false;
         document.getElementById('stream-rad').checked = true;
         document.getElementById('stream-sigint').checked = false;
+        if (titleEl) titleEl.textContent = "Scenario 3: Foothill Ag & Vineyard Frost-Inversion Telemetry Mesh (Soil & Cold-Air Basin)";
+        simNodes = [
+          { id: "base", name: "Ranch Barn Base Gateway", nx: 0.14, ny: 0.74, x: 80, y: 250, type: "base", elev: 960 },
+          { id: "relay1", name: "Upper Hilltop Solar Relay", nx: 0.34, ny: 0.24, x: 198, y: 84, type: "drop", elev: 1680 },
+          { id: "relay2", name: "East Terrace Wind-Machine", nx: 0.72, ny: 0.30, x: 420, y: 105, type: "drop", elev: 1440 },
+          { id: "body1", name: "Frost Basin Inversion Probe", nx: 0.54, ny: 0.55, x: 312, y: 188, type: "body", elev: 540 },
+          { id: "body2", name: "Orchard Drip-Valve Node", nx: 0.82, ny: 0.64, x: 475, y: 218, type: "body", elev: 1020 }
+        ];
+      } else if (preset === 'urban') {
+        // 4. R&D: GPS-Denied Canyon SAR Trilateration (TRL 2-3)
+        document.getElementById('input-distance').value = 1650;
+        document.getElementById('input-frequency').value = "915";
+        document.getElementById('input-terrain').value = "austere";
+        document.getElementById('input-jamming').value = 35;
+        document.getElementById('stream-video').checked = true;
+        document.getElementById('stream-rad').checked = true;
+        document.getElementById('stream-sigint').checked = true;
+        if (titleEl) titleEl.textContent = "Scenario 4 (R&D TRL 3): GPS-Denied Canyon SAR WNLLS Trilateration & Covariance Solver";
+        simNodes = [
+          { id: "base", name: "SAR Incident Command Base", nx: 0.14, ny: 0.70, x: 80, y: 238, type: "base", elev: 1240 },
+          { id: "relay1", name: "North Rim Anchor Node A", nx: 0.35, ny: 0.20, x: 205, y: 70, type: "drop", elev: 2910 },
+          { id: "relay2", name: "South Spur Anchor Node B", nx: 0.66, ny: 0.82, x: 385, y: 278, type: "drop", elev: 2380 },
+          { id: "body1", name: "Gorge Distress Beacon (No GPS)", nx: 0.50, ny: 0.53, x: 290, y: 180, type: "body", elev: 430 },
+          { id: "body2", name: "SAR Hasty Team Alpha", nx: 0.78, ny: 0.42, x: 452, y: 144, type: "body", elev: 1520 }
+        ];
+      }
+
+      if (canvas) {
+        const rect = canvas.getBoundingClientRect();
+        syncNodePixelPositions(rect.width, rect.height * 0.73);
       }
       updateSimulation();
     }
@@ -2239,10 +2881,14 @@ CALIFORNIA & FEDERAL R&D PATHWAYS
           if (saved && typeof saved === 'object') {
             currentAppState = { ...DEFAULT_APP_STATE, ...saved };
 
-            // Restore Simulator Inputs
+            // Restore Simulator Inputs (only if matching current valid options)
             if (saved.simDistance) document.getElementById('input-distance').value = saved.simDistance;
-            if (saved.simFrequency) document.getElementById('input-frequency').value = saved.simFrequency;
-            if (saved.simTerrain) document.getElementById('input-terrain').value = saved.simTerrain;
+            if (saved.simFrequency && ['915', '868', '2400'].includes(String(saved.simFrequency))) {
+              document.getElementById('input-frequency').value = String(saved.simFrequency);
+            }
+            if (saved.simTerrain && ['canyon', 'los', 'ag', 'austere'].includes(saved.simTerrain)) {
+              document.getElementById('input-terrain').value = saved.simTerrain;
+            }
             if (saved.simJamming !== undefined) document.getElementById('input-jamming').value = saved.simJamming;
             if (saved.streams) {
               document.getElementById('stream-video').checked = !!saved.streams.video;
