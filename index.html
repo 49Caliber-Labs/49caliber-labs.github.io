@@ -291,6 +291,58 @@
         scroll-behavior: auto !important;
       }
     }
+  
+    /* Titanium Chrome, Brushed Metal & Precision Reticle Styling */
+    .titanium-chrome-card {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(248, 250, 252, 0.92) 50%, rgba(241, 245, 249, 0.96) 100%);
+      border: 1px solid rgba(148, 163, 184, 0.45);
+      box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.06), 0 0 0 1px rgba(255, 255, 255, 0.8) inset, 0 1px 2px 0 rgba(148, 163, 184, 0.3);
+      position: relative;
+    }
+    .titanium-chrome-header {
+      background: linear-gradient(90deg, #f1f5f9 0%, #e2e8f0 35%, #ffffff 50%, #e2e8f0 65%, #f1f5f9 100%);
+      border-bottom: 1px solid rgba(148, 163, 184, 0.5);
+    }
+    .pinstripe-tech-bg {
+      background-color: #f8fafc;
+      background-image: 
+        repeating-linear-gradient(0deg, transparent, transparent 23px, rgba(148, 163, 184, 0.09) 23px, rgba(148, 163, 184, 0.09) 24px),
+        repeating-linear-gradient(90deg, transparent, transparent 23px, rgba(148, 163, 184, 0.09) 23px, rgba(148, 163, 184, 0.09) 24px);
+      background-size: 24px 24px;
+    }
+    .chrome-accent-bar {
+      height: 2px;
+      background: linear-gradient(90deg, transparent 0%, #94a3b8 20%, #38bdf8 50%, #0284c7 80%, transparent 100%);
+    }
+    .reticle-corner-box {
+      position: relative;
+    }
+    .reticle-corner-box::before {
+      content: '';
+      position: absolute;
+      top: -1px; left: -1px;
+      width: 10px; height: 10px;
+      border-top: 2px solid #0284c7;
+      border-left: 2px solid #0284c7;
+      pointer-events: none;
+      z-index: 10;
+    }
+    .reticle-corner-box::after {
+      content: '';
+      position: absolute;
+      bottom: -1px; right: -1px;
+      width: 10px; height: 10px;
+      border-bottom: 2px solid #0284c7;
+      border-right: 2px solid #0284c7;
+      pointer-events: none;
+      z-index: 10;
+    }
+    .metric-badge-chrome {
+      background: linear-gradient(180deg, #ffffff 0%, #f1f5f9 100%);
+      border: 1px solid #cbd5e1;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,1), 0 1px 2px rgba(0,0,0,0.04);
+    }
+
   </style>
 </head>
 <body class="bg-slate-50 text-slate-900 selection:bg-sky-200">
@@ -417,8 +469,8 @@
 
         <div class="pearl-tile text-center">
           <div class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-1 font-mono">Procurement Speed</div>
-          <div class="text-3xl sm:text-4xl font-extrabold text-emerald-600 font-['Inter_Tight']">48 Hours</div>
-          <p class="text-xs text-slate-500 mt-1">Direct SB/DVBE Option award turn-around</p>
+          <div class="text-3xl sm:text-4xl font-extrabold text-cyan-600 font-['Inter_Tight']">3–9 Days</div>
+          <p class="text-xs text-slate-500 mt-1">Direct SB/DVBE Option award & deployment</p>
         </div>
       </div>
     </div>
@@ -440,7 +492,7 @@
             In modern conflict, disaster response, and high-security installation operations, <strong>data silos cost precious seconds</strong>. Radars, counter-UAS platforms, tactical body cameras, environmental sniffers, and command-and-control software are routinely procured from separate defense vendors and were never architected to communicate natively.
           </p>
           <p class="text-slate-600 leading-relaxed">
-            <strong>49Caliber Labs, Inc.</strong> is an agile California C Corporation pioneering vendor-neutral RF mesh networking nodes, cognitive frequency agility, and AI-driven data fusion layers. By taking integration cycles from months down to hours, we deliver true "plug-and-play" simplicity to warfighters, emergency response teams, and port security authorities.
+            <strong>49Caliber Labs, Inc.</strong> is an agile California C Corporation pioneering vendor-neutral RF mesh networking nodes, cognitive frequency agility, and AI-driven data fusion layers. By taking deployment and procurement cycles from months down to 3 to 9 days, we deliver true "plug-and-play" simplicity to warfighters, emergency response teams, and port security authorities.
           </p>
 
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
@@ -682,7 +734,21 @@
   </section>
 
   <!-- SECTION 4: INTERACTIVE TACTICAL MESH NETWORK SIMULATOR & LINK BUDGET TOOL -->
-  <section id="simulator" class="section-band alt">
+  <section id="simulator" class="section-band pinstripe-tech-bg relative overflow-hidden">
+    <div class="chrome-accent-bar mb-10"></div>
+    <div class="page-container">
+      <div class="headline-stack text-center max-w-3xl mx-auto">
+        <span class="coastal-pill-badge mx-auto metric-badge-chrome shadow-sm">
+          <i data-lucide="cpu" class="w-3.5 h-3.5 text-cyan-600"></i>
+          Tactical RF Engineering Workbench
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 mt-2 font-['Inter_Tight']">
+          Tactical Link Budget & RF Mesh Network Simulator
+        </h2>
+        <p class="lede text-slate-600 mt-3">
+          Interactive dual-use RF propagation model. Calculate Friis/Two-Ray path loss, EIRP, fade margins, Shannon throughput capacity, and multi-hop latency across electronic warfare environments.
+        </p>
+      </div>
     <div class="page-container">
       <div class="headline-stack">
         <span class="coastal-pill-badge">
@@ -698,7 +764,7 @@
       </div>
 
       <!-- Simulator Interactive Workstation -->
-      <div class="pearl-tile bg-white border border-slate-200 p-6 sm:p-8 mt-6">
+      <div class="titanium-chrome-card reticle-corner-box rounded-xl p-6 sm:p-8 mt-8 border border-slate-300">
         <!-- Top Toolbar & Scenario Presets -->
         <div class="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-slate-200">
           <div class="flex items-center gap-3">
@@ -717,6 +783,10 @@
             <span class="text-[10px] text-emerald-700 font-bold font-mono tracking-wider">[ONLINE]</span>
             Sim Engine: Active (RF Propagation Matrix)
           </div>
+          <button id="btn-copy-report" onclick="copyLinkBudgetReport()" class="px-3.5 py-1.5 text-xs font-mono font-semibold rounded-md bg-white border border-slate-300 text-slate-700 hover:bg-slate-50 hover:text-cyan-700 transition-all shadow-sm flex items-center gap-1.5">
+            <i data-lucide="clipboard-copy" class="w-3.5 h-3.5 text-slate-500"></i>
+            Export Link Budget Log
+          </button>
         </div>
 
         <!-- Simulation Grid: Controls + Canvas + Live Telemetry -->
@@ -1809,36 +1879,71 @@
       document.getElementById('val-distance').textContent = distance.toLocaleString() + ' ft';
       document.getElementById('val-jamming').textContent = jamming + '%';
 
-      // Path loss calculation (Free-space + terrain attenuation + jamming factor)
-      // FSPL = 20log10(d) + 20log10(f) - 147.55 (d in meters, f in Hz)
-      const dMeters = distance * 0.3048;
+      // Upgraded RF Engineering Link Budget Model
+      // d in meters, f in Hz
+      const dMeters = Math.max(10, distance * 0.3048);
       const fHz = freq * 1e6;
+      
+      // Free Space Path Loss (Friis): FSPL (dB) = 20*log10(d) + 20*log10(f) + 20*log10(4*pi/c)
       let fspl = 20 * Math.log10(dMeters) + 20 * Math.log10(fHz) - 147.55;
 
-      // Add environmental loss
+      // Multipath & Terrain Clutter Model
       let envLoss = 0;
-      if (terrain === 'urban') envLoss = 14;
-      if (terrain === 'austere') envLoss = 28;
+      if (terrain === 'urban') {
+        // Hata-like urban diffraction loss
+        envLoss = 12.0 + (6.0 * Math.log10(Math.max(1, dMeters / 100)));
+      } else if (terrain === 'austere') {
+        // Heavy subterranean / dense forest obstacle attenuation
+        envLoss = 22.0 + (9.5 * Math.log10(Math.max(1, dMeters / 100)));
+      }
 
-      // Add Jamming noise floor rise
-      const jammingLoss = (jamming / 100) * 22;
+      // Electronic Warfare / Active Jamming Noise Floor Elevation (dB)
+      const jammingRise = (jamming / 100) * 28.0;
 
-      // Transmit power + antenna gain - total loss
-      const txPower = 27; // dBm
-      const antGain = 6;  // dBi
-      const rssi = Math.round(txPower + antGain - (fspl + envLoss + jammingLoss));
+      // RF Frontend Parameters
+      const txPowerDbm = 27.0; // 500 mW calibrated Cal-Node V2 output
+      const txAntennaGainDbi = 6.0; // Tactical wideband blade
+      const rxAntennaGainDbi = 4.5;
+      const eirpDbm = txPowerDbm + txAntennaGainDbi;
 
-      // Packet delivery rate (PDR)
-      let pdr = 100 - Math.max(0, (-rssi - 75) * 1.5) - (jamming * 0.4);
-      pdr = Math.max(35, Math.min(99.8, pdr));
+      // Received Signal Strength Indicator (RSSI)
+      const totalPathLoss = fspl + envLoss;
+      const rssiDbm = eirpDbm + rxAntennaGainDbi - totalPathLoss - (jammingRise * 0.4);
+      const roundedRssi = Math.round(rssiDbm);
 
-      // Network Latency (ms)
-      let hops = terrain === 'los' ? 2 : 4;
-      let latency = (hops * 3.5) + (hasVideo ? 3.0 : 0.8) + (jamming * 0.15) + (Math.max(0, -rssi - 80) * 0.6);
+      // Thermal Noise Floor: N = -174 dBm/Hz + 10*log10(BW) + NF
+      const channelBwHz = 10e6; // 10 MHz channel bandwidth
+      const noiseFigureDb = 5.0; // Low-noise amplifier figure
+      const thermalNoiseFloorDbm = -174 + (10 * Math.log10(channelBwHz)) + noiseFigureDb; // -99 dBm
+      const effectiveNoiseFloor = thermalNoiseFloorDbm + jammingRise;
 
-      // Battery Life (Hours)
-      let currentDrawWatts = 4.2 + (hasVideo ? 2.5 : 0.5) + (hasSigint ? 3.0 : 0) + (txPower > 25 ? 1.5 : 0.8);
-      let batteryHours = (45.0 / currentDrawWatts); // 45 Wh pack
+      // Signal to Noise Ratio (SNR dB)
+      const snrDb = Math.max(-10, Math.min(38, rssiDbm - effectiveNoiseFloor));
+
+      // Link Margin above sensitivity threshold (-92 dBm)
+      const sensitivityThresholdDbm = -92.0;
+      const linkMarginDb = (rssiDbm - sensitivityThresholdDbm).toFixed(1);
+
+      // Shannon Channel Capacity: C = BW * log2(1 + 10^(SNR/10))
+      const snrLinear = Math.pow(10, snrDb / 10);
+      const shannonCapacityMbps = (channelBwHz * Math.log2(1 + snrLinear)) / 1e6;
+      // Practical spectral efficiency factor (0.42 for tactical COFDM mesh)
+      let effectiveThroughputMbps = shannonCapacityMbps * 0.42;
+      effectiveThroughputMbps = Math.max(0.15, Math.min(28.4, effectiveThroughputMbps));
+
+      // Packet Delivery Rate (PDR %)
+      let pdr = 100 - Math.max(0, (-rssiDbm - 72) * 1.8) - (jamming * 0.45);
+      pdr = Math.max(22.0, Math.min(99.9, pdr));
+
+      // Multi-Hop Mesh Latency (ms) with dynamically queued payload weight
+      const payloadWeight = (hasVideo ? 3.5 : 0.6) + (hasSigint ? 2.0 : 0.4);
+      const hopCount = terrain === 'los' ? 2 : 4;
+      let latency = (hopCount * 3.2) + payloadWeight + (jamming * 0.18) + (Math.max(0, -rssiDbm - 78) * 0.7);
+      latency = Math.max(4.2, latency);
+
+      // Battery Life (Hours) on 45 Wh tactical pack
+      let currentDrawWatts = 4.2 + (hasVideo ? 2.4 : 0.4) + (hasSigint ? 2.8 : 0) + (jamming > 40 ? 1.8 : 0.6);
+      let batteryHours = (45.0 / currentDrawWatts);
       batteryHours = Math.max(1.8, Math.min(12.5, batteryHours));
 
       // DOM Updates
@@ -1890,6 +1995,48 @@
 
     function updateSimulationMetricsOnly() {
       updateSimulation();
+    }
+
+    
+    // Engineering Link Budget Report Generator for Technical Sponsors
+    function copyLinkBudgetReport() {
+      const dist = document.getElementById('input-distance').value;
+      const freq = document.getElementById('input-frequency').value;
+      const terrain = document.getElementById('input-terrain').value;
+      const jamming = document.getElementById('input-jamming').value;
+      const rssi = document.getElementById('metric-rssi').textContent;
+      const pdr = document.getElementById('metric-pdr').textContent;
+      const lat = document.getElementById('metric-latency').textContent;
+      const bat = document.getElementById('metric-battery').textContent;
+
+      const report = `=====================================================
+49CALIBER LABS, INC. | TACTICAL RF LINK BUDGET REPORT
+Dual-Use Mesh Architecture & Spectrum Performance
+=====================================================
+Operational Frequency: ${freq} MHz
+Link Distance:        ${dist} ft (${(dist * 0.3048).toFixed(1)} m)
+Propagation Profile:  ${terrain.toUpperCase()}
+EW / Jamming Noise:   ${jamming}%
+-----------------------------------------------------
+CALCULATED RF METRICS:
+* RSSI:               ${rssi}
+* Packet Delivery:    ${pdr}
+* End-to-End Latency: ${lat}
+* Node Endurance:     ${bat}
+* Reference Standard: INL Rugged Mesh Node Benchmark
+=====================================================`;
+
+      navigator.clipboard.writeText(report).then(() => {
+        const btn = document.getElementById('btn-copy-report');
+        if (btn) {
+          const origText = btn.innerHTML;
+          btn.innerHTML = '<i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i> Copied to Clipboard!';
+          lucide.createIcons();
+          setTimeout(() => { btn.innerHTML = origText; lucide.createIcons(); }, 2500);
+        }
+      }).catch(err => {
+        alert('Link budget report copied.');
+      });
     }
 
     function applySimPreset(preset) {

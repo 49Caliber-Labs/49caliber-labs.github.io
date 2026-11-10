@@ -1,21 +1,10 @@
-# 49Caliber Labs - Website Deployment Package
+# 49Caliber Labs, Inc. - Website Release v2
 
-## Quick Deployment Options
+## What Changed in v2:
+1. **Deployment Scorecard Metric:** Replaced the ungrounded 48-hour claim with a realistic **3 to 9 Days** turn-around for direct California SB/DVBE Option awards and emergency node deployments.
+2. **Tactical RF Engineering Simulator:** Upgraded calculation engine with Friis/Hata path loss models, fade margins, Shannon channel throughput, and added a 1-click **Export Link Budget Log** for technical sponsors.
+3. **Titanium Chrome & Technical Pinstriping:** Enhanced the UI with precision reticle corner brackets, brushed titanium chrome borders, and technical grid pinstripes.
 
-### Option 1: Microsoft Azure Static Web Apps (Free with your ,000 credits)
-1. Open the Azure Portal.
-2. Search for Static Web Apps and click Create.
-3. Choose your Subscription (Azure Credits), Resource Group (49Caliber-Labs), and Name (49caliber-labs-web).
-4. Select GitHub as the source, pick your repository 49Caliber-Labs/website (or upload these files directly).
-5. Click Review + Create. Azure will build, deploy, and assign a free HTTPS URL with SSL.
-
-### Option 2: GitHub Pages (100% Free & Fast)
-1. In your GitHub Organization 49Caliber-Labs, create a repository named website.
-2. Upload index.html and 49caliber_logo_vector.svg.
-3. Go to Settings -> Pages, set source to main branch / root.
-4. Your site will be live instantly!
-
-### Option 3: Google Cloud / Firebase Hosting
-1. Install Firebase CLI: npm install -g firebase-tools
-2. Run firebase login and firebase init hosting inside this folder.
-3. Run firebase deploy.
+## How to Update Your Live Site in 60 Seconds:
+- **GitHub Pages:** Go to your `49Caliber-Labs/website` GitHub repo, click `Add file` > `Upload files`, drag the new `index.html` in, and click `Commit changes`.
+- **Azure Static Web Apps:** Pushing the updated `index.html` to your connected GitHub repository triggers Azure to automatically deploy the new version in ~45 seconds.
