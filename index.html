@@ -546,10 +546,10 @@
           </div>
 
           <div class="space-y-2.5 pt-4 border-t border-slate-100">
-            <button type="button" id="btn-buy-bitewindow-lifetime" onclick="openBiteWindowCheckout()" class="btn-primary-coastal text-xs py-3 px-4 w-full justify-center shadow-sm cursor-pointer">
+            <a id="btn-buy-bitewindow-lifetime" href="https://buy.stripe.com/4gM3cv1io9n43Nfa0H7g400" target="_blank" rel="noopener noreferrer" class="btn-primary-coastal text-xs py-3 px-4 w-full justify-center shadow-sm">
               <i data-lucide="shopping-bag" class="w-4 h-4"></i>
               Buy BiteWindow Vector7 &mdash; $9.99 Lifetime
-            </button>
+            </a>
             <a href="./bitewindow/" class="btn-secondary-coastal text-xs py-2.5 px-4 w-full justify-center border-sky-600 text-sky-800 hover:bg-sky-50">
               <i data-lucide="smartphone" class="w-4 h-4 text-sky-600"></i>
               Launch Live Web &amp; iPhone App (v1.0)
@@ -3264,7 +3264,7 @@ CALIFORNIA & FEDERAL R&D PATHWAYS
     // ==========================================
     // BITEWINDOW CHECKOUT MODAL & PAYMENT LINK
     // ==========================================
-    const BITEWINDOW_CHECKOUT_URL = '';
+    const BITEWINDOW_CHECKOUT_URL = 'https://buy.stripe.com/4gM3cv1io9n43Nfa0H7g400';
 
     function openBiteWindowCheckout() {
       if (BITEWINDOW_CHECKOUT_URL) {
