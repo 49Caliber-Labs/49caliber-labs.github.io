@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.bitewindow.app",
+      "sha256_cert_fingerprints": [
+        "14:6D:E9:75:5F:CD:A8:14:4E:9F:8B:44:E2:22:92:44:E8:22:15:39:B5:12:35:86:E9:29:13:B9:AA:89:D6:2F"
+      ]
+    }
+  }
+]
