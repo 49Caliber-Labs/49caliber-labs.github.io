@@ -546,10 +546,10 @@
           </div>
 
           <div class="space-y-2.5 pt-4 border-t border-slate-100">
-            <a href="mailto:jthreet@49caliber.com?subject=BiteWindow%20Vector7%20-%20%249.99%20Lifetime%20License%20Order&body=Hello%2049Caliber%20Labs%2C%0A%0AI%20would%20like%20to%20purchase%20the%20BiteWindow%20Vector7%20%249.99%20Lifetime%20License%20(includes%20direct%20Android%20APK%20%2B%20iPhone%2FWeb%20access%20and%20lifetime%20free%20updates)." class="btn-primary-coastal text-xs py-3 px-4 w-full justify-center shadow-sm">
+            <button type="button" id="btn-buy-bitewindow-lifetime" onclick="openBiteWindowCheckout()" class="btn-primary-coastal text-xs py-3 px-4 w-full justify-center shadow-sm cursor-pointer">
               <i data-lucide="shopping-bag" class="w-4 h-4"></i>
               Buy BiteWindow Vector7 &mdash; $9.99 Lifetime
-            </a>
+            </button>
             <a href="./bitewindow/" class="btn-secondary-coastal text-xs py-2.5 px-4 w-full justify-center border-sky-600 text-sky-800 hover:bg-sky-50">
               <i data-lucide="smartphone" class="w-4 h-4 text-sky-600"></i>
               Launch Live Web &amp; iPhone App (v1.0)
@@ -1761,6 +1761,45 @@
       </div>
     </div>
   </footer>
+
+  <!-- BiteWindow Vector7 Lifetime Direct Checkout / Order Modal -->
+  <div id="bitewindow-checkout-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/70 backdrop-blur-sm" role="dialog" aria-modal="true" aria-labelledby="checkout-modal-title" onclick="if (event.target === this) closeBiteWindowCheckout()">
+    <div class="bg-white border border-slate-200 rounded-2xl shadow-2xl max-w-md w-full p-6 sm:p-7 relative">
+      <button type="button" onclick="closeBiteWindowCheckout()" aria-label="Close purchase dialog" class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 p-1.5 rounded-lg hover:bg-slate-100 transition-colors">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-50 border border-sky-200 text-sky-800 text-[11px] font-mono font-bold uppercase mb-3">
+        One-Time Lifetime License &bull; $9.99 USD
+      </div>
+      <h3 id="checkout-modal-title" class="text-xl font-extrabold text-slate-900 font-['Inter_Tight']">BiteWindow Vector7 Direct Order</h3>
+      <p class="text-xs text-slate-600 mt-1.5 leading-relaxed">
+        Includes full access to Web &amp; iPhone PWA, signed Android APK delivery, 50-state USGS/NOAA telemetry, and lifetime free updates.
+      </p>
+
+      <div class="mt-4 p-3.5 rounded-xl bg-amber-50 border border-amber-200 text-xs text-amber-950 leading-relaxed">
+        <strong>Card Payment Link Pending Final Wiring:</strong> Instant Stripe/Mercury card checkout is being activated. Use 1-click order copy below for manual invoice fulfillment from <span class="font-mono font-semibold">jthreet@49caliber.com</span>, or launch the live app directly.
+      </div>
+
+      <div class="mt-5 space-y-2.5">
+        <button type="button" id="btn-copy-bitewindow-order" onclick="copyBiteWindowOrder()" class="btn-primary-coastal text-xs py-3 px-4 w-full justify-center shadow-sm cursor-pointer">
+          <i data-lucide="copy" class="w-4 h-4"></i>
+          Copy Order Email &amp; Instructions (jthreet@49caliber.com)
+        </button>
+        <div id="checkout-copy-status" class="hidden text-center text-[11px] font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 rounded-lg py-1.5 px-3">
+          Copied to clipboard &mdash; paste into any email app to send to jthreet@49caliber.com
+        </div>
+        <a href="mailto:jthreet@49caliber.com?subject=BiteWindow%20Vector7%209.99%20USD%20Lifetime%20License%20Order&body=Hello%2049Caliber%20Labs%2C%0A%0AI%20would%20like%20to%20purchase%20the%20BiteWindow%20Vector7%209.99%20USD%20Lifetime%20License%20(includes%20Android%20APK%20%2B%20iPhone%2FWeb%20access%20and%20lifetime%20free%20updates)." class="btn-secondary-coastal text-xs py-2.5 px-4 w-full justify-center">
+          <i data-lucide="mail" class="w-4 h-4 text-sky-600"></i>
+          Open System Mail App (Optional)
+        </a>
+        <a href="./bitewindow/" class="btn-secondary-coastal text-xs py-2.5 px-4 w-full justify-center border-sky-600 text-sky-800 hover:bg-sky-50">
+          <i data-lucide="smartphone" class="w-4 h-4 text-sky-600"></i>
+          Launch Live Web &amp; iPhone App (v1.0)
+        </a>
+      </div>
+    </div>
+  </div>
 
   <!-- State persistence shim component -->
   <api-shim></api-shim>
@@ -3221,6 +3260,57 @@ CALIFORNIA & FEDERAL R&D PATHWAYS
         window.notebookAppApi.notifyAppReady();
       }
     }
+
+    // ==========================================
+    // BITEWINDOW CHECKOUT MODAL & PAYMENT LINK
+    // ==========================================
+    const BITEWINDOW_CHECKOUT_URL = '';
+
+    function openBiteWindowCheckout() {
+      if (BITEWINDOW_CHECKOUT_URL) {
+        window.open(BITEWINDOW_CHECKOUT_URL, '_blank', 'noopener,noreferrer');
+        return;
+      }
+      const modal = document.getElementById('bitewindow-checkout-modal');
+      const copyStatus = document.getElementById('checkout-copy-status');
+      if (copyStatus) copyStatus.classList.add('hidden');
+      if (modal) {
+        modal.classList.remove('hidden');
+        if (window.lucide) window.lucide.createIcons();
+      }
+    }
+
+    function closeBiteWindowCheckout() {
+      const modal = document.getElementById('bitewindow-checkout-modal');
+      if (modal) modal.classList.add('hidden');
+    }
+
+    async function copyBiteWindowOrder() {
+      const orderText = [
+        'To: jthreet@49caliber.com',
+        'Subject: BiteWindow Vector7 9.99 USD Lifetime License Order',
+        '',
+        'Hello 49Caliber Labs,',
+        'I would like to purchase the BiteWindow Vector7 $9.99 Lifetime License (Android APK + iPhone/Web access and lifetime free updates).'
+      ].join('\n');
+      const statusEl = document.getElementById('checkout-copy-status');
+      try {
+        await navigator.clipboard.writeText(orderText);
+        if (statusEl) {
+          statusEl.textContent = 'Copied to clipboard — paste into any email app to send to jthreet@49caliber.com';
+          statusEl.classList.remove('hidden');
+        }
+      } catch (_err) {
+        if (statusEl) {
+          statusEl.textContent = 'Clipboard blocked — send email directly to jthreet@49caliber.com';
+          statusEl.classList.remove('hidden');
+        }
+      }
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeBiteWindowCheckout();
+    });
 
     window.addEventListener('DOMContentLoaded', () => {
       initializeApplication();
