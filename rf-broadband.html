@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-W81F0VN40N"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-W81F0VN40N');
+  </script>
+  <title>Custom Antenna Design &amp; Receive-Only Broadband RF Telemetry | 49Caliber Labs</title>
+  <meta name="description" content="49Caliber Labs RF hardware engineering: VNA-tuned 915 MHz MeshMule antennas, marine collinear arrays, low-noise LNA front-ends, and zero-transmit receive-only broadbanding.">
+  <link rel="canonical" href="https://49caliber.com/rf-broadband.html">
+  <link rel="icon" type="image/svg+xml" href="./assets/49caliber_logo_crosshairs_animated.svg">
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans antialiased">
+  <header class="bg-white/95 backdrop-blur-md border-b border-slate-200 sticky top-0 z-40">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 h-18 flex items-center justify-between gap-4">
+      <a href="./index.html" class="flex items-center gap-3 shrink-0">
+        <img src="./assets/49caliber_logo_crosshairs_animated.svg" alt="49Caliber Labs" class="w-10 h-10 rounded-xl border border-sky-200 object-cover" />
+        <div>
+          <span class="font-extrabold text-lg text-slate-900">49CALIBER</span>
+          <span class="font-light text-lg text-sky-600">LABS</span>
+        </div>
+      </a>
+      <nav class="hidden md:flex items-center gap-5 text-xs font-semibold text-slate-600">
+        <a href="./index.html" class="hover:text-sky-700">Home</a>
+        <a href="./hydro-telemetry.html" class="hover:text-sky-700">Hydro Telemetry</a>
+        <a href="./rf-broadband.html" class="text-sky-700 font-bold">RF &amp; Antennas</a>
+        <a href="./orion-partner.html" class="hover:text-sky-700">Orion Partner</a>
+        <a href="./bitewindow/" class="px-3 py-1.5 rounded-lg bg-sky-600 text-white hover:bg-sky-700">Launch BiteWindow</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-5xl mx-auto px-4 sm:px-6 py-12 space-y-12">
+    <section class="bg-white rounded-3xl border border-slate-200 p-8 sm:p-10 shadow-sm space-y-5">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-50 border border-cyan-200 text-cyan-900 text-xs font-mono font-semibold uppercase tracking-wider">
+        RF Telemetry &bull; Custom Antennas &bull; RX-Only Broadbanding
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+        Custom Antenna Design &amp; Receive-Only Broadband RF Telemetry
+      </h1>
+      <p class="text-base sm:text-lg text-slate-600 leading-relaxed">
+        Off-the-shelf rubber-duck whips bleed link budget before telemetry even leaves the enclosure. 49Caliber Labs designs application-matched custom radiating elements and receive-only (<code class="font-mono text-sm">RX-Only</code>) wideband RF front-ends for coastal estuaries, wildfire corridors, and sparse-cellular recreation lands.
+      </p>
+    </section>
+
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="bg-white rounded-2xl border border-slate-200 p-7 shadow-xs space-y-4">
+        <div class="text-xs font-mono uppercase tracking-wider font-bold text-sky-700">Architecture 01 &bull; Zero-TX Spectral Hygiene</div>
+        <h2 class="text-2xl font-bold text-slate-900">Receive-Only Broadbanding</h2>
+        <p class="text-sm text-slate-600 leading-relaxed">
+          Federal park installations, utility rights-of-way, and shared aviation/marine corridors frequently restrict active RF emissions. Receive-only broadband telemetry decouples passive environmental sensing from transmitter licensing bottlenecks:
+        </p>
+        <ul class="space-y-2 text-sm text-slate-700 list-disc list-inside">
+          <li><strong>Wideband Passive Capture:</strong> Swept HF/VHF/UHF reception (<code class="font-mono text-xs">10 MHz &ndash; 1.2 GHz</code>) for NOAA weather broadcasts, AIS marine beacons, GOES DCP downlinks, and ambient RF noise-floor baselines.</li>
+          <li><strong>Low-Noise Front-End Conditioning:</strong> Band-selective SAW / cavity pre-filtering paired with sub-1 dB noise-figure LNAs to pull weak beacon frames out of urban Vallejo or industrial Mare Island interference.</li>
+          <li><strong>Zero-Emission Audit Profile:</strong> Passive nodes generate zero unintended out-of-band spurs, simplifying multi-agency co-location on shared fire lookouts and ridge repeaters.</li>
+        </ul>
+      </div>
+
+      <div class="bg-white rounded-2xl border border-slate-200 p-7 shadow-xs space-y-4">
+        <div class="text-xs font-mono uppercase tracking-wider font-bold text-amber-700">Architecture 02 &bull; Physical Match</div>
+        <h2 class="text-2xl font-bold text-slate-900">Custom Antenna Engineering</h2>
+        <p class="text-sm text-slate-600 leading-relaxed">
+          Every MeshMule and field telemetry node is swept on a Vector Network Analyzer (<code class="font-mono text-xs">50 &Omega;</code> reference plane) inside its actual weatherproof radome and mounting mast configuration:
+        </p>
+        <ul class="space-y-2 text-sm text-slate-700 list-disc list-inside">
+          <li><strong>902&ndash;928 MHz Sub-GHz ISM Arrays:</strong> Elevated ground-plane quarter-wave whips, stacked collinear fiberglass verticals (<code class="font-mono text-xs">VSWR &lt; 1.3:1</code>), and directional canyon Yagi feeds.</li>
+          <li><strong>Wideband Discone &amp; Fat-Dipole RX Elements:</strong> Tapered-skirt geometries maintaining stable impedance across multi-octave receive-only sweeps without mechanical band switching.</li>
+          <li><strong>Marine &amp; Wildfire Hardening:</strong> UV-stabilized fiberglass shrouds, N-type bulkhead gaskets, and DC-grounded lightning arrestor stubs engineered with Orion General Contracting field rigs.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="bg-slate-900 text-white rounded-3xl p-8 space-y-5">
+      <h2 class="text-2xl font-bold">Open-Source Codec + Hardware Integration</h2>
+      <p class="text-sm text-slate-300 leading-relaxed max-w-3xl">
+        All packet serialization (<code class="font-mono text-xs">14-byte</code> compact hydro/baro frames), link tomography scoring, and phase-array storm tracking live inside our MIT-licensed <strong>MeshMule-Core</strong> repository on GitHub, engineered to pair with physical tower mounts and off-grid power enclosures deployed alongside Orion General Contracting, Inc.
+      </p>
+      <div class="flex flex-wrap gap-3">
+        <a href="https://github.com/49Caliber-Labs" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-xl bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold text-sm transition">
+          49Caliber-Labs GitHub &rarr;
+        </a>
+        <a href="./orion-partner.html" class="px-5 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-sm border border-white/20 transition">
+          Sister Partner: Orion General Contracting
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-slate-200 bg-white py-6 text-center text-xs text-slate-500">
+    49Caliber Labs &bull; Solano County, California &bull; <a href="./index.html" class="underline hover:text-slate-700">Main Portal</a> &bull; <a href="./privacy.html" class="underline hover:text-slate-700">Privacy Policy</a>
+  </footer>
+</body>
+</html>

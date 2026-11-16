@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /download.html
+Disallow: /bitewindow/download.html
+
+Sitemap: https://49caliber.com/sitemap.xml
