@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-W81F0VN40N"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-W81F0VN40N');
+  </script>
+  <title>BiteWindow Vector7 | Verified Purchase &amp; APK Fulfillment | 49Caliber Labs</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/svg+xml" href="./assets/49caliber_logo_crosshairs_animated.svg">
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans antialiased min-h-screen flex flex-col">
+  <header class="bg-white border-b border-slate-200">
+    <div class="max-w-3xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="./index.html" class="flex items-center gap-2.5">
+        <img src="./assets/49caliber_logo_crosshairs_animated.svg" alt="49Caliber Labs" class="w-9 h-9 rounded-lg border border-sky-200 object-cover" />
+        <div>
+          <span class="font-extrabold text-base text-slate-900">49CALIBER</span>
+          <span class="font-light text-base text-sky-600">LABS</span>
+        </div>
+      </a>
+      <a href="./bitewindow/" class="text-xs font-semibold text-sky-700 hover:text-sky-900">Launch Web App &rarr;</a>
+    </div>
+  </header>
+
+  <main class="flex-1 max-w-3xl w-full mx-auto px-6 py-10">
+    <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-6 sm:p-8 space-y-6">
+      <div class="flex items-start justify-between gap-4 border-b border-slate-100 pb-5">
+        <div>
+          <span class="inline-flex items-center gap-1.5 text-xs font-mono uppercase tracking-wider text-sky-700 font-semibold">
+            Stripe Checkout Fulfillment
+          </span>
+          <h1 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1">BiteWindow Vector7 &mdash; v1.0.0</h1>
+          <p class="text-sm text-slate-600 mt-1">Verified Android APK &amp; Lifetime Web/PWA Access</p>
+        </div>
+        <span id="status-badge" class="shrink-0 inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-sky-50 text-sky-700 border border-sky-200">
+          Verifying...
+        </span>
+      </div>
+
+      <!-- Loading state -->
+      <div id="state-loading" class="py-6 space-y-3">
+        <div class="flex items-center gap-3 text-slate-700">
+          <div class="w-5 h-5 rounded-full border-2 border-sky-600 border-t-transparent animate-spin"></div>
+          <span class="text-sm font-medium">Confirming payment directly with Stripe...</span>
+        </div>
+        <p class="text-xs text-slate-500">Hold tight &mdash; your private signed installer link is generated automatically once Stripe confirms your checkout session.</p>
+      </div>
+
+      <!-- Verified Paid State -->
+      <div id="state-paid" class="hidden space-y-5">
+        <div class="rounded-xl bg-emerald-50 border border-emerald-200 p-4 text-sm text-emerald-900">
+          <strong>Payment Verified:</strong> Thank you for backing 49Caliber Labs. Your lifetime BiteWindow Vector7 release is ready below.
+          <div id="receipt-meta" class="mt-2 text-xs font-mono text-emerald-800 space-y-0.5"></div>
+        </div>
+
+        <div class="flex flex-col sm:flex-row gap-3">
+          <a id="apk-download-btn" href="#" class="flex-1 inline-flex items-center justify-center gap-2 rounded-xl bg-sky-600 hover:bg-sky-700 text-white font-semibold text-sm py-3.5 px-5 shadow-sm transition">
+            Download BiteWindow-Vector7-v1.0.0.apk (5.38 MB)
+          </a>
+          <a id="webapp-launch-btn" href="https://49caliber.com/bitewindow/" class="inline-flex items-center justify-center gap-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-semibold text-sm py-3.5 px-5 transition">
+            Launch Live Web / PWA
+          </a>
+        </div>
+
+        <p id="expiry-note" class="text-xs text-slate-500"></p>
+
+        <div class="rounded-xl bg-slate-50 border border-slate-200 p-4 space-y-2 text-xs text-slate-700">
+          <div class="font-semibold text-slate-900">Android Sideload Instructions (30 seconds) &amp; iPhone PWA</div>
+          <ol class="list-decimal list-inside space-y-1">
+            <li><strong>Android:</strong> Tap <strong>Download BiteWindow-Vector7-v1.0.0.apk</strong>, open it from <strong>Files</strong> or notifications, and tap <strong>Settings &rarr; Allow from this source &rarr; Install</strong>.</li>
+            <li><strong>iPhone / iPad / Desktop:</strong> Tap <strong>Launch Live Web / PWA</strong> above in Safari, tap <strong>Share &rarr; Add to Home Screen</strong> for full offline-cached access.</li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- Error / Manual Recovery State -->
+      <div id="state-error" class="hidden space-y-4">
+        <div id="error-box" class="rounded-xl bg-amber-50 border border-amber-200 p-4 text-sm text-amber-900"></div>
+
+        <form id="manual-session-form" class="space-y-3 pt-2">
+          <label for="session-id-input" class="block text-xs font-semibold uppercase tracking-wider text-slate-700">
+            Verify With Stripe Checkout Session ID
+          </label>
+          <div class="flex flex-col sm:flex-row gap-2">
+            <input
+              id="session-id-input"
+              type="text"
+              placeholder="cs_live_..."
+              class="flex-1 rounded-lg border border-slate-300 px-3 py-2 text-sm font-mono focus:outline-none focus:ring-2 focus:ring-sky-500"
+              required
+            />
+            <button type="submit" class="rounded-lg bg-sky-600 hover:bg-sky-700 text-white text-sm font-semibold px-4 py-2 transition">
+              Verify &amp; Unlock
+            </button>
+          </div>
+          <p class="text-xs text-slate-500">
+            Already paid and closed the window? Email your Stripe receipt email or reference to
+            <a href="mailto:jthreet@49caliber.com" class="text-sky-700 underline">jthreet@49caliber.com</a> for immediate manual re-issue.
+          </p>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer class="border-t border-slate-200 bg-white py-5 text-center text-xs text-slate-500">
+    49Caliber Labs Inc. &bull; Solano County, California &bull; <a href="./privacy.html" class="underline hover:text-slate-700">Privacy &amp; Telemetry Policy</a>
+  </footer>
+
+  <script>
+    (function () {
+      const API_BASE = window.location.hostname === 'caliber-labs.web.app' || window.location.hostname === 'caliber-labs.firebaseapp.com'
+        ? ''
+        : 'https://caliber-labs.web.app';
+
+      const statusBadge = document.getElementById('status-badge');
+      const stateLoading = document.getElementById('state-loading');
+      const statePaid = document.getElementById('state-paid');
+      const stateError = document.getElementById('state-error');
+      const errorBox = document.getElementById('error-box');
+      const receiptMeta = document.getElementById('receipt-meta');
+      const apkBtn = document.getElementById('apk-download-btn');
+      const expiryNote = document.getElementById('expiry-note');
+      const manualForm = document.getElementById('manual-session-form');
+      const sessionInput = document.getElementById('session-id-input');
+
+      function escapeHtml(value) {
+        return String(value == null ? '' : value)
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;')
+          .replace(/"/g, '&quot;')
+          .replace(/'/g, '&#39;');
+      }
+
+      function showState(mode) {
+        stateLoading.classList.toggle('hidden', mode !== 'loading');
+        statePaid.classList.toggle('hidden', mode !== 'paid');
+        stateError.classList.toggle('hidden', mode !== 'error');
+      }
+
+      function showError(badgeText, htmlMessage) {
+        statusBadge.textContent = badgeText;
+        statusBadge.className = 'shrink-0 inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-amber-50 text-amber-800 border border-amber-200';
+        errorBox.innerHTML = htmlMessage;
+        showState('error');
+      }
+
+      async function verifySession(sessionId) {
+        showState('loading');
+        statusBadge.textContent = 'Verifying...';
+        statusBadge.className = 'shrink-0 inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-sky-50 text-sky-700 border border-sky-200';
+
+        try {
+          const res = await fetch(API_BASE + '/api/fulfill?session_id=' + encodeURIComponent(sessionId), {
+            method: 'GET',
+            headers: { 'Accept': 'application/json' },
+          });
+          const data = await res.json();
+
+          if (!res.ok || !data.paid) {
+            showError(
+              res.status === 402 ? 'Unpaid' : 'Verification Issue',
+              '<strong>Unable to verify checkout:</strong> ' + escapeHtml(data.error || 'Please confirm your Stripe Checkout session ID or contact jthreet@49caliber.com.')
+            );
+            return;
+          }
+
+          statusBadge.textContent = 'Verified Paid';
+          statusBadge.className = 'shrink-0 inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200';
+
+          const amountFmt = typeof data.amountTotal === 'number'
+            ? '$' + (data.amountTotal / 100).toFixed(2) + ' ' + String(data.currency || 'USD').toUpperCase()
+            : '$9.99 USD';
+
+          receiptMeta.innerHTML =
+            '<div>Order Session: ' + escapeHtml(data.sessionId) + '</div>' +
+            '<div>Amount Paid: ' + escapeHtml(amountFmt) + (data.customerEmailMasked ? ' &bull; Buyer: ' + escapeHtml(data.customerEmailMasked) : '') + '</div>';
+
+          apkBtn.href = data.downloadUrl;
+          apkBtn.addEventListener('click', function () {
+            if (typeof window.gtag === 'function') {
+              window.gtag('event', 'apk_download_click', {
+                product: 'bitewindow-vector7',
+                version: data.version || '1.0.0',
+              });
+            }
+          }, { once: true });
+
+          if (data.expiresAt) {
+            expiryNote.textContent = 'Signed download link expires at ' + new Date(data.expiresAt).toLocaleTimeString() + ' (reload this page anytime to mint a fresh link).';
+          }
+
+          if (typeof window.gtag === 'function') {
+            window.gtag('event', 'purchase_verified', {
+              transaction_id: data.sessionId,
+              value: typeof data.amountTotal === 'number' ? data.amountTotal / 100 : 9.99,
+              currency: String(data.currency || 'USD').toUpperCase(),
+            });
+          }
+
+          showState('paid');
+        } catch (err) {
+          showError(
+            'Connection Error',
+            '<strong>Could not reach fulfillment server:</strong> ' + escapeHtml(err && err.message ? err.message : 'Network error') + '. Reload this page in a few seconds.'
+          );
+        }
+      }
+
+      manualForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        const sid = sessionInput.value.trim();
+        if (!sid) return;
+        const nextUrl = new URL(window.location.href);
+        nextUrl.searchParams.set('session_id', sid);
+        window.history.replaceState({}, '', nextUrl.toString());
+        verifySession(sid);
+      });
+
+      const params = new URLSearchParams(window.location.search);
+      const sessionId = params.get('session_id');
+      if (sessionId) {
+        sessionInput.value = sessionId;
+        verifySession(sessionId);
+      } else {
+        showError(
+          'Session Required',
+          '<strong>No Stripe Checkout session detected in URL.</strong> Complete checkout via the <a href="./index.html#store" class="underline font-semibold">49Caliber Store</a> or paste your <code>cs_live_...</code> session ID below.'
+        );
+      }
+    })();
+  </script>
+</body>
+</html>
