@@ -16,6 +16,8 @@
   <meta name="robots" content="noindex, nofollow">
   <link rel="icon" type="image/svg+xml" href="./assets/49caliber_logo_crosshairs_animated.svg">
   <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://www.gstatic.com/firebasejs/11.0.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/11.0.2/firebase-auth-compat.js"></script>
 </head>
 <body class="bg-slate-50 text-slate-900 font-sans antialiased min-h-screen flex flex-col">
   <header class="bg-white border-b border-slate-200">
@@ -36,7 +38,7 @@
       <div class="flex items-start justify-between gap-4 border-b border-slate-100 pb-5">
         <div>
           <span class="inline-flex items-center gap-1.5 text-xs font-mono uppercase tracking-wider text-sky-700 font-semibold">
-            Stripe Checkout Fulfillment
+            Stripe Checkout Fulfillment &amp; Account Recovery
           </span>
           <h1 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1">BiteWindow Vector7 &mdash; v1.0.0</h1>
           <p class="text-sm text-slate-600 mt-1">Verified Android APK &amp; Lifetime Web/PWA Access</p>
@@ -50,9 +52,9 @@
       <div id="state-loading" class="py-6 space-y-3">
         <div class="flex items-center gap-3 text-slate-700">
           <div class="w-5 h-5 rounded-full border-2 border-sky-600 border-t-transparent animate-spin"></div>
-          <span class="text-sm font-medium">Confirming payment directly with Stripe...</span>
+          <span id="loading-message" class="text-sm font-medium">Confirming payment directly with Stripe...</span>
         </div>
-        <p class="text-xs text-slate-500">Hold tight &mdash; your private signed installer link is generated automatically once Stripe confirms your checkout session.</p>
+        <p class="text-xs text-slate-500">Hold tight &mdash; your private signed installer link is generated automatically once your purchase is verified.</p>
       </div>
 
       <!-- Verified Paid State -->
@@ -71,6 +73,8 @@
           </a>
         </div>
 
+        <div id="extra-orders" class="hidden space-y-2"></div>
+
         <p id="expiry-note" class="text-xs text-slate-500"></p>
 
         <div class="rounded-xl bg-slate-50 border border-slate-200 p-4 space-y-2 text-xs text-slate-700">
@@ -82,13 +86,52 @@
         </div>
       </div>
 
-      <!-- Error / Manual Recovery State -->
-      <div id="state-error" class="hidden space-y-4">
+      <!-- Returning Buyer Sign-In & Manual Recovery State -->
+      <div id="state-error" class="hidden space-y-5">
+        <div id="returning-buyer-panel" class="rounded-2xl border border-sky-200 bg-sky-50/70 p-5 space-y-4">
+          <div class="space-y-1">
+            <div class="text-xs font-mono uppercase tracking-wider font-bold text-sky-800">
+              Returning Buyer &amp; Cross-Device Unlock
+            </div>
+            <h2 class="text-base font-bold text-slate-900">Sign In With Your Checkout Google Account</h2>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Already bought BiteWindow Vector7 on another device? Sign in using the Google email tied to your Stripe receipt to restore your Android APK download and PWA access without paying twice.
+            </p>
+          </div>
+
+          <div id="signed-out-controls" class="flex flex-wrap items-center gap-3">
+            <button
+              id="google-signin-btn"
+              type="button"
+              class="inline-flex items-center justify-center gap-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-sm font-semibold px-4 py-2.5 shadow-sm transition"
+            >
+              Sign in with Google (Find My Downloads)
+            </button>
+          </div>
+
+          <div id="signed-in-controls" class="hidden flex-wrap items-center justify-between gap-3 rounded-xl bg-white border border-sky-200 px-4 py-3">
+            <div class="text-xs">
+              <div class="font-semibold text-slate-900">Signed in as <span id="signed-in-email" class="font-mono text-sky-700"></span></div>
+              <div class="text-slate-500">Checked Firestore &amp; live Stripe receipts for this email.</div>
+            </div>
+            <div class="flex items-center gap-2">
+              <button id="refresh-orders-btn" type="button" class="rounded-lg bg-sky-600 hover:bg-sky-700 text-white text-xs font-semibold px-3 py-1.5 transition">
+                Re-check Orders
+              </button>
+              <button id="signout-btn" type="button" class="rounded-lg border border-slate-300 hover:bg-slate-100 text-slate-700 text-xs font-semibold px-3 py-1.5 transition">
+                Sign Out
+              </button>
+            </div>
+          </div>
+
+          <div id="auth-feedback" class="hidden rounded-xl border border-amber-200 bg-amber-50 p-3 text-xs text-amber-900"></div>
+        </div>
+
         <div id="error-box" class="rounded-xl bg-amber-50 border border-amber-200 p-4 text-sm text-amber-900"></div>
 
-        <form id="manual-session-form" class="space-y-3 pt-2">
+        <form id="manual-session-form" class="space-y-3 pt-1 border-t border-slate-100">
           <label for="session-id-input" class="block text-xs font-semibold uppercase tracking-wider text-slate-700">
-            Verify With Stripe Checkout Session ID
+            Or Verify With Stripe Checkout Session ID
           </label>
           <div class="flex flex-col sm:flex-row gap-2">
             <input
@@ -103,7 +146,7 @@
             </button>
           </div>
           <p class="text-xs text-slate-500">
-            Already paid and closed the window? Email your Stripe receipt email or reference to
+            Checked out with a non-Google email (e.g. Apple Hide My Email or Yahoo)? Email your Stripe receipt email or reference to
             <a href="mailto:jthreet@49caliber.com" class="text-sky-700 underline">jthreet@49caliber.com</a> for immediate manual re-issue.
           </p>
         </form>
@@ -112,7 +155,7 @@
   </main>
 
   <footer class="border-t border-slate-200 bg-white py-5 text-center text-xs text-slate-500">
-    49Caliber Labs Inc. &bull; Solano County, California &bull; <a href="./privacy.html" class="underline hover:text-slate-700">Privacy &amp; Telemetry Policy</a>
+    49Caliber Labs &bull; Solano County, California &bull; <a href="./privacy.html" class="underline hover:text-slate-700">Privacy &amp; Telemetry Policy</a>
   </footer>
 
   <script>
@@ -121,16 +164,43 @@
         ? ''
         : 'https://caliber-labs.web.app';
 
+      const firebaseConfig = {
+        apiKey: "AIzaSyB8uGQwb345pBoe291DDZgYm2aC93zqQIE",
+        authDomain: "caliber-labs.firebaseapp.com",
+        projectId: "caliber-labs",
+        storageBucket: "caliber-labs.firebasestorage.app",
+        messagingSenderId: "318192608015",
+        appId: "1:318192608015:web:eddfb2a7a36a4b7e19147a",
+        measurementId: "G-6S9T9EQYT6"
+      };
+
+      let firebaseAuth = null;
+      if (window.firebase && typeof window.firebase.initializeApp === 'function') {
+        if (!window.firebase.apps || window.firebase.apps.length === 0) {
+          window.firebase.initializeApp(firebaseConfig);
+        }
+        firebaseAuth = window.firebase.auth();
+      }
+
       const statusBadge = document.getElementById('status-badge');
       const stateLoading = document.getElementById('state-loading');
+      const loadingMessage = document.getElementById('loading-message');
       const statePaid = document.getElementById('state-paid');
       const stateError = document.getElementById('state-error');
       const errorBox = document.getElementById('error-box');
       const receiptMeta = document.getElementById('receipt-meta');
       const apkBtn = document.getElementById('apk-download-btn');
+      const extraOrdersEl = document.getElementById('extra-orders');
       const expiryNote = document.getElementById('expiry-note');
       const manualForm = document.getElementById('manual-session-form');
       const sessionInput = document.getElementById('session-id-input');
+      const googleSigninBtn = document.getElementById('google-signin-btn');
+      const signedOutControls = document.getElementById('signed-out-controls');
+      const signedInControls = document.getElementById('signed-in-controls');
+      const signedInEmail = document.getElementById('signed-in-email');
+      const refreshOrdersBtn = document.getElementById('refresh-orders-btn');
+      const signoutBtn = document.getElementById('signout-btn');
+      const authFeedback = document.getElementById('auth-feedback');
 
       function escapeHtml(value) {
         return String(value == null ? '' : value)
@@ -141,21 +211,83 @@
           .replace(/'/g, '&#39;');
       }
 
-      function showState(mode) {
+      function showState(mode, loadingText) {
+        if (loadingText) {
+          loadingMessage.textContent = loadingText;
+        }
         stateLoading.classList.toggle('hidden', mode !== 'loading');
         statePaid.classList.toggle('hidden', mode !== 'paid');
         stateError.classList.toggle('hidden', mode !== 'error');
       }
 
-      function showError(badgeText, htmlMessage) {
+      function showAuthFeedback(htmlMessage) {
+        if (!htmlMessage) {
+          authFeedback.classList.add('hidden');
+          authFeedback.innerHTML = '';
+          return;
+        }
+        authFeedback.innerHTML = htmlMessage;
+        authFeedback.classList.remove('hidden');
+      }
+
+      function showError(badgeText, htmlMessage, isNeutral) {
         statusBadge.textContent = badgeText;
-        statusBadge.className = 'shrink-0 inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-amber-50 text-amber-800 border border-amber-200';
+        statusBadge.className = isNeutral
+          ? 'shrink-0 inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-sky-50 text-sky-700 border border-sky-200'
+          : 'shrink-0 inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-amber-50 text-amber-800 border border-amber-200';
         errorBox.innerHTML = htmlMessage;
+        errorBox.classList.toggle('hidden', !htmlMessage);
         showState('error');
       }
 
+      function renderPaidOrder(primaryOrder, extraOrders) {
+        statusBadge.textContent = 'Verified Paid';
+        statusBadge.className = 'shrink-0 inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200';
+
+        const amountFmt = typeof primaryOrder.amountTotal === 'number'
+          ? '$' + (primaryOrder.amountTotal / 100).toFixed(2) + ' ' + String(primaryOrder.currency || 'USD').toUpperCase()
+          : '$9.99 USD';
+
+        receiptMeta.innerHTML =
+          '<div>Order Session: ' + escapeHtml(primaryOrder.sessionId) + '</div>' +
+          '<div>Amount Paid: ' + escapeHtml(amountFmt) + (primaryOrder.customerEmailMasked ? ' &bull; Buyer: ' + escapeHtml(primaryOrder.customerEmailMasked) : '') + '</div>';
+
+        apkBtn.href = primaryOrder.downloadUrl;
+        apkBtn.addEventListener('click', function () {
+          if (typeof window.gtag === 'function') {
+            window.gtag('event', 'apk_download_click', {
+              product: 'bitewindow-vector7',
+              version: primaryOrder.version || '1.0.0',
+            });
+          }
+        }, { once: true });
+
+        if (Array.isArray(extraOrders) && extraOrders.length > 0) {
+          extraOrdersEl.innerHTML = extraOrders
+            .map(function (order) {
+              return (
+                '<div class="flex items-center justify-between gap-3 rounded-xl border border-slate-200 bg-slate-50 px-4 py-2.5 text-xs">' +
+                '<div class="font-mono text-slate-700">Order ' + escapeHtml(order.sessionId) + '</div>' +
+                '<a href="' + escapeHtml(order.downloadUrl) + '" class="font-semibold text-sky-700 hover:underline">Download APK &darr;</a>' +
+                '</div>'
+              );
+            })
+            .join('');
+          extraOrdersEl.classList.remove('hidden');
+        } else {
+          extraOrdersEl.innerHTML = '';
+          extraOrdersEl.classList.add('hidden');
+        }
+
+        if (primaryOrder.expiresAt) {
+          expiryNote.textContent = 'Signed download link expires at ' + new Date(primaryOrder.expiresAt).toLocaleTimeString() + ' (reload this page anytime to mint a fresh link).';
+        }
+
+        showState('paid');
+      }
+
       async function verifySession(sessionId) {
-        showState('loading');
+        showState('loading', 'Confirming payment directly with Stripe...');
         statusBadge.textContent = 'Verifying...';
         statusBadge.className = 'shrink-0 inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-sky-50 text-sky-700 border border-sky-200';
 
@@ -174,31 +306,6 @@
             return;
           }
 
-          statusBadge.textContent = 'Verified Paid';
-          statusBadge.className = 'shrink-0 inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200';
-
-          const amountFmt = typeof data.amountTotal === 'number'
-            ? '$' + (data.amountTotal / 100).toFixed(2) + ' ' + String(data.currency || 'USD').toUpperCase()
-            : '$9.99 USD';
-
-          receiptMeta.innerHTML =
-            '<div>Order Session: ' + escapeHtml(data.sessionId) + '</div>' +
-            '<div>Amount Paid: ' + escapeHtml(amountFmt) + (data.customerEmailMasked ? ' &bull; Buyer: ' + escapeHtml(data.customerEmailMasked) : '') + '</div>';
-
-          apkBtn.href = data.downloadUrl;
-          apkBtn.addEventListener('click', function () {
-            if (typeof window.gtag === 'function') {
-              window.gtag('event', 'apk_download_click', {
-                product: 'bitewindow-vector7',
-                version: data.version || '1.0.0',
-              });
-            }
-          }, { once: true });
-
-          if (data.expiresAt) {
-            expiryNote.textContent = 'Signed download link expires at ' + new Date(data.expiresAt).toLocaleTimeString() + ' (reload this page anytime to mint a fresh link).';
-          }
-
           if (typeof window.gtag === 'function') {
             window.gtag('event', 'purchase_verified', {
               transaction_id: data.sessionId,
@@ -207,13 +314,126 @@
             });
           }
 
-          showState('paid');
+          renderPaidOrder(data, []);
         } catch (err) {
           showError(
             'Connection Error',
             '<strong>Could not reach fulfillment server:</strong> ' + escapeHtml(err && err.message ? err.message : 'Network error') + '. Reload this page in a few seconds.'
           );
         }
+      }
+
+      async function lookupMyDownloads(user) {
+        if (!user) return;
+        showAuthFeedback('');
+        showState('loading', 'Checking eligible BiteWindow orders for ' + (user.email || 'your account') + '...');
+        statusBadge.textContent = 'Checking Orders...';
+        statusBadge.className = 'shrink-0 inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-sky-50 text-sky-700 border border-sky-200';
+
+        try {
+          const idToken = await user.getIdToken(true);
+          const res = await fetch(API_BASE + '/api/my-downloads', {
+            method: 'GET',
+            headers: {
+              'Accept': 'application/json',
+              'Authorization': 'Bearer ' + idToken,
+            },
+          });
+          const data = await res.json();
+
+          if (!res.ok) {
+            showError('Account Check Issue', '', false);
+            showAuthFeedback('<strong>Unable to check account orders:</strong> ' + escapeHtml(data.error || 'Please sign in again or verify using your Stripe session ID below.'));
+            return;
+          }
+
+          if (data.eligible && Array.isArray(data.orders) && data.orders.length > 0) {
+            renderPaidOrder(data.orders[0], data.orders.slice(1));
+            return;
+          }
+
+          showError('No Match Yet', '', true);
+          showAuthFeedback(
+            '<strong>No paid Stripe order matched ' + escapeHtml(data.emailMasked || user.email) + '.</strong> ' +
+            'If you checked out with a different email address, click <strong>Sign Out</strong> and sign in with that Google account, or paste your Stripe <code>cs_live_...</code> Checkout Session ID below.'
+          );
+        } catch (err) {
+          showError('Connection Error', '', false);
+          showAuthFeedback('<strong>Network error looking up eligible downloads:</strong> ' + escapeHtml(err && err.message ? err.message : 'Please try again.'));
+        }
+      }
+
+      function updateSignedInUi(user) {
+        if (user) {
+          signedOutControls.classList.add('hidden');
+          signedInControls.classList.remove('hidden');
+          signedInControls.classList.add('flex');
+          signedInEmail.textContent = user.email || 'Verified User';
+        } else {
+          signedOutControls.classList.remove('hidden');
+          signedInControls.classList.add('hidden');
+          signedInControls.classList.remove('flex');
+          signedInEmail.textContent = '';
+        }
+      }
+
+      if (firebaseAuth) {
+        firebaseAuth.getRedirectResult().catch(function (err) {
+          if (err && err.message) {
+            showAuthFeedback('<strong>Sign-in notice:</strong> ' + escapeHtml(err.message));
+          }
+        });
+
+        firebaseAuth.onAuthStateChanged(function (user) {
+          updateSignedInUi(user);
+          const params = new URLSearchParams(window.location.search);
+          if (user && !params.get('session_id')) {
+            lookupMyDownloads(user);
+          }
+        });
+
+        googleSigninBtn.addEventListener('click', async function () {
+          showAuthFeedback('');
+          const provider = new window.firebase.auth.GoogleAuthProvider();
+          provider.setCustomParameters({ prompt: 'select_account' });
+          try {
+            const cred = await firebaseAuth.signInWithPopup(provider);
+            if (cred && cred.user) {
+              await lookupMyDownloads(cred.user);
+            }
+          } catch (err) {
+            const code = err && err.code ? err.code : '';
+            if (code === 'auth/popup-blocked') {
+              await firebaseAuth.signInWithRedirect(provider);
+              return;
+            }
+            if (code === 'auth/unauthorized-domain') {
+              showAuthFeedback(
+                '<strong>Domain Authorization Pending:</strong> Complete Google Sign-In directly on our primary Firebase portal: ' +
+                '<a href="https://caliber-labs.web.app/download.html" class="underline font-semibold text-sky-800">caliber-labs.web.app/download.html &rarr;</a>'
+              );
+              return;
+            }
+            if (code !== 'auth/popup-closed-by-user' && code !== 'auth/cancelled-popup-request') {
+              showAuthFeedback('<strong>Sign-in error:</strong> ' + escapeHtml(err && err.message ? err.message : 'Unable to sign in cleanly.'));
+            }
+          }
+        });
+
+        refreshOrdersBtn.addEventListener('click', function () {
+          if (firebaseAuth.currentUser) {
+            lookupMyDownloads(firebaseAuth.currentUser);
+          }
+        });
+
+        signoutBtn.addEventListener('click', async function () {
+          await firebaseAuth.signOut();
+          showAuthFeedback('');
+          showError('Sign In / Verify', '', true);
+        });
+      } else {
+        googleSigninBtn.disabled = true;
+        googleSigninBtn.textContent = 'Sign-In Unavailable Offline';
       }
 
       manualForm.addEventListener('submit', function (e) {
@@ -231,11 +451,11 @@
       if (sessionId) {
         sessionInput.value = sessionId;
         verifySession(sessionId);
+      } else if (firebaseAuth && firebaseAuth.currentUser) {
+        updateSignedInUi(firebaseAuth.currentUser);
+        lookupMyDownloads(firebaseAuth.currentUser);
       } else {
-        showError(
-          'Session Required',
-          '<strong>No Stripe Checkout session detected in URL.</strong> Complete checkout via the <a href="./index.html#store" class="underline font-semibold">49Caliber Store</a> or paste your <code>cs_live_...</code> session ID below.'
-        );
+        showError('Sign In / Verify', '', true);
       }
     })();
   </script>
