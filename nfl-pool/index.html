@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="NFL Pool" />
+    <meta name="theme-color" content="#1b3a2b" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <title>NFL Football Pool</title>
+    <meta name="description" content="40th Annual NFL Football Pool featuring zero-login straight-up mobile picks, legacy leaderboard matrix, automated weekly dispatches via Gmail, and global cross-browser sync." />
+    <meta property="og:title" content="NFL Football Pool" />
+    <meta property="og:description" content="40th Annual NFL Football Pool featuring zero-login straight-up mobile picks, legacy leaderboard matrix, automated weekly dispatches via Gmail, and global cross-browser sync." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Kalam:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script type="module" crossorigin src="./assets/index-Cnqhgqdg.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-BBvt_BTf.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      if ('serviceWorker' in navigator && location.protocol.startsWith('http')) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('./sw.js').catch(() => {});
+        });
+      }
+    </script>
+  </body>
+</html>
+
