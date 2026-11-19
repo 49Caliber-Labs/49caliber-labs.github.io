@@ -403,6 +403,7 @@
         <a href="./hydro-telemetry.html" class="nav-link">Hydro Guides</a>
         <a href="./rf-broadband.html" class="nav-link">RF &amp; Antennas</a>
         <a href="./orion-partner.html" class="nav-link">Orion Partner</a>
+        <a href="#visual-suite" class="nav-link text-sky-600 font-semibold">Visual Suite</a>
         <a href="#simulator" class="nav-link">Mesh Lab</a>
         <a href="#procurement" class="nav-link">Grants</a>
         <a href="#collaboration" class="nav-link">Contact</a>
@@ -1204,6 +1205,242 @@
       </div>
     </div>
   </section>
+
+  <!-- SECTION: PRODUCTION VISUAL SUITE & FIELD DEPLOYMENT GALLERY -->
+  <section id="visual-suite" class="section-band bg-slate-900 text-slate-100 py-20 relative overflow-hidden border-y border-slate-800">
+    <div class="absolute inset-0 pointer-events-none opacity-20">
+      <div class="absolute -top-40 right-20 w-[500px] h-[500px] rounded-full bg-cyan-500/30 blur-[120px]"></div>
+      <div class="absolute -bottom-40 left-10 w-[500px] h-[500px] rounded-full bg-sky-600/30 blur-[120px]"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="headline-stack text-center max-w-3xl mx-auto mb-14">
+        <span class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-cyan-400 bg-cyan-950/80 border border-cyan-800/80 px-3 py-1 rounded-full">
+          <i data-lucide="layers" class="w-3.5 h-3.5"></i>
+          Production Visual Telemetry &amp; Field Infrastructure
+        </span>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white font-['Inter_Tight'] mt-3">
+          From Sub-GHz Silicon to Heavy Steel &amp; Field Execution
+        </h2>
+        <p class="lede text-slate-400 text-base sm:text-lg mt-4 leading-relaxed">
+          Real telemetry interfaces, live environmental forecast engines, and 30 years of heavy civil field rigging. Explore the operational software and infrastructure powering 49Caliber Labs and Orion General Contracting, Inc.
+        </p>
+
+        <div class="flex flex-wrap justify-center gap-2 mt-8">
+          <button onclick="filterGallery('all')" id="tab-all" class="px-4 py-1.5 rounded-lg text-xs font-semibold bg-sky-600 text-white transition-all">All Systems (6)</button>
+          <button onclick="filterGallery('bitewindow')" id="tab-bitewindow" class="px-4 py-1.5 rounded-lg text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 transition-all">BiteWindow&trade; Forecast Engine</button>
+          <button onclick="filterGallery('mesh')" id="tab-mesh" class="px-4 py-1.5 rounded-lg text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 transition-all">Tactical LoRa Mesh</button>
+          <button onclick="filterGallery('infrastructure')" id="tab-infrastructure" class="px-4 py-1.5 rounded-lg text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 transition-all">Orion Heavy Infrastructure</button>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8" id="gallery-cards">
+        <!-- CARD 1: 360 Horizon Radar Dial -->
+        <div class="gallery-card bg-slate-800/90 border border-slate-700 rounded-2xl overflow-hidden shadow-xl hover:border-cyan-500/60 transition-all duration-300 group flex flex-col" data-cat="bitewindow">
+          <div class="relative overflow-hidden bg-slate-950 aspect-[4/3] cursor-pointer" onclick="openLightbox('assets/img/bitewindow-360-horizon.png', '360° Feeding Window Horizon & 24h Diurnal Science Dial')">
+            <img src="assets/img/bitewindow-360-horizon.png" alt="BiteWindow 360 Diurnal Feeding Window Dial" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+            <div class="absolute top-3 right-3 bg-cyan-950/90 text-cyan-300 border border-cyan-800/60 text-[10px] font-mono font-bold px-2 py-0.5 rounded-md flex items-center gap-1">
+              <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-ping"></span> Live Radar
+            </div>
+            <div class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+              <span class="px-3 py-1.5 rounded-full bg-sky-600 text-white text-xs font-medium shadow-lg flex items-center gap-1.5">
+                <i data-lucide="maximize-2" class="w-3.5 h-3.5"></i> Click to Zoom Fullscreen
+              </span>
+            </div>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="text-[11px] font-mono text-cyan-400 uppercase tracking-widest font-semibold mb-1">Telemetry Model &bull; Diurnal Science</div>
+              <h3 class="text-lg font-bold text-white group-hover:text-cyan-300 transition-colors">360&deg; Feeding Window Horizon</h3>
+              <p class="text-xs text-slate-300 mt-2 leading-relaxed">
+                Visualizes real-time 24-hour diurnal bio-windows, identifying solar/lunar peak transits, barometric inflection points (&Delta;P/&Delta;t), and activity probability curves.
+              </p>
+            </div>
+            <div class="pt-4 mt-4 border-t border-slate-700/80 flex items-center justify-between text-[11px] text-slate-400 font-mono">
+              <span>BiteWindow Vector7</span>
+              <span class="text-cyan-400 font-semibold">100% Client-Side Engine</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 2: Off-Grid LoRa Mesh Communicator -->
+        <div class="gallery-card bg-slate-800/90 border border-slate-700 rounded-2xl overflow-hidden shadow-xl hover:border-amber-500/60 transition-all duration-300 group flex flex-col" data-cat="mesh">
+          <div class="relative overflow-hidden bg-slate-950 aspect-[4/3] cursor-pointer" onclick="openLightbox('assets/img/lora-mesh-communicator.png', 'Off-Grid LoRa Mesh Communicator & Meshtastic 915 MHz Bridge')">
+            <img src="assets/img/lora-mesh-communicator.png" alt="Off-Grid LoRa Mesh Communicator UI" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+            <div class="absolute top-3 right-3 bg-amber-950/90 text-amber-300 border border-amber-800/60 text-[10px] font-mono font-bold px-2 py-0.5 rounded-md flex items-center gap-1">
+              <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span> 915 MHz LoRa
+            </div>
+            <div class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+              <span class="px-3 py-1.5 rounded-full bg-amber-600 text-white text-xs font-medium shadow-lg flex items-center gap-1.5">
+                <i data-lucide="maximize-2" class="w-3.5 h-3.5"></i> Click to Zoom Fullscreen
+              </span>
+            </div>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="text-[11px] font-mono text-amber-400 uppercase tracking-widest font-semibold mb-1">Ad-Hoc Network &bull; Tactical RF</div>
+              <h3 class="text-lg font-bold text-white group-hover:text-amber-300 transition-colors">MeshMule&trade; Off-Grid Communicator</h3>
+              <p class="text-xs text-slate-300 mt-2 leading-relaxed">
+                Connects directly to Semtech SX1262 transceivers via Bluetooth, USB-C Serial, or Wi-Fi. Transmits 16B &amp; 32B binary telemetry frames, emergency beacons, and GPS coordinates with zero cellular infrastructure.
+              </p>
+            </div>
+            <div class="pt-4 mt-4 border-t border-slate-700/80 flex items-center justify-between text-[11px] text-slate-400 font-mono">
+              <span>Meshtastic Protocol</span>
+              <span class="text-amber-400 font-semibold">160 Char / 32B Frame</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 3: Tactical Hydro Telemetry (USGS Gage Coupling) -->
+        <div class="gallery-card bg-slate-800/90 border border-slate-700 rounded-2xl overflow-hidden shadow-xl hover:border-sky-500/60 transition-all duration-300 group flex flex-col" data-cat="bitewindow">
+          <div class="relative overflow-hidden bg-slate-950 aspect-[4/3] cursor-pointer" onclick="openLightbox('assets/img/tactical-hydro-telemetry.png', 'The Hydro Protocol: Mare Island Strait USGS Gage Ingestion')">
+            <img src="assets/img/tactical-hydro-telemetry.png" alt="Mare Island Strait USGS Gage Hydrology" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+            <div class="absolute top-3 right-3 bg-sky-950/90 text-sky-300 border border-sky-800/60 text-[10px] font-mono font-bold px-2 py-0.5 rounded-md flex items-center gap-1">
+              USGS #11455820
+            </div>
+            <div class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+              <span class="px-3 py-1.5 rounded-full bg-sky-600 text-white text-xs font-medium shadow-lg flex items-center gap-1.5">
+                <i data-lucide="maximize-2" class="w-3.5 h-3.5"></i> Click to Zoom Fullscreen
+              </span>
+            </div>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="text-[11px] font-mono text-sky-400 uppercase tracking-widest font-semibold mb-1">Hydrodynamic Sensor Ingestion</div>
+              <h3 class="text-lg font-bold text-white group-hover:text-sky-300 transition-colors">Tactical Marine Hydrology Stream</h3>
+              <p class="text-xs text-slate-300 mt-2 leading-relaxed">
+                Direct USGS gage coupling on the Carquinez &amp; Mare Island Strait corridors. Evaluates real-time tidal streamflow, 61&deg;F water isotherms, shore vs. boat feasibility, and local prey forage matching.
+              </p>
+            </div>
+            <div class="pt-4 mt-4 border-t border-slate-700/80 flex items-center justify-between text-[11px] text-slate-400 font-mono">
+              <span>Solano County, CA</span>
+              <span class="text-sky-400 font-semibold">Tidal Coupling</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 4: Orion Heavy Field Rigging & Crane Operations -->
+        <div class="gallery-card bg-slate-800/90 border border-slate-700 rounded-2xl overflow-hidden shadow-xl hover:border-emerald-500/60 transition-all duration-300 group flex flex-col" data-cat="infrastructure">
+          <div class="relative overflow-hidden bg-slate-950 aspect-[4/3] cursor-pointer" onclick="openLightbox('assets/img/orion-field-rigging.png', 'Orion General Contracting: Heavy Industrial Site Operations & Structural Crane Rigging')">
+            <img src="assets/img/orion-field-rigging.png" alt="Orion Crane Rigging and Heavy Civil Site Superintendency" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+            <div class="absolute top-3 right-3 bg-emerald-950/90 text-emerald-300 border border-emerald-800/60 text-[10px] font-mono font-bold px-2 py-0.5 rounded-md flex items-center gap-1">
+              30-Yr Heavy Civil
+            </div>
+            <div class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+              <span class="px-3 py-1.5 rounded-full bg-emerald-600 text-white text-xs font-medium shadow-lg flex items-center gap-1.5">
+                <i data-lucide="maximize-2" class="w-3.5 h-3.5"></i> Click to Zoom Fullscreen
+              </span>
+            </div>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="text-[11px] font-mono text-emerald-400 uppercase tracking-widest font-semibold mb-1">Sister Entity &bull; Field Operations</div>
+              <h3 class="text-lg font-bold text-white group-hover:text-emerald-300 transition-colors">Orion General Contracting Rigging</h3>
+              <p class="text-xs text-slate-300 mt-2 leading-relaxed">
+                Superintendency on heavy commercial builds, high-silo crane lifts, deep earthwork shoring, and complex federal &amp; historic structural restoration (2,500+ operational hrs). Structural backbone for remote repeater towers and off-grid solar masts.
+              </p>
+            </div>
+            <div class="pt-4 mt-4 border-t border-slate-700/80 flex items-center justify-between text-[11px] text-slate-400 font-mono">
+              <span>3M Fall Protection</span>
+              <span class="text-emerald-400 font-semibold">CFTT Grade I &bull; Procore</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 5: Thermal Metabolism Dossier -->
+        <div class="gallery-card bg-slate-800/90 border border-slate-700 rounded-2xl overflow-hidden shadow-xl hover:border-cyan-500/60 transition-all duration-300 group flex flex-col" data-cat="bitewindow">
+          <div class="relative overflow-hidden bg-slate-950 aspect-[4/3] cursor-pointer" onclick="openLightbox('assets/img/thermal-metabolism-dossier.png', 'Thermal Metabolism Profile & Water Column Hunting Strata')">
+            <img src="assets/img/thermal-metabolism-dossier.png" alt="Thermal Metabolism Dossier" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+            <div class="absolute top-3 right-3 bg-cyan-950/90 text-cyan-300 border border-cyan-800/60 text-[10px] font-mono font-bold px-2 py-0.5 rounded-md flex items-center gap-1">
+              55&deg;F - 68&deg;F Window
+            </div>
+            <div class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+              <span class="px-3 py-1.5 rounded-full bg-sky-600 text-white text-xs font-medium shadow-lg flex items-center gap-1.5">
+                <i data-lucide="maximize-2" class="w-3.5 h-3.5"></i> Click to Zoom Fullscreen
+              </span>
+            </div>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="text-[11px] font-mono text-cyan-400 uppercase tracking-widest font-semibold mb-1">Ecological Edge Compute</div>
+              <h3 class="text-lg font-bold text-white group-hover:text-cyan-300 transition-colors">Thermal Metabolism &amp; Depth Profile</h3>
+              <p class="text-xs text-slate-300 mt-2 leading-relaxed">
+                Computes metabolic activity windows across 4&ndash;35 ft tidal channels. Synthesizes water clarity, low-light bias, barometric sensitivity, and tidal vulnerability to model behavior in complex estuaries.
+              </p>
+            </div>
+            <div class="pt-4 mt-4 border-t border-slate-700/80 flex items-center justify-between text-[11px] text-slate-400 font-mono">
+              <span>Bio Dossier Engine</span>
+              <span class="text-cyan-400 font-semibold">Metabolic Ingestion</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 6: Direct SKU Strike Arsenal Blueprint -->
+        <div class="gallery-card bg-slate-800/90 border border-slate-700 rounded-2xl overflow-hidden shadow-xl hover:border-amber-500/60 transition-all duration-300 group flex flex-col" data-cat="bitewindow">
+          <div class="relative overflow-hidden bg-slate-950 aspect-[4/3] cursor-pointer" onclick="openLightbox('assets/img/strike-arsenal-blueprint.png', 'Direct SKU Strike Arsenal & Terminal Rigging Specification')">
+            <img src="assets/img/strike-arsenal-blueprint.png" alt="Terminal Rigging and SKU Match Blueprint" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+            <div class="absolute top-3 right-3 bg-amber-950/90 text-amber-300 border border-amber-800/60 text-[10px] font-mono font-bold px-2 py-0.5 rounded-md flex items-center gap-1">
+              Direct SKU Engine
+            </div>
+            <div class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+              <span class="px-3 py-1.5 rounded-full bg-amber-600 text-white text-xs font-medium shadow-lg flex items-center gap-1.5">
+                <i data-lucide="maximize-2" class="w-3.5 h-3.5"></i> Click to Zoom Fullscreen
+              </span>
+            </div>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="text-[11px] font-mono text-amber-400 uppercase tracking-widest font-semibold mb-1">Direct Equipment Pairing</div>
+              <h3 class="text-lg font-bold text-white group-hover:text-amber-300 transition-colors">Tactical Strike Arsenal Specification</h3>
+              <p class="text-xs text-slate-300 mt-2 leading-relaxed">
+                Connects environmental telemetry directly to physical gear execution: hook sizes, line test, presentation cadence, calibrated weights, and live commercial affiliate inventory lookup.
+              </p>
+            </div>
+            <div class="pt-4 mt-4 border-t border-slate-700/80 flex items-center justify-between text-[11px] text-slate-400 font-mono">
+              <span>Commercial Ecosystem</span>
+              <span class="text-amber-400 font-semibold">SKU Mapping</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Integrated Architecture Callout Box -->
+      <div class="mt-14 bg-gradient-to-r from-slate-800 via-slate-800/90 to-slate-800 border border-slate-700 rounded-2xl p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 rounded-xl bg-sky-600/20 border border-sky-500/40 flex items-center justify-center text-sky-400 shrink-0">
+            <i data-lucide="cpu" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <h4 class="text-base font-bold text-white">Full-Stack Technology + Civil Construction Synergy</h4>
+            <p class="text-xs text-slate-400 mt-1">49Caliber Labs authors the algorithms and embedded RF protocols; Orion General Contracting, Inc. executes the heavy civil site engineering and off-grid field infrastructure.</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-3 shrink-0">
+          <button onclick="scrollToSection('architecture')" class="px-4 py-2.5 rounded-xl bg-slate-700 hover:bg-slate-600 text-slate-200 text-xs font-semibold transition-all flex items-center gap-1.5">
+            <i data-lucide="git-merge" class="w-4 h-4 text-sky-400"></i> View 4-Tier Stack
+          </button>
+          <button onclick="scrollToSection('simulator')" class="px-4 py-2.5 rounded-xl bg-sky-600 hover:bg-sky-500 text-white text-xs font-semibold shadow-lg shadow-sky-600/30 transition-all flex items-center gap-1.5">
+            <i data-lucide="radio" class="w-4 h-4"></i> Test Link Budget
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX MODAL CONTAINER -->
+  <div id="lightbox-modal" class="fixed inset-0 z-50 bg-slate-950/90 backdrop-blur-md hidden items-center justify-center p-4 sm:p-8 transition-opacity duration-300" onclick="closeLightbox()">
+    <div class="relative max-w-5xl w-full max-h-[90vh] flex flex-col items-center bg-slate-900 border border-slate-700 rounded-2xl overflow-hidden shadow-2xl" onclick="event.stopPropagation()">
+      <div class="w-full flex items-center justify-between px-5 py-3 border-b border-slate-800 bg-slate-950">
+        <div id="lightbox-caption" class="text-xs sm:text-sm font-semibold text-slate-200 font-mono truncate mr-4">Preview</div>
+        <button onclick="closeLightbox()" class="text-slate-400 hover:text-white p-1 rounded-lg hover:bg-slate-800 transition-colors" aria-label="Close Preview">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+      <div class="p-3 sm:p-6 w-full flex-1 overflow-auto flex items-center justify-center bg-slate-950">
+        <img id="lightbox-img" src="" alt="Zoomed Screenshot" class="max-w-full max-h-[75vh] object-contain rounded-lg shadow-md" />
+      </div>
+    </div>
+  </div>
 
   <!-- SECTION 4: INTERACTIVE CANYON, REMOTE PARK & AG MESH TOPOGRAPHIC SIMULATOR -->
   <section id="simulator" class="section-band pinstripe-tech-bg relative overflow-hidden">
@@ -3502,8 +3739,52 @@ CALIFORNIA & FEDERAL R&D PATHWAYS
     }
 
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') closeBiteWindowCheckout();
+      if (e.key === 'Escape') {
+        closeBiteWindowCheckout();
+        closeLightbox();
+      }
     });
+
+    function filterGallery(category) {
+      const cards = document.querySelectorAll('#gallery-cards .gallery-card');
+      const buttons = {
+        all: document.getElementById('tab-all'),
+        bitewindow: document.getElementById('tab-bitewindow'),
+        mesh: document.getElementById('tab-mesh'),
+        infrastructure: document.getElementById('tab-infrastructure')
+      };
+      Object.keys(buttons).forEach((k) => {
+        if (!buttons[k]) return;
+        buttons[k].className = k === category
+          ? 'px-4 py-1.5 rounded-lg text-xs font-semibold bg-sky-600 text-white transition-all'
+          : 'px-4 py-1.5 rounded-lg text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 transition-all';
+      });
+      cards.forEach((card) => {
+        const cat = card.getAttribute('data-cat');
+        card.style.display = (category === 'all' || cat === category) ? 'flex' : 'none';
+      });
+    }
+
+    function openLightbox(imgSrc, caption) {
+      const modal = document.getElementById('lightbox-modal');
+      const img = document.getElementById('lightbox-img');
+      const cap = document.getElementById('lightbox-caption');
+      if (!modal || !img) return;
+      img.src = imgSrc;
+      if (cap) cap.textContent = caption || 'System Telemetry Preview';
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+      if (window.lucide) lucide.createIcons();
+    }
+
+    function closeLightbox() {
+      const modal = document.getElementById('lightbox-modal');
+      if (!modal) return;
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+      document.body.style.overflow = '';
+    }
 
     window.addEventListener('DOMContentLoaded', () => {
       initializeApplication();
