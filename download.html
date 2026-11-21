@@ -3,13 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Google tag (gtag.js) -->
+  <!-- Google tag (gtag.js) — 49Caliber Labs Dual-Property & Cross-Domain Linker -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-W81F0VN40N"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
+    gtag('set', 'linker', {
+      'domains': ['49caliber.com', 'www.49caliber.com', 'caliber-labs.web.app', 'caliber-labs.firebaseapp.com', '49caliber-labs.github.io'],
+      'accept_incoming': true
+    });
     gtag('config', 'G-W81F0VN40N');
+    gtag('config', 'G-6S9T9EQYT6');
   </script>
   <title>My Downloads &amp; App Unlock | 49Caliber Labs</title>
   <meta name="robots" content="noindex, nofollow">
@@ -403,10 +408,10 @@
                   (order.maxContenders ? '<span class="px-2.5 py-1 rounded-full text-[11px] font-bold bg-amber-100 text-amber-900">Up to ' + escapeHtml(order.maxContenders) + ' Contenders</span>' : '') +
                 '</div>' +
                 '<div class="flex flex-col sm:flex-row gap-3">' +
-                  '<a href="' + escapeHtml(order.downloadUrl) + '" class="flex-1 inline-flex items-center justify-center gap-2 rounded-xl ' + accentBtn + ' font-semibold text-sm py-3 px-4 shadow-xs transition">' +
+                  '<a href="' + escapeHtml(order.downloadUrl) + '" data-track-apk="' + escapeHtml(order.sku || order.product || 'software') + '" data-track-version="' + escapeHtml(order.version || '1.0.0') + '" class="flex-1 inline-flex items-center justify-center gap-2 rounded-xl ' + accentBtn + ' font-semibold text-sm py-3 px-4 shadow-xs transition">' +
                     'Download ' + escapeHtml(order.apkFilename || 'Android APK') + (sizeMb ? ' (' + escapeHtml(sizeMb) + ')' : '') +
                   '</a>' +
-                  '<a href="' + escapeHtml(launchHref) + '" class="inline-flex items-center justify-center gap-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-semibold text-sm py-3 px-4 transition">' +
+                  '<a href="' + escapeHtml(launchHref) + '" data-track-launch="' + escapeHtml(order.sku || order.product || 'software') + '" class="inline-flex items-center justify-center gap-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-semibold text-sm py-3 px-4 transition">' +
                     'Launch &amp; Unlock Web App &rarr;' +
                   '</a>' +
                 '</div>' +
@@ -473,11 +478,31 @@
           }
 
           if (typeof window.gtag === 'function') {
+            const valNum = typeof data.amountTotal === 'number' ? data.amountTotal / 100 : 10;
+            const currCode = String(data.currency || 'USD').toUpperCase();
             window.gtag('event', 'purchase_verified', {
               transaction_id: data.sessionId,
-              value: typeof data.amountTotal === 'number' ? data.amountTotal / 100 : 10,
-              currency: String(data.currency || 'USD').toUpperCase(),
+              value: valNum,
+              currency: currCode,
+              sku: data.sku || data.product || 'software',
             });
+            try {
+              const dedupKey = 'caliber_ga_purchase_' + data.sessionId;
+              if (!window.localStorage.getItem(dedupKey)) {
+                window.localStorage.setItem(dedupKey, '1');
+                window.gtag('event', 'purchase', {
+                  transaction_id: data.sessionId,
+                  value: valNum,
+                  currency: currCode,
+                  items: [{
+                    item_id: data.sku || data.product || '49caliber-software',
+                    item_name: data.productName || '49Caliber Labs Lifetime License',
+                    price: valNum,
+                    quantity: 1,
+                  }],
+                });
+              }
+            } catch (_e) {}
           }
 
           renderPaidOrders([data], firebaseAuth && firebaseAuth.currentUser ? firebaseAuth.currentUser.email : '');
@@ -692,6 +717,24 @@
       } else {
         googleSigninBtn.disabled = true;
         emailLinkSubmitBtn.disabled = true;
+      }
+
+      if (ordersListEl) {
+        ordersListEl.addEventListener('click', function (e) {
+          const apkLink = e.target && e.target.closest ? e.target.closest('[data-track-apk]') : null;
+          if (apkLink && typeof window.gtag === 'function') {
+            window.gtag('event', 'apk_download_click', {
+              product: apkLink.getAttribute('data-track-apk') || 'software',
+              version: apkLink.getAttribute('data-track-version') || '1.0.0',
+            });
+          }
+          const launchLink = e.target && e.target.closest ? e.target.closest('[data-track-launch]') : null;
+          if (launchLink && typeof window.gtag === 'function') {
+            window.gtag('event', 'web_app_launch_click', {
+              product: launchLink.getAttribute('data-track-launch') || 'software',
+            });
+          }
+        });
       }
 
       manualForm.addEventListener('submit', function (e) {

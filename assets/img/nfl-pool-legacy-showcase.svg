@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="turfBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#052e16" />
+      <stop offset="55%" stop-color="#14532d" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+    <linearGradient id="amberBar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#fbbf24" />
+    </linearGradient>
+  </defs>
+
+  <!-- Stadium Turf & Grid Backdrop -->
+  <rect width="800" height="500" rx="18" fill="url(#turfBg)" />
+  <g stroke="#ffffff" stroke-width="1" opacity="0.08">
+    <line x1="100" y1="0" x2="100" y2="500" />
+    <line x1="230" y1="0" x2="230" y2="500" />
+    <line x1="360" y1="0" x2="360" y2="500" />
+    <line x1="490" y1="0" x2="490" y2="500" />
+    <line x1="620" y1="0" x2="620" y2="500" />
+    <line x1="0" y1="110" x2="800" y2="110" />
+  </g>
+
+  <!-- Top Commissioner Header -->
+  <rect x="24" y="20" width="752" height="74" rx="14" fill="#0f172a" stroke="#fbbf24" stroke-width="2" />
+  <rect x="40" y="34" width="166" height="22" rx="11" fill="url(#amberBar)" />
+  <text x="123" y="49" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="900" fill="#0f172a">40TH SEASON HERITAGE</text>
+  <text x="40" y="77" font-family="Arial, sans-serif" font-size="22" font-weight="900" fill="#ffffff">Branham Hills Legacy Football Pool</text>
+
+  <rect x="520" y="34" width="114" height="46" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5" />
+  <text x="577" y="53" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="700" fill="#7dd3fc">STANDARD</text>
+  <text x="577" y="71" text-anchor="middle" font-family="monospace" font-size="14" font-weight="900" fill="#ffffff">$10 (&le;20)</text>
+
+  <rect x="644" y="34" width="116" height="46" rx="10" fill="#451a03" stroke="#fbbf24" stroke-width="1.5" />
+  <text x="702" y="53" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="700" fill="#fde68a">LEAGUE</text>
+  <text x="702" y="71" text-anchor="middle" font-family="monospace" font-size="14" font-weight="900" fill="#ffffff">$20 (&le;50)</text>
+
+  <!-- Left Card: Carbon-Copy Weekly Scoresheet & Standings -->
+  <rect x="24" y="110" width="465" height="260" rx="14" fill="#fefce8" stroke="#d97706" stroke-width="2" />
+  <rect x="24" y="110" width="465" height="36" rx="14" fill="#fde68a" />
+  <text x="42" y="133" font-family="monospace" font-size="13" font-weight="900" fill="#78350f">OFFICIAL WEEKLY SCORESHEET &bull; LIVE SUNDAY STANDINGS</text>
+
+  <!-- Table Header -->
+  <g font-family="monospace" font-size="11" font-weight="700" fill="#475569">
+    <text x="42" y="166">CONTENDER</text>
+    <text x="200" y="166">SF@BUF</text>
+    <text x="262" y="166">KC@LV</text>
+    <text x="322" y="166">DET@GB</text>
+    <text x="385" y="166">MNF TB</text>
+    <text x="442" y="166">W-L</text>
+  </g>
+  <line x1="36" y1="174" x2="475" y2="174" stroke="#cbd5e1" stroke-width="1.5" />
+
+  <!-- Row 1 -->
+  <rect x="34" y="182" width="443" height="32" rx="6" fill="#ecfdf5" />
+  <g font-family="monospace" font-size="12" font-weight="700" fill="#065f46">
+    <text x="42" y="203">1. Commissioner</text>
+    <text x="205" y="203">SF ✓</text>
+    <text x="266" y="203">KC ✓</text>
+    <text x="325" y="203">DET ✓</text>
+    <text x="392" y="203">47 pts</text>
+    <text x="442" y="203">13-3</text>
+  </g>
+
+  <!-- Row 2 -->
+  <rect x="34" y="220" width="443" height="32" rx="6" fill="#ffffff" />
+  <g font-family="monospace" font-size="12" font-weight="700" fill="#1e293b">
+    <text x="42" y="241">2. Gridiron Ace</text>
+    <text x="205" y="241">BUF</text>
+    <text x="266" y="241">KC ✓</text>
+    <text x="325" y="241">DET ✓</text>
+    <text x="392" y="241">44 pts</text>
+    <text x="442" y="241">12-4</text>
+  </g>
+
+  <!-- Row 3: Elvis Bot -->
+  <rect x="34" y="258" width="443" height="32" rx="6" fill="#fffbeb" stroke="#f59e0b" stroke-width="1" />
+  <g font-family="monospace" font-size="12" font-weight="700" fill="#92400e">
+    <text x="42" y="279">3. Elvis (House Bot)</text>
+    <text x="205" y="279">SF ✓</text>
+    <text x="266" y="279">KC ✓</text>
+    <text x="325" y="279">GB</text>
+    <text x="392" y="279">45 pts</text>
+    <text x="442" y="279">11-5</text>
+  </g>
+
+  <!-- Row 4 -->
+  <rect x="34" y="296" width="443" height="32" rx="6" fill="#ffffff" />
+  <g font-family="monospace" font-size="12" font-weight="700" fill="#334155">
+    <text x="42" y="317">4. Sunday Contender</text>
+    <text x="205" y="317">SF ✓</text>
+    <text x="266" y="317">LV</text>
+    <text x="325" y="317">DET ✓</text>
+    <text x="392" y="317">51 pts</text>
+    <text x="442" y="317">10-6</text>
+  </g>
+
+  <text x="42" y="352" font-family="Arial, sans-serif" font-size="11" font-weight="700" fill="#b45309">✓ Invited Players Join Free via 1-Click League Code &bull; Never Overwrites Real Picks</text>
+
+  <!-- Right Column: 3 Canonical Dispatches + Lore Vault -->
+  <rect x="505" y="110" width="271" height="260" rx="14" fill="#0f172a" stroke="#334155" stroke-width="2" />
+  <text x="523" y="136" font-family="Arial, sans-serif" font-size="13" font-weight="900" fill="#fbbf24">AUTOMATED WEEKLY DISPATCHES</text>
+
+  <rect x="521" y="148" width="239" height="48" rx="9" fill="#1e293b" stroke="#38bdf8" stroke-width="1.2" />
+  <text x="533" y="167" font-family="Arial, sans-serif" font-size="12" font-weight="800" fill="#7dd3fc">1. The Friday Wire and Injury Report</text>
+  <text x="533" y="185" font-family="monospace" font-size="10" fill="#cbd5e1">Live ESPN NFL Injuries + Spreads</text>
+
+  <rect x="521" y="204" width="239" height="48" rx="9" fill="#1e293b" stroke="#f59e0b" stroke-width="1.2" />
+  <text x="533" y="223" font-family="Arial, sans-serif" font-size="12" font-weight="800" fill="#fde68a">2. Sunday Night Live</text>
+  <text x="533" y="241" font-family="monospace" font-size="10" fill="#cbd5e1">MNF Elimination &amp; Tiebreaker Math</text>
+
+  <rect x="521" y="260" width="239" height="48" rx="9" fill="#1e293b" stroke="#34d399" stroke-width="1.2" />
+  <text x="533" y="279" font-family="Arial, sans-serif" font-size="12" font-weight="800" fill="#6ee7b7">3. The Weekly Final</text>
+  <text x="533" y="297" font-family="monospace" font-size="10" fill="#cbd5e1">Podium Recap + PDF &amp; Word (.docx)</text>
+
+  <rect x="521" y="316" width="239" height="42" rx="9" fill="#451a03" stroke="#fbbf24" stroke-width="1" />
+  <text x="640" y="335" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="800" fill="#fde68a">Don Threet Lore Vault &amp; Soundboard</text>
+  <text x="640" y="350" text-anchor="middle" font-family="monospace" font-size="10" fill="#fcd34d">33 Quotes &bull; 32 NFL Team Themes</text>
+
+  <!-- Bottom Feature Bar -->
+  <rect x="24" y="386" width="752" height="92" rx="14" fill="#091526" stroke="#1e293b" stroke-width="2" />
+  <g font-family="Arial, sans-serif" font-size="13" font-weight="800">
+    <text x="46" y="416" fill="#6ee7b7">✓ Zero Contender Fees (Players Play Free)</text>
+    <text x="46" y="442" fill="#7dd3fc">✓ Android APK + Instant Web / iOS PWA</text>
+    <text x="46" y="466" fill="#fde68a">✓ Hardened Auto-Pick Never Overwrites Manual Picks</text>
+
+    <text x="430" y="416" fill="#ffffff">✓ Elvis Vegas Favorites House Pacer Bot</text>
+    <text x="430" y="442" fill="#ffffff">✓ Umpire Penalty Jar &amp; Commissioner Audit Log</text>
+    <text x="430" y="466" fill="#fbbf24">✓ One-Time Lifetime Payment &bull; Zero Ads Ever</text>
+  </g>
+</svg>

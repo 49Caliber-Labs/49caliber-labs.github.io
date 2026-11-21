@@ -4,14 +4,27 @@
   <meta charset="UTF-8">
   <meta name="impact-site-verification" value="a5de7673-26cd-4f4f-9e64-5d7e23e04c5b">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Google tag (gtag.js) -->
+  <!-- Google tag (gtag.js) — 49Caliber Labs Dual-Property & Cross-Domain Linker -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-W81F0VN40N"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
+    gtag('set', 'linker', {
+      'domains': ['49caliber.com', 'www.49caliber.com', 'caliber-labs.web.app', 'caliber-labs.firebaseapp.com', '49caliber-labs.github.io'],
+      'accept_incoming': true
+    });
     gtag('config', 'G-W81F0VN40N');
+    gtag('config', 'G-6S9T9EQYT6');
+    window.trackCheckout = function(sku, itemName, priceUsd) {
+      if (typeof window.gtag === 'function') {
+        window.gtag('event', 'begin_checkout', {
+          currency: 'USD',
+          value: priceUsd,
+          items: [{ item_id: sku, item_name: itemName, price: priceUsd, quantity: 1 }]
+        });
+      }
+    };
   </script>
   <meta name="artifact-type" content="narrative">
   <meta name="design-style" content="showroom">
@@ -437,14 +450,14 @@
         <div class="flex justify-center mb-4">
           <span class="coastal-pill-badge">
             <i data-lucide="compass" class="w-3.5 h-3.5 text-sky-600"></i>
-            Hikers &bull; Mountain Bikers &bull; Anglers &bull; Low-CAPEX Public-Land Mesh
+            Lifetime Field Apps ($10&ndash;$20) &bull; Sports League Platforms &bull; Free MIT Open-Source Tools
           </span>
         </div>
         <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight">
-          BiteWindow Vector7 &amp; Resilient Mesh for Hikers, Bikers, Anglers &amp; Public Lands
+          Practical Field Apps, League Platforms &amp; Off-Grid Radio Tools Built to Last
         </h1>
         <p class="lede text-slate-600 text-lg sm:text-xl font-normal mt-5 leading-relaxed">
-          Built for trail corridors, coastlines, and backcountry basins with sparse or unreliable cellular service: <strong>BiteWindow Vector7</strong> (our flagship commercial app&mdash;<strong>$10 Lifetime License</strong>, zero ads, free updates forever) joins our MIT open-source releases&mdash;<strong>MeshMule-Core</strong> (915 MHz LoRa binary telemetry) and <strong>ACE-10: The Architect Council Engine</strong>&mdash;giving outdoor recreationists and federal park management agencies practical field intelligence with minimal infrastructure cost.
+          Pay once, own forever, zero ads: <strong>BiteWindow Vector7</strong> (<strong>$10 Lifetime</strong> fishing, tide, barometer &amp; off-grid trail radio app) and <strong>Branham Hills Legacy Football Pool</strong> (<strong>$10 Standard</strong> &le;20 contenders / <strong>$20 League</strong> &le;50 contenders, invited players join free)&mdash;alongside our free MIT open-source releases: <strong>Umpire Pool</strong>, <strong>MeshMule-Core</strong> (915 MHz LoRa radio), and <strong>ACE-10</strong>.
         </p>
       </div>
 
@@ -520,7 +533,7 @@
       <!-- Commercial Lifetime Applications Row (2 Cards) -->
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-10 items-stretch">
         <!-- Card 1: BiteWindow Vector7 ($10 Lifetime) -->
-        <div class="pearl-tile bg-white border-2 border-sky-500/70 p-7 flex flex-col justify-between shadow-lg relative">
+        <div class="pearl-tile bg-white border-2 border-sky-500/80 p-7 flex flex-col justify-between shadow-lg relative">
           <div>
             <div class="flex items-center justify-between gap-2 mb-4">
               <span class="px-3 py-1 rounded-full text-xs font-mono font-bold bg-sky-100 text-sky-800 border border-sky-200">
@@ -532,42 +545,58 @@
             </div>
 
             <h3 class="text-2xl font-extrabold text-slate-900 font-['Inter_Tight']">BiteWindow Vector7</h3>
-            <p class="text-xs font-mono text-slate-500 mt-0.5">Package ID: com.caliber49labs.bitewindow (Android APK &amp; Web/PWA)</p>
+            <p class="text-xs font-mono text-slate-500 mt-0.5">Android APK &amp; Web/PWA &bull; Fishing, Tide, Barometer &amp; Off-Grid Trail Radio</p>
 
-            <div class="my-5 p-4 rounded-xl bg-slate-50 border border-slate-200 flex items-baseline justify-between">
+            <!-- Interactive 3-Screenshot Preview Strip (Click any to Zoom) -->
+            <div class="grid grid-cols-3 gap-2.5 my-4">
+              <div onclick="openLightbox('assets/img/bitewindow-360-horizon.png', 'BiteWindow Vector7 — 24-Hour Bite, Tide & Barometer Dial')" class="group relative rounded-xl overflow-hidden bg-slate-950 border border-sky-200 aspect-[4/3] cursor-pointer shadow-xs">
+                <img src="assets/img/bitewindow-360-horizon.png" alt="BiteWindow 24-Hour Bite & Tide Dial" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+                <span class="absolute bottom-1 left-1 right-1 bg-slate-950/85 text-cyan-300 text-[10px] font-mono font-semibold px-1.5 py-0.5 rounded text-center truncate">24h Bite Dial</span>
+              </div>
+              <div onclick="openLightbox('assets/img/tactical-hydro-telemetry.png', 'BiteWindow Vector7 — Live USGS River & Tidal Flow Gauges')" class="group relative rounded-xl overflow-hidden bg-slate-950 border border-sky-200 aspect-[4/3] cursor-pointer shadow-xs">
+                <img src="assets/img/tactical-hydro-telemetry.png" alt="Live USGS Tidal & River Flow Gauges" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+                <span class="absolute bottom-1 left-1 right-1 bg-slate-950/85 text-sky-300 text-[10px] font-mono font-semibold px-1.5 py-0.5 rounded text-center truncate">Live Tides &amp; Flow</span>
+              </div>
+              <div onclick="openLightbox('assets/img/strike-arsenal-blueprint.png', 'BiteWindow Vector7 — 1-Click Lure & Tackle Match')" class="group relative rounded-xl overflow-hidden bg-slate-950 border border-sky-200 aspect-[4/3] cursor-pointer shadow-xs">
+                <img src="assets/img/strike-arsenal-blueprint.png" alt="1-Click Lure & Tackle Advisor" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+                <span class="absolute bottom-1 left-1 right-1 bg-slate-950/85 text-amber-300 text-[10px] font-mono font-semibold px-1.5 py-0.5 rounded text-center truncate">Lure &amp; Tackle Match</span>
+              </div>
+            </div>
+
+            <div class="my-4 p-4 rounded-xl bg-sky-50/80 border border-sky-200 flex items-baseline justify-between">
               <div>
                 <span class="text-3xl font-extrabold text-slate-900 font-['Inter_Tight']">$10</span>
                 <span class="text-xs font-semibold text-slate-600 ml-1">USD One-Time</span>
               </div>
-              <span class="text-xs font-mono font-bold text-sky-700 uppercase">Lifetime License &amp; Updates</span>
+              <span class="text-xs font-mono font-bold text-sky-700 uppercase">Lifetime License &bull; Android + Web</span>
             </div>
 
             <p class="text-sm text-slate-600 leading-relaxed mb-4">
-              Offline-first 7-vector hydro-meteorological bite &amp; trail weather intelligence plus 915 MHz LoRa communicator built for hikers, mountain bikers, and anglers operating in areas with sparse or unreliable cellular service.
+              Built for anglers, hikers, and mountain bikers heading into coastlines, rivers, and canyons where cell service drops out. Combines live tide and weather scoring with off-grid 915 MHz radio messaging.
             </p>
 
             <ul class="space-y-2.5 text-xs text-slate-700 mb-6">
               <li class="flex items-start gap-2">
                 <i data-lucide="check-circle-2" class="w-4 h-4 text-sky-600 shrink-0 mt-0.5"></i>
-                <span><strong>7-Vector Bite, Barometric &amp; Tidal Engine:</strong> Real-time NOAA CO-OPS tide derivatives, NDBC swell energy, solunar phase, and local pressure-trend scoring for anglers, hikers, and riders.</span>
+                <span><strong>24-Hour Bite, Tide &amp; Weather Dial:</strong> Combines live NOAA tides, USGS river gauges, ocean swell, moon phase, and barometric pressure drops into a clear hourly score.</span>
               </li>
               <li class="flex items-start gap-2">
                 <i data-lucide="check-circle-2" class="w-4 h-4 text-sky-600 shrink-0 mt-0.5"></i>
-                <span><strong>Off-Grid 915 MHz LoRa Communicator:</strong> Direct BLE GATT &amp; USB-C OTG hardware bridge (<code>Field Comms</code>, <code>Mesh Nodes</code>, <code>Radio Status</code>, <code>RF Horizon</code>) with $0/mo airtime in weak-signal basins.</span>
+                <span><strong>Off-Grid 915 MHz Trail &amp; Water Messenger:</strong> Pair your phone over Bluetooth or USB-C to a pocket 915 MHz LoRa radio to send GPS pins, group check-ins, and weather alerts with $0/mo fees.</span>
               </li>
               <li class="flex items-start gap-2">
                 <i data-lucide="check-circle-2" class="w-4 h-4 text-sky-600 shrink-0 mt-0.5"></i>
-                <span><strong>Zero-Ad Direct SKU Tackle Advisor:</strong> 1-click species-matched lure &amp; terminal rigging lookup across Bass Pro Shops, Cabela's, and Tackle Warehouse.</span>
+                <span><strong>1-Click Lure &amp; Rigging Match:</strong> Recommends exact lures, hook sizes, and line weights for current water clarity and temperature across Bass Pro, Cabela&rsquo;s, and Tackle Warehouse.</span>
               </li>
               <li class="flex items-start gap-2">
                 <i data-lucide="check-circle-2" class="w-4 h-4 text-sky-600 shrink-0 mt-0.5"></i>
-                <span><strong>Pay Once, Own Forever:</strong> $10 lifetime license unlocks Android APK download and Web/PWA access with all future updates included.</span>
+                <span><strong>Pay Once, Own Forever:</strong> $10 one-time purchase immediately unlocks your signed Android APK and Web/PWA app with free lifetime updates.</span>
               </li>
             </ul>
           </div>
 
           <div class="space-y-2.5 pt-4 border-t border-slate-100">
-            <a id="btn-buy-bitewindow-lifetime" href="https://buy.stripe.com/5kQ00idBV8fh9NG7DZ4wM00" class="btn-primary-coastal text-xs py-3 px-4 w-full justify-center shadow-sm">
+            <a id="btn-buy-bitewindow-lifetime" href="https://buy.stripe.com/5kQ00idBV8fh9NG7DZ4wM00" onclick="trackCheckout('bitewindow', 'BiteWindow Vector7 Lifetime License', 10)" class="btn-primary-coastal text-xs py-3 px-4 w-full justify-center shadow-sm">
               <i data-lucide="shopping-bag" class="w-4 h-4"></i>
               Buy BiteWindow Vector7 &mdash; $10 Lifetime
             </a>
@@ -595,9 +624,15 @@
             </div>
 
             <h3 class="text-2xl font-extrabold text-slate-900 font-['Inter_Tight']">Branham Hills Legacy Football Pool</h3>
-            <p class="text-xs font-mono text-slate-500 mt-0.5">Awesome Dawson Edition &bull; Package ID: com.caliber49labs.nflpool (Android APK &amp; Web/PWA)</p>
+            <p class="text-xs font-mono text-slate-500 mt-0.5">Awesome Dawson 40th Season Edition &bull; Android APK &amp; Web/PWA</p>
 
-            <div class="my-5 p-4 rounded-xl bg-amber-50/70 border border-amber-200 flex flex-wrap items-center justify-between gap-3">
+            <!-- Interactive Visual Preview Banner (Click to Zoom) -->
+            <div onclick="openLightbox('assets/img/nfl-pool-legacy-showcase.svg', 'Branham Hills Legacy Football Pool — Carbon-Copy Weekly Scoresheet, Elvis House Bot & Automated Dispatches')" class="group relative rounded-xl overflow-hidden bg-slate-950 border border-amber-300 my-4 aspect-[16/10] cursor-pointer shadow-xs">
+              <img src="assets/img/nfl-pool-legacy-showcase.svg" alt="Branham Hills Legacy Football Pool Scoresheet & Dispatches Preview" class="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-300" loading="lazy" />
+              <span class="absolute bottom-2 right-2 bg-slate-950/85 text-amber-300 border border-amber-500/50 text-[10px] font-mono font-bold px-2.5 py-1 rounded-full">Click to Zoom Preview</span>
+            </div>
+
+            <div class="my-4 p-4 rounded-xl bg-amber-50/80 border border-amber-200 flex flex-wrap items-center justify-between gap-3">
               <div class="flex items-baseline gap-3">
                 <div>
                   <span class="text-2xl sm:text-3xl font-extrabold text-slate-900 font-['Inter_Tight']">$10</span>
@@ -609,40 +644,40 @@
                   <span class="text-[11px] font-semibold text-amber-900 ml-0.5">League (&le;50)</span>
                 </div>
               </div>
-              <span class="text-[11px] font-mono font-bold text-amber-900 uppercase">Commissioner License &bull; Players Join Free</span>
+              <span class="text-[11px] font-mono font-bold text-amber-900 uppercase">Commissioner Buys &bull; Players Join Free</span>
             </div>
 
             <p class="text-sm text-slate-600 leading-relaxed mb-4">
-              Multi-platform NFL Pick&rsquo;em pool platform infused with 40 years of authentic Commissioner character, heritage carbon-copy scoresheets, live Sunday standings, and zero ads forever. Invited players join your league free.
+              Run your own straight-up weekly NFL Pick&rsquo;em pool with 40 years of authentic Commissioner character, classic carbon-copy scoresheets, live Sunday standings, and automated weekly dispatches.
             </p>
 
             <ul class="space-y-2.5 text-xs text-slate-700 mb-6">
               <li class="flex items-start gap-2">
                 <i data-lucide="check-circle-2" class="w-4 h-4 text-amber-600 shrink-0 mt-0.5"></i>
-                <span><strong>Authentic 40-Year Heritage &amp; Lore Vault:</strong> 33 authentic Don Threet Commissioner quotes, 15 banter intros, Consultant&rsquo;s Corner soundboard, and carbon-copy scoresheet aesthetic.</span>
+                <span><strong>Zero Contender Fees (Invited Players Play Free):</strong> Only the Commissioner buys the license (<strong>$10</strong> for up to 20 contenders, or <strong>$20</strong> for up to 50 contenders). Friends, family, or coworkers join free via your 1-click invite link.</span>
               </li>
               <li class="flex items-start gap-2">
                 <i data-lucide="check-circle-2" class="w-4 h-4 text-amber-600 shrink-0 mt-0.5"></i>
-                <span><strong>Live ESPN Dispatches &amp; Injury Wire:</strong> Automated <em>The Friday Wire and Injury Report</em>, <em>Sunday Night Live</em>, and <em>The Weekly Final</em> with 1-click PDF &amp; Word (<code>.docx</code>) export.</span>
+                <span><strong>40-Year Heritage &amp; Don Threet Lore Vault:</strong> 33 classic Commissioner quotes, 15 weekly banter intros, Consultant&rsquo;s Corner soundboard, 32 NFL team color themes, and carbon-copy scoresheets.</span>
               </li>
               <li class="flex items-start gap-2">
                 <i data-lucide="check-circle-2" class="w-4 h-4 text-amber-600 shrink-0 mt-0.5"></i>
-                <span><strong>Elvis Consensus House Bot &amp; 32 NFL Team Themes:</strong> Automated Vegas spread-favorites pacer, MNF combined-points tiebreaker, hardened anti-overwrite pick rules, and Umpire Penalty Jar.</span>
+                <span><strong>Automated Weekly Dispatches &amp; Live ESPN Injuries:</strong> Generates <em>The Friday Wire and Injury Report</em>, <em>Sunday Night Live</em>, and <em>The Weekly Final</em> with 1-click PDF and Word (<code>.docx</code>) downloads.</span>
               </li>
               <li class="flex items-start gap-2">
                 <i data-lucide="check-circle-2" class="w-4 h-4 text-amber-600 shrink-0 mt-0.5"></i>
-                <span><strong>Instant Download &amp; Web Unlock:</strong> One-time Commissioner purchase immediately unlocks signed Android APK download and Web/PWA league hosting.</span>
+                <span><strong>Elvis House Bot &amp; Pick Protection:</strong> Built-in Vegas favorites pacer bot, Monday Night Football total-points tiebreaker, Umpire Penalty Jar, and hardened rules that never overwrite a player&rsquo;s real picks.</span>
               </li>
             </ul>
           </div>
 
           <div class="space-y-2.5 pt-4 border-t border-slate-100">
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-              <a href="https://buy.stripe.com/5kQ14mcxR3Z16BubUf4wM01" class="btn-primary-coastal text-xs py-3 px-3 w-full justify-center shadow-sm">
+              <a href="https://buy.stripe.com/5kQ14mcxR3Z16BubUf4wM01" onclick="trackCheckout('nfl-pool-standard', 'Branham Hills Legacy Football Pool Standard (Up to 20 Contenders)', 10)" class="btn-primary-coastal text-xs py-3 px-3 w-full justify-center shadow-sm">
                 <i data-lucide="credit-card" class="w-4 h-4"></i>
                 Buy Standard &mdash; $10 (&le;20)
               </a>
-              <a href="https://buy.stripe.com/4gMcN469tanp9NG3nJ4wM02" class="btn-primary-coastal text-xs py-3 px-3 w-full justify-center shadow-sm bg-amber-600 hover:bg-amber-700 border-amber-600">
+              <a href="https://buy.stripe.com/4gMcN469tanp9NG3nJ4wM02" onclick="trackCheckout('nfl-pool-league', 'Branham Hills Legacy Football Pool League (Up to 50 Contenders)', 20)" class="btn-primary-coastal text-xs py-3 px-3 w-full justify-center shadow-sm bg-amber-600 hover:bg-amber-700 border-amber-600">
                 <i data-lucide="trophy" class="w-4 h-4"></i>
                 Buy League &mdash; $20 (&le;50)
               </a>
@@ -662,7 +697,7 @@
       <!-- Free Open-Source MIT Releases Row (3 Cards) -->
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8 items-stretch">
         <!-- Card 3: Umpire Pool: Youth Sports Officiating Edition (Free Open Source) -->
-        <div class="pearl-tile bg-white border border-slate-200 p-7 flex flex-col justify-between shadow-sm">
+        <div class="pearl-tile bg-white border-2 border-emerald-500/50 p-7 flex flex-col justify-between shadow-sm">
           <div>
             <div class="flex items-center justify-between gap-2 mb-4">
               <span class="px-3 py-1 rounded-full text-xs font-mono font-bold bg-emerald-100 text-emerald-800 border border-emerald-200">
@@ -671,10 +706,15 @@
               <span class="text-xs font-mono font-semibold text-slate-500">v1.0.0 Release</span>
             </div>
 
-            <h3 class="text-2xl font-extrabold text-slate-900 font-['Inter_Tight']">Umpire Pool: Youth Sports Officiating Edition</h3>
+            <h3 class="text-2xl font-extrabold text-slate-900 font-['Inter_Tight']">Umpire Pool: Youth Sports Edition</h3>
             <p class="text-xs font-mono text-slate-500 mt-0.5">Repo: github.com/49Caliber-Labs/Umpire-Pool</p>
 
-            <div class="my-5 p-4 rounded-xl bg-emerald-50/70 border border-emerald-200 flex items-baseline justify-between gap-2">
+            <div onclick="openLightbox('assets/img/umpire-pool-showcase.svg', 'Umpire Pool: Free MIT Open-Source Youth Sports Officiating Fundraiser')" class="group relative rounded-xl overflow-hidden bg-slate-950 border border-emerald-200 my-4 aspect-[16/10] cursor-pointer shadow-xs">
+              <img src="assets/img/umpire-pool-showcase.svg" alt="Umpire Pool Youth Sports Edition Preview" class="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-300" loading="lazy" />
+              <span class="absolute bottom-2 right-2 bg-slate-950/85 text-emerald-300 border border-emerald-500/40 text-[10px] font-mono font-bold px-2 py-0.5 rounded-full">Click to Zoom</span>
+            </div>
+
+            <div class="my-4 p-4 rounded-xl bg-emerald-50/70 border border-emerald-200 flex items-baseline justify-between gap-2">
               <div>
                 <span class="text-3xl font-extrabold text-emerald-700 font-['Inter_Tight']">FREE</span>
                 <span class="text-xs font-semibold text-emerald-900 ml-1">Open-Source MIT</span>
@@ -683,25 +723,21 @@
             </div>
 
             <p class="text-sm text-slate-600 leading-relaxed mb-4">
-              Clean white-label NFL Pick&rsquo;em pool platform crafted for Little Leagues, youth sports associations, and officiating organizations supporting volunteer umpire protective gear.
+              Free white-label NFL Pick&rsquo;em pool built for Little Leagues, youth sports associations, and officiating crews raising funds for volunteer umpire masks, chest protectors, and field gear.
             </p>
 
             <ul class="space-y-2.5 text-xs text-slate-700 mb-6">
               <li class="flex items-start gap-2">
                 <i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i>
-                <span><strong>White-Label Youth Sports Officiating Edition:</strong> Built for Little Leagues, youth sports associations, and officiating organizations supporting volunteer umpire protective gear.</span>
+                <span><strong>Built for Youth Sports &amp; Little Leagues:</strong> Clean white-label fundraiser template with zero ads, zero tracking, and printable weekly landscape scoresheets.</span>
               </li>
               <li class="flex items-start gap-2">
                 <i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i>
-                <span><strong>5-Step League Setup Wizard &amp; Midseason Protection:</strong> Configure league title, roster, Elvis pacer bot, and tiebreaker rules in under 60 seconds with live ESPN NFL calendar sync.</span>
+                <span><strong>60-Second Setup Wizard:</strong> Customize your league name, contender roster, Elvis pacer bot, and Monday Night tiebreaker in 5 quick steps with live ESPN schedule sync.</span>
               </li>
               <li class="flex items-start gap-2">
                 <i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i>
-                <span><strong>Atomic Disk Persistence &amp; Crash Recovery:</strong> Zero-dependency JSON ledger with rolling <code>.bak.json</code> failover, per-game kickoff lockouts, and printable landscape scoresheets.</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i>
-                <span><strong>Dual-Track Open Source:</strong> Full MIT source code plus instant browser/mobile PWA mode with Web &amp; self-hosted Node/Docker deploy targets.</span>
+                <span><strong>Automatic Backup &amp; Kickoff Locks:</strong> Rolling <code>.bak.json</code> crash recovery, per-game kickoff lockouts, and hardened pick protection.</span>
               </li>
             </ul>
           </div>
@@ -723,7 +759,7 @@
         </div>
 
         <!-- Card 4: ACE-10 (The Architect Council Engine - Free Open Source) -->
-        <div class="pearl-tile bg-white border border-slate-200 p-7 flex flex-col justify-between shadow-sm">
+        <div class="pearl-tile bg-white border-2 border-indigo-500/40 p-7 flex flex-col justify-between shadow-sm">
           <div>
             <div class="flex items-center justify-between gap-2 mb-4">
               <span class="px-3 py-1 rounded-full text-xs font-mono font-bold bg-emerald-100 text-emerald-800 border border-emerald-200">
@@ -735,7 +771,12 @@
             <h3 class="text-2xl font-extrabold text-slate-900 font-['Inter_Tight']">ACE-10: Architect Council Engine</h3>
             <p class="text-xs font-mono text-slate-500 mt-0.5">Repo: github.com/49Caliber-Labs/ACE10-Architect-Council</p>
 
-            <div class="my-5 p-4 rounded-xl bg-emerald-50/70 border border-emerald-200 flex items-baseline justify-between">
+            <div onclick="openLightbox('assets/img/ace10-architect-showcase.svg', 'ACE-10: 4-Gate Quality & Anti-Bluffing Rule Engine for AI Coding Assistants')" class="group relative rounded-xl overflow-hidden bg-slate-950 border border-indigo-200 my-4 aspect-[16/10] cursor-pointer shadow-xs">
+              <img src="assets/img/ace10-architect-showcase.svg" alt="ACE-10 4-Gate Cognitive Pipeline Preview" class="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-300" loading="lazy" />
+              <span class="absolute bottom-2 right-2 bg-slate-950/85 text-sky-300 border border-sky-500/40 text-[10px] font-mono font-bold px-2 py-0.5 rounded-full">Click to Zoom</span>
+            </div>
+
+            <div class="my-4 p-4 rounded-xl bg-emerald-50/70 border border-emerald-200 flex items-baseline justify-between">
               <div>
                 <span class="text-3xl font-extrabold text-emerald-700 font-['Inter_Tight']">FREE</span>
                 <span class="text-xs font-semibold text-emerald-900 ml-1">Open-Source MIT</span>
@@ -744,25 +785,21 @@
             </div>
 
             <p class="text-sm text-slate-600 leading-relaxed mb-4">
-              Our production 4-Gate cognitive execution pipeline and Zero-Stub Anti-Bluffing system instruction for frontier AI coding agents (Gemini, Claude Code, Cursor, Codex).
+              Drop-in quality and anti-bluffing rule file for AI coding tools (Google Gemini, Claude Code, Cursor, and Codex). Stops AI assistants from outputting lazy placeholders or fake mock code.
             </p>
 
             <ul class="space-y-2.5 text-xs text-slate-700 mb-6">
               <li class="flex items-start gap-2">
                 <i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i>
-                <span><strong>10 Functional Heuristic Filters:</strong> Synthesizes Da Vinci, Tesla, Aurelius, JFK, Lovelace, Ritchie, Torvalds, Curie, Tosh, and Hypatia without theatrical roleplay.</span>
+                <span><strong>4-Step Engineering Check:</strong> Forces AI tools to strip away buzzwords, test failure cases, cut unnecessary bloat, and deliver direct, working answers.</span>
               </li>
               <li class="flex items-start gap-2">
                 <i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i>
-                <span><strong>4-Gate Internal Cognitive Pipeline:</strong> First-Principles Deconstruction &rarr; Multi-Domain Simulation &rarr; Pragmatic BS Audit &rarr; Strategic Delivery.</span>
+                <span><strong>Zero-Stub Anti-Bluffing Rule:</strong> Strictly bans <code>// ... rest of code</code> shortcuts, fake timer stubs, and claiming a feature is wired up when it isn&rsquo;t.</span>
               </li>
               <li class="flex items-start gap-2">
                 <i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i>
-                <span><strong>Zero-Stub Backend Mandate:</strong> Eliminates mock-data bluffing, `// ... rest of code` elision, and phantom `Promise.resolve()` placeholders.</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i>
-                <span><strong>Command Triggers:</strong> Built-in `/council debate`, `/council stress-test`, and `/council synthesis` operational gates.</span>
+                <span><strong>Built-In Slash Shortcuts:</strong> Includes <code>/council debate</code>, <code>/council stress-test</code>, and <code>/council synthesis</code> for deep code audits.</span>
               </li>
             </ul>
           </div>
@@ -780,7 +817,7 @@
         </div>
 
         <!-- Card 5: MeshMule-Core (Free Open Source) -->
-        <div class="pearl-tile bg-white border border-slate-200 p-7 flex flex-col justify-between shadow-sm">
+        <div class="pearl-tile bg-white border-2 border-cyan-500/50 p-7 flex flex-col justify-between shadow-sm">
           <div>
             <div class="flex items-center justify-between gap-2 mb-4">
               <span class="px-3 py-1 rounded-full text-xs font-mono font-bold bg-emerald-100 text-emerald-800 border border-emerald-200">
@@ -792,7 +829,12 @@
             <h3 class="text-2xl font-extrabold text-slate-900 font-['Inter_Tight']">MeshMule-Core Protocol</h3>
             <p class="text-xs font-mono text-slate-500 mt-0.5">Repo: github.com/49Caliber-Labs/MeshMule-core</p>
 
-            <div class="my-5 p-4 rounded-xl bg-emerald-50/70 border border-emerald-200 flex items-baseline justify-between">
+            <div onclick="openLightbox('assets/img/lora-mesh-communicator.png', 'MeshMule-Core — Off-Grid 915 MHz LoRa Radio & Weather Mesh Protocol')" class="group relative rounded-xl overflow-hidden bg-slate-950 border border-cyan-200 my-4 aspect-[16/10] cursor-pointer shadow-xs">
+              <img src="assets/img/lora-mesh-communicator.png" alt="MeshMule-Core 915 MHz LoRa Communicator Preview" class="w-full h-full object-contain p-1.5 group-hover:scale-[1.02] transition-transform duration-300" loading="lazy" />
+              <span class="absolute bottom-2 right-2 bg-slate-950/85 text-amber-300 border border-amber-500/40 text-[10px] font-mono font-bold px-2 py-0.5 rounded-full">Click to Zoom</span>
+            </div>
+
+            <div class="my-4 p-4 rounded-xl bg-emerald-50/70 border border-emerald-200 flex items-baseline justify-between">
               <div>
                 <span class="text-3xl font-extrabold text-emerald-700 font-['Inter_Tight']">FREE</span>
                 <span class="text-xs font-semibold text-emerald-900 ml-1">Open-Source MIT</span>
@@ -801,25 +843,21 @@
             </div>
 
             <p class="text-sm text-slate-600 leading-relaxed mb-4">
-              Citizen-science sub-GHz LoRa binary framing, distributed barometric phased-array (&nabla;P) front solver, and RF moisture tomography engine.
+              Open-source 915 MHz LoRa radio messaging and weather-front tracking engine that lets pocket radios and solar trail repeaters share GPS pins and weather alerts without cell towers.
             </p>
 
             <ul class="space-y-2.5 text-xs text-slate-700 mb-6">
               <li class="flex items-start gap-2">
                 <i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i>
-                <span><strong>24–38 Byte Binary Framing:</strong> Deterministic bitwise telemetry encoding with CRC-16/CCITT integrity verification over unlicensed 915 MHz ISM.</span>
+                <span><strong>Compact 24–38 Byte Radio Packets:</strong> Shrinks bulky data by ~90% so GPS locations, battery levels, and pressure readings get through deep canyons reliably.</span>
               </li>
               <li class="flex items-start gap-2">
                 <i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i>
-                <span><strong>Barometric Phased-Array (&nabla;P):</strong> Least-squares planar regression across 3+ peer nodes solving horizontal pressure-gradient velocity and bearing.</span>
+                <span><strong>Multi-Radio Weather Front Tracking:</strong> Compares barometric pressure across 3+ nearby radios to spot approaching storms and wind shifts without internet radar.</span>
               </li>
               <li class="flex items-start gap-2">
                 <i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i>
-                <span><strong>RF Attenuation Tomography:</strong> Infers path-integrated rain and foliage moisture anomalies directly from peer RSSI/SNR link metadata.</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i>
-                <span><strong>GPS-Denied SAR R&amp;D:</strong> Weighted nonlinear least-squares (WNLLS) range-ring trilateration fused with barometric altitude locking.</span>
+                <span><strong>Rain &amp; Canyon Search R&amp;D:</strong> Estimates heavy rain along radio paths from signal drop (RSSI/SNR) and supports off-grid search-and-rescue distance ranging.</span>
               </li>
             </ul>
           </div>
@@ -831,7 +869,7 @@
             </a>
             <div class="flex items-center justify-between text-[11px] text-slate-500 font-mono px-1">
               <a href="https://github.com/49Caliber-Labs/MeshMule-core" target="_blank" rel="noopener noreferrer" class="text-sky-700 font-semibold hover:underline">Source Repository &rarr;</a>
-              <span>MIT License &bull; TRL 3–4</span>
+              <span>MIT License &bull; 23 Modules</span>
             </div>
           </div>
         </div>
@@ -1226,20 +1264,21 @@
         </p>
 
         <div class="flex flex-wrap justify-center gap-2 mt-8">
-          <button onclick="filterGallery('all')" id="tab-all" class="px-4 py-1.5 rounded-lg text-xs font-semibold bg-sky-600 text-white transition-all">All Systems (6)</button>
-          <button onclick="filterGallery('bitewindow')" id="tab-bitewindow" class="px-4 py-1.5 rounded-lg text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 transition-all">BiteWindow&trade; Forecast Engine</button>
-          <button onclick="filterGallery('mesh')" id="tab-mesh" class="px-4 py-1.5 rounded-lg text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 transition-all">Tactical LoRa Mesh</button>
-          <button onclick="filterGallery('infrastructure')" id="tab-infrastructure" class="px-4 py-1.5 rounded-lg text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 transition-all">Orion Heavy Infrastructure</button>
+          <button onclick="filterGallery('all')" id="tab-all" class="px-4 py-1.5 rounded-lg text-xs font-semibold bg-sky-600 text-white transition-all">All Products &amp; Systems (9)</button>
+          <button onclick="filterGallery('bitewindow')" id="tab-bitewindow" class="px-4 py-1.5 rounded-lg text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 transition-all">BiteWindow Vector7 ($10)</button>
+          <button onclick="filterGallery('pools')" id="tab-pools" class="px-4 py-1.5 rounded-lg text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 transition-all">Football &amp; Umpire Pools</button>
+          <button onclick="filterGallery('mesh')" id="tab-mesh" class="px-4 py-1.5 rounded-lg text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 transition-all">LoRa Radio &amp; ACE-10 (Free MIT)</button>
+          <button onclick="filterGallery('infrastructure')" id="tab-infrastructure" class="px-4 py-1.5 rounded-lg text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 transition-all">Orion Heavy Civil &amp; Field Ops</button>
         </div>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8" id="gallery-cards">
         <!-- CARD 1: 360 Horizon Radar Dial -->
         <div class="gallery-card bg-slate-800/90 border border-slate-700 rounded-2xl overflow-hidden shadow-xl hover:border-cyan-500/60 transition-all duration-300 group flex flex-col" data-cat="bitewindow">
-          <div class="relative overflow-hidden bg-slate-950 aspect-[4/3] cursor-pointer" onclick="openLightbox('assets/img/bitewindow-360-horizon.png', '360° Feeding Window Horizon & 24h Diurnal Science Dial')">
+          <div class="relative overflow-hidden bg-slate-950 aspect-[4/3] cursor-pointer" onclick="openLightbox('assets/img/bitewindow-360-horizon.png', 'BiteWindow Vector7 — 24-Hour Bite, Tide & Barometer Horizon Dial')">
             <img src="assets/img/bitewindow-360-horizon.png" alt="BiteWindow 360 Diurnal Feeding Window Dial" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500" loading="lazy" />
             <div class="absolute top-3 right-3 bg-cyan-950/90 text-cyan-300 border border-cyan-800/60 text-[10px] font-mono font-bold px-2 py-0.5 rounded-md flex items-center gap-1">
-              <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-ping"></span> Live Radar
+              <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-ping"></span> BiteWindow $10
             </div>
             <div class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
               <span class="px-3 py-1.5 rounded-full bg-sky-600 text-white text-xs font-medium shadow-lg flex items-center gap-1.5">
@@ -1249,20 +1288,48 @@
           </div>
           <div class="p-5 flex-1 flex flex-col justify-between">
             <div>
-              <div class="text-[11px] font-mono text-cyan-400 uppercase tracking-widest font-semibold mb-1">Telemetry Model &bull; Diurnal Science</div>
-              <h3 class="text-lg font-bold text-white group-hover:text-cyan-300 transition-colors">360&deg; Feeding Window Horizon</h3>
+              <div class="text-[11px] font-mono text-cyan-400 uppercase tracking-widest font-semibold mb-1">BiteWindow Vector7 &bull; 24-Hour Forecast</div>
+              <h3 class="text-lg font-bold text-white group-hover:text-cyan-300 transition-colors">360&deg; Bite, Tide &amp; Barometer Dial</h3>
               <p class="text-xs text-slate-300 mt-2 leading-relaxed">
-                Visualizes real-time 24-hour diurnal bio-windows, identifying solar/lunar peak transits, barometric inflection points (&Delta;P/&Delta;t), and activity probability curves.
+                Shows your best 24-hour fishing and trail weather windows at a glance by combining sunrise/moon peaks, tide swings, and barometric pressure drops directly on your phone.
               </p>
             </div>
             <div class="pt-4 mt-4 border-t border-slate-700/80 flex items-center justify-between text-[11px] text-slate-400 font-mono">
               <span>BiteWindow Vector7</span>
-              <span class="text-cyan-400 font-semibold">100% Client-Side Engine</span>
+              <span class="text-cyan-400 font-semibold">Works Offline</span>
             </div>
           </div>
         </div>
 
-        <!-- CARD 2: Off-Grid LoRa Mesh Communicator -->
+        <!-- CARD 2: Branham Hills Legacy Football Pool -->
+        <div class="gallery-card bg-slate-800/90 border border-slate-700 rounded-2xl overflow-hidden shadow-xl hover:border-amber-500/60 transition-all duration-300 group flex flex-col" data-cat="pools">
+          <div class="relative overflow-hidden bg-slate-950 aspect-[4/3] cursor-pointer" onclick="openLightbox('assets/img/nfl-pool-legacy-showcase.svg', 'Branham Hills Legacy Football Pool — 40th Season Scoresheets, Elvis Bot & Automated Dispatches')">
+            <img src="assets/img/nfl-pool-legacy-showcase.svg" alt="Branham Hills Legacy Football Pool Interface Preview" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+            <div class="absolute top-3 right-3 bg-amber-950/90 text-amber-300 border border-amber-800/60 text-[10px] font-mono font-bold px-2 py-0.5 rounded-md flex items-center gap-1">
+              <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span> $10 Std / $20 League
+            </div>
+            <div class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+              <span class="px-3 py-1.5 rounded-full bg-amber-600 text-white text-xs font-medium shadow-lg flex items-center gap-1.5">
+                <i data-lucide="maximize-2" class="w-3.5 h-3.5"></i> Click to Zoom Fullscreen
+              </span>
+            </div>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="text-[11px] font-mono text-amber-400 uppercase tracking-widest font-semibold mb-1">40th Season Heritage &bull; Players Join Free</div>
+              <h3 class="text-lg font-bold text-white group-hover:text-amber-300 transition-colors">Branham Hills Legacy Football Pool</h3>
+              <p class="text-xs text-slate-300 mt-2 leading-relaxed">
+                Carbon-copy weekly NFL pick sheets, Elvis Vegas favorites pacer bot, Don Threet Lore Vault, and live ESPN dispatches (<em>The Friday Wire and Injury Report</em>, <em>Sunday Night Live</em>, <em>The Weekly Final</em>).
+              </p>
+            </div>
+            <div class="pt-4 mt-4 border-t border-slate-700/80 flex items-center justify-between text-[11px] text-slate-400 font-mono">
+              <span>20 or 50 Contenders</span>
+              <span class="text-amber-400 font-semibold">Android APK + Web</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 3: Off-Grid LoRa Mesh Communicator -->
         <div class="gallery-card bg-slate-800/90 border border-slate-700 rounded-2xl overflow-hidden shadow-xl hover:border-amber-500/60 transition-all duration-300 group flex flex-col" data-cat="mesh">
           <div class="relative overflow-hidden bg-slate-950 aspect-[4/3] cursor-pointer" onclick="openLightbox('assets/img/lora-mesh-communicator.png', 'Off-Grid LoRa Mesh Communicator & Meshtastic 915 MHz Bridge')">
             <img src="assets/img/lora-mesh-communicator.png" alt="Off-Grid LoRa Mesh Communicator UI" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500" loading="lazy" />
@@ -1277,22 +1344,22 @@
           </div>
           <div class="p-5 flex-1 flex flex-col justify-between">
             <div>
-              <div class="text-[11px] font-mono text-amber-400 uppercase tracking-widest font-semibold mb-1">Ad-Hoc Network &bull; Tactical RF</div>
-              <h3 class="text-lg font-bold text-white group-hover:text-amber-300 transition-colors">MeshMule&trade; Off-Grid Communicator</h3>
+              <div class="text-[11px] font-mono text-amber-400 uppercase tracking-widest font-semibold mb-1">No Cell Service Needed &bull; $0/mo Airtime</div>
+              <h3 class="text-lg font-bold text-white group-hover:text-amber-300 transition-colors">MeshMule&trade; Off-Grid Radio Messenger</h3>
               <p class="text-xs text-slate-300 mt-2 leading-relaxed">
-                Connects directly to Semtech SX1262 transceivers via Bluetooth, USB-C Serial, or Wi-Fi. Transmits 16B &amp; 32B binary telemetry frames, emergency beacons, and GPS coordinates with zero cellular infrastructure.
+                Pairs your phone over Bluetooth or USB-C to a pocket 915 MHz LoRa radio. Sends compact 24&ndash;38 byte GPS pins, text messages, and emergency beacons across miles of canyon terrain with zero cell coverage.
               </p>
             </div>
             <div class="pt-4 mt-4 border-t border-slate-700/80 flex items-center justify-between text-[11px] text-slate-400 font-mono">
-              <span>Meshtastic Protocol</span>
-              <span class="text-amber-400 font-semibold">160 Char / 32B Frame</span>
+              <span>BiteWindow + MeshMule</span>
+              <span class="text-amber-400 font-semibold">24&ndash;38 Byte Packets</span>
             </div>
           </div>
         </div>
 
-        <!-- CARD 3: Tactical Hydro Telemetry (USGS Gage Coupling) -->
+        <!-- CARD 4: Tactical Hydro Telemetry (USGS Gage Coupling) -->
         <div class="gallery-card bg-slate-800/90 border border-slate-700 rounded-2xl overflow-hidden shadow-xl hover:border-sky-500/60 transition-all duration-300 group flex flex-col" data-cat="bitewindow">
-          <div class="relative overflow-hidden bg-slate-950 aspect-[4/3] cursor-pointer" onclick="openLightbox('assets/img/tactical-hydro-telemetry.png', 'The Hydro Protocol: Mare Island Strait USGS Gage Ingestion')">
+          <div class="relative overflow-hidden bg-slate-950 aspect-[4/3] cursor-pointer" onclick="openLightbox('assets/img/tactical-hydro-telemetry.png', 'BiteWindow Vector7 — Live Mare Island Strait & Carquinez USGS Tidal Gauges')">
             <img src="assets/img/tactical-hydro-telemetry.png" alt="Mare Island Strait USGS Gage Hydrology" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500" loading="lazy" />
             <div class="absolute top-3 right-3 bg-sky-950/90 text-sky-300 border border-sky-800/60 text-[10px] font-mono font-bold px-2 py-0.5 rounded-md flex items-center gap-1">
               USGS #11455820
@@ -1305,20 +1372,132 @@
           </div>
           <div class="p-5 flex-1 flex flex-col justify-between">
             <div>
-              <div class="text-[11px] font-mono text-sky-400 uppercase tracking-widest font-semibold mb-1">Hydrodynamic Sensor Ingestion</div>
-              <h3 class="text-lg font-bold text-white group-hover:text-sky-300 transition-colors">Tactical Marine Hydrology Stream</h3>
+              <div class="text-[11px] font-mono text-sky-400 uppercase tracking-widest font-semibold mb-1">BiteWindow Vector7 &bull; Live Water Gauges</div>
+              <h3 class="text-lg font-bold text-white group-hover:text-sky-300 transition-colors">Live USGS Tidal &amp; River Flow</h3>
               <p class="text-xs text-slate-300 mt-2 leading-relaxed">
-                Direct USGS gage coupling on the Carquinez &amp; Mare Island Strait corridors. Evaluates real-time tidal streamflow, 61&deg;F water isotherms, shore vs. boat feasibility, and local prey forage matching.
+                Pulls live USGS water gauges along the Mare Island Strait, Carquinez Strait, and coastal rivers to show current speed, water temperature, shore vs. boat conditions, and active baitfish.
               </p>
             </div>
             <div class="pt-4 mt-4 border-t border-slate-700/80 flex items-center justify-between text-[11px] text-slate-400 font-mono">
               <span>Solano County, CA</span>
-              <span class="text-sky-400 font-semibold">Tidal Coupling</span>
+              <span class="text-sky-400 font-semibold">Live Tides &amp; Flow</span>
             </div>
           </div>
         </div>
 
-        <!-- CARD 4: Orion Heavy Field Rigging & Crane Operations -->
+        <!-- CARD 5: Umpire Pool Youth Sports Fundraiser -->
+        <div class="gallery-card bg-slate-800/90 border border-slate-700 rounded-2xl overflow-hidden shadow-xl hover:border-emerald-500/60 transition-all duration-300 group flex flex-col" data-cat="pools">
+          <div class="relative overflow-hidden bg-slate-950 aspect-[4/3] cursor-pointer" onclick="openLightbox('assets/img/umpire-pool-showcase.svg', 'Umpire Pool: Youth Sports Officiating Edition (Free MIT Open Source)')">
+            <img src="assets/img/umpire-pool-showcase.svg" alt="Umpire Pool Youth Sports Edition Preview" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+            <div class="absolute top-3 right-3 bg-emerald-950/90 text-emerald-300 border border-emerald-800/60 text-[10px] font-mono font-bold px-2 py-0.5 rounded-md flex items-center gap-1">
+              Free MIT Open Source
+            </div>
+            <div class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+              <span class="px-3 py-1.5 rounded-full bg-emerald-600 text-white text-xs font-medium shadow-lg flex items-center gap-1.5">
+                <i data-lucide="maximize-2" class="w-3.5 h-3.5"></i> Click to Zoom Fullscreen
+              </span>
+            </div>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="text-[11px] font-mono text-emerald-400 uppercase tracking-widest font-semibold mb-1">Youth Sports &bull; Volunteer Umpire Gear</div>
+              <h3 class="text-lg font-bold text-white group-hover:text-emerald-300 transition-colors">Umpire Pool: Youth Sports Edition</h3>
+              <p class="text-xs text-slate-300 mt-2 leading-relaxed">
+                Free white-label NFL Pick&rsquo;em pool for Little Leagues and youth sports organizations raising money for volunteer umpire masks, chest protectors, and equipment. Sets up in 60 seconds.
+              </p>
+            </div>
+            <div class="pt-4 mt-4 border-t border-slate-700/80 flex items-center justify-between text-[11px] text-slate-400 font-mono">
+              <span>49caliber.com/umpire-pool</span>
+              <span class="text-emerald-400 font-semibold">100% Free Forever</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 6: Thermal Metabolism Dossier -->
+        <div class="gallery-card bg-slate-800/90 border border-slate-700 rounded-2xl overflow-hidden shadow-xl hover:border-cyan-500/60 transition-all duration-300 group flex flex-col" data-cat="bitewindow">
+          <div class="relative overflow-hidden bg-slate-950 aspect-[4/3] cursor-pointer" onclick="openLightbox('assets/img/thermal-metabolism-dossier.png', 'BiteWindow Vector7 — Fish Depth & Water Temperature Zones')">
+            <img src="assets/img/thermal-metabolism-dossier.png" alt="Thermal Metabolism Dossier" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+            <div class="absolute top-3 right-3 bg-cyan-950/90 text-cyan-300 border border-cyan-800/60 text-[10px] font-mono font-bold px-2 py-0.5 rounded-md flex items-center gap-1">
+              55&deg;F - 68&deg;F Window
+            </div>
+            <div class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+              <span class="px-3 py-1.5 rounded-full bg-sky-600 text-white text-xs font-medium shadow-lg flex items-center gap-1.5">
+                <i data-lucide="maximize-2" class="w-3.5 h-3.5"></i> Click to Zoom Fullscreen
+              </span>
+            </div>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="text-[11px] font-mono text-cyan-400 uppercase tracking-widest font-semibold mb-1">BiteWindow Vector7 &bull; Species Guide</div>
+              <h3 class="text-lg font-bold text-white group-hover:text-cyan-300 transition-colors">Water Temperature &amp; Depth Zones</h3>
+              <p class="text-xs text-slate-300 mt-2 leading-relaxed">
+                Shows where fish are holding across 4&ndash;35 ft channels based on water temperature, clarity, light level, and tide movement so you target the right depth immediately.
+              </p>
+            </div>
+            <div class="pt-4 mt-4 border-t border-slate-700/80 flex items-center justify-between text-[11px] text-slate-400 font-mono">
+              <span>Species Profiles</span>
+              <span class="text-cyan-400 font-semibold">4&ndash;35 ft Channels</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 7: Direct SKU Strike Arsenal Blueprint -->
+        <div class="gallery-card bg-slate-800/90 border border-slate-700 rounded-2xl overflow-hidden shadow-xl hover:border-amber-500/60 transition-all duration-300 group flex flex-col" data-cat="bitewindow">
+          <div class="relative overflow-hidden bg-slate-950 aspect-[4/3] cursor-pointer" onclick="openLightbox('assets/img/strike-arsenal-blueprint.png', 'BiteWindow Vector7 — 1-Click Lure, Hook & Rigging Match')">
+            <img src="assets/img/strike-arsenal-blueprint.png" alt="Terminal Rigging and SKU Match Blueprint" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+            <div class="absolute top-3 right-3 bg-amber-950/90 text-amber-300 border border-amber-800/60 text-[10px] font-mono font-bold px-2 py-0.5 rounded-md flex items-center gap-1">
+              Lure &amp; Tackle Match
+            </div>
+            <div class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+              <span class="px-3 py-1.5 rounded-full bg-amber-600 text-white text-xs font-medium shadow-lg flex items-center gap-1.5">
+                <i data-lucide="maximize-2" class="w-3.5 h-3.5"></i> Click to Zoom Fullscreen
+              </span>
+            </div>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="text-[11px] font-mono text-amber-400 uppercase tracking-widest font-semibold mb-1">BiteWindow Vector7 &bull; Gear Advisor</div>
+              <h3 class="text-lg font-bold text-white group-hover:text-amber-300 transition-colors">1-Click Lure &amp; Rigging Blueprint</h3>
+              <p class="text-xs text-slate-300 mt-2 leading-relaxed">
+                Matches today&rsquo;s water clarity and current to exact hook sizes, line test, sinker weights, and retrieve speed with 1-click lookup at Bass Pro Shops, Cabela&rsquo;s, and Tackle Warehouse.
+              </p>
+            </div>
+            <div class="pt-4 mt-4 border-t border-slate-700/80 flex items-center justify-between text-[11px] text-slate-400 font-mono">
+              <span>Zero Banner Ads</span>
+              <span class="text-amber-400 font-semibold">Direct Gear Lookup</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 8: ACE-10 Architect Council Engine -->
+        <div class="gallery-card bg-slate-800/90 border border-slate-700 rounded-2xl overflow-hidden shadow-xl hover:border-sky-500/60 transition-all duration-300 group flex flex-col" data-cat="mesh">
+          <div class="relative overflow-hidden bg-slate-950 aspect-[4/3] cursor-pointer" onclick="openLightbox('assets/img/ace10-architect-showcase.svg', 'ACE-10: The Architect Council Engine — 4-Gate Anti-Bluffing Rule Set for AI Coding Tools')">
+            <img src="assets/img/ace10-architect-showcase.svg" alt="ACE-10 Architect Council Engine Preview" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+            <div class="absolute top-3 right-3 bg-sky-950/90 text-sky-300 border border-sky-800/60 text-[10px] font-mono font-bold px-2 py-0.5 rounded-md flex items-center gap-1">
+              GEMINI.md / CLAUDE.md
+            </div>
+            <div class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+              <span class="px-3 py-1.5 rounded-full bg-sky-600 text-white text-xs font-medium shadow-lg flex items-center gap-1.5">
+                <i data-lucide="maximize-2" class="w-3.5 h-3.5"></i> Click to Zoom Fullscreen
+              </span>
+            </div>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="text-[11px] font-mono text-sky-400 uppercase tracking-widest font-semibold mb-1">Free MIT Open Source &bull; AI Rule Engine</div>
+              <h3 class="text-lg font-bold text-white group-hover:text-sky-300 transition-colors">ACE-10: Architect Council Engine</h3>
+              <p class="text-xs text-slate-300 mt-2 leading-relaxed">
+                Our 4-gate engineering checklist and anti-bluffing rule file for Gemini, Claude Code, Cursor, and Codex. Eliminates fake placeholder code and forces complete, runnable software.
+              </p>
+            </div>
+            <div class="pt-4 mt-4 border-t border-slate-700/80 flex items-center justify-between text-[11px] text-slate-400 font-mono">
+              <span>1-Click Rule File</span>
+              <span class="text-sky-400 font-semibold">Zero-Stub Mandate</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 9: Orion Heavy Field Rigging & Crane Operations -->
         <div class="gallery-card bg-slate-800/90 border border-slate-700 rounded-2xl overflow-hidden shadow-xl hover:border-emerald-500/60 transition-all duration-300 group flex flex-col" data-cat="infrastructure">
           <div class="relative overflow-hidden bg-slate-950 aspect-[4/3] cursor-pointer" onclick="openLightbox('assets/img/orion-field-rigging.png', 'Orion General Contracting: Heavy Industrial Site Operations & Structural Crane Rigging')">
             <img src="assets/img/orion-field-rigging.png" alt="Orion Crane Rigging and Heavy Civil Site Superintendency" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
@@ -1336,68 +1515,12 @@
               <div class="text-[11px] font-mono text-emerald-400 uppercase tracking-widest font-semibold mb-1">Sister Entity &bull; Field Operations</div>
               <h3 class="text-lg font-bold text-white group-hover:text-emerald-300 transition-colors">Orion General Contracting Rigging</h3>
               <p class="text-xs text-slate-300 mt-2 leading-relaxed">
-                Superintendency on heavy commercial builds, high-silo crane lifts, deep earthwork shoring, and complex federal &amp; historic structural restoration (2,500+ operational hrs). Structural backbone for remote repeater towers and off-grid solar masts.
+                30 years of heavy commercial construction, crane lifts, earthwork shoring, and structural restoration (2,500+ field hours) powering remote solar relay towers and rugged outdoor installations.
               </p>
             </div>
             <div class="pt-4 mt-4 border-t border-slate-700/80 flex items-center justify-between text-[11px] text-slate-400 font-mono">
               <span>3M Fall Protection</span>
               <span class="text-emerald-400 font-semibold">CFTT Grade I &bull; Procore</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- CARD 5: Thermal Metabolism Dossier -->
-        <div class="gallery-card bg-slate-800/90 border border-slate-700 rounded-2xl overflow-hidden shadow-xl hover:border-cyan-500/60 transition-all duration-300 group flex flex-col" data-cat="bitewindow">
-          <div class="relative overflow-hidden bg-slate-950 aspect-[4/3] cursor-pointer" onclick="openLightbox('assets/img/thermal-metabolism-dossier.png', 'Thermal Metabolism Profile & Water Column Hunting Strata')">
-            <img src="assets/img/thermal-metabolism-dossier.png" alt="Thermal Metabolism Dossier" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500" loading="lazy" />
-            <div class="absolute top-3 right-3 bg-cyan-950/90 text-cyan-300 border border-cyan-800/60 text-[10px] font-mono font-bold px-2 py-0.5 rounded-md flex items-center gap-1">
-              55&deg;F - 68&deg;F Window
-            </div>
-            <div class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-              <span class="px-3 py-1.5 rounded-full bg-sky-600 text-white text-xs font-medium shadow-lg flex items-center gap-1.5">
-                <i data-lucide="maximize-2" class="w-3.5 h-3.5"></i> Click to Zoom Fullscreen
-              </span>
-            </div>
-          </div>
-          <div class="p-5 flex-1 flex flex-col justify-between">
-            <div>
-              <div class="text-[11px] font-mono text-cyan-400 uppercase tracking-widest font-semibold mb-1">Ecological Edge Compute</div>
-              <h3 class="text-lg font-bold text-white group-hover:text-cyan-300 transition-colors">Thermal Metabolism &amp; Depth Profile</h3>
-              <p class="text-xs text-slate-300 mt-2 leading-relaxed">
-                Computes metabolic activity windows across 4&ndash;35 ft tidal channels. Synthesizes water clarity, low-light bias, barometric sensitivity, and tidal vulnerability to model behavior in complex estuaries.
-              </p>
-            </div>
-            <div class="pt-4 mt-4 border-t border-slate-700/80 flex items-center justify-between text-[11px] text-slate-400 font-mono">
-              <span>Bio Dossier Engine</span>
-              <span class="text-cyan-400 font-semibold">Metabolic Ingestion</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- CARD 6: Direct SKU Strike Arsenal Blueprint -->
-        <div class="gallery-card bg-slate-800/90 border border-slate-700 rounded-2xl overflow-hidden shadow-xl hover:border-amber-500/60 transition-all duration-300 group flex flex-col" data-cat="bitewindow">
-          <div class="relative overflow-hidden bg-slate-950 aspect-[4/3] cursor-pointer" onclick="openLightbox('assets/img/strike-arsenal-blueprint.png', 'Direct SKU Strike Arsenal & Terminal Rigging Specification')">
-            <img src="assets/img/strike-arsenal-blueprint.png" alt="Terminal Rigging and SKU Match Blueprint" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500" loading="lazy" />
-            <div class="absolute top-3 right-3 bg-amber-950/90 text-amber-300 border border-amber-800/60 text-[10px] font-mono font-bold px-2 py-0.5 rounded-md flex items-center gap-1">
-              Direct SKU Engine
-            </div>
-            <div class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-              <span class="px-3 py-1.5 rounded-full bg-amber-600 text-white text-xs font-medium shadow-lg flex items-center gap-1.5">
-                <i data-lucide="maximize-2" class="w-3.5 h-3.5"></i> Click to Zoom Fullscreen
-              </span>
-            </div>
-          </div>
-          <div class="p-5 flex-1 flex flex-col justify-between">
-            <div>
-              <div class="text-[11px] font-mono text-amber-400 uppercase tracking-widest font-semibold mb-1">Direct Equipment Pairing</div>
-              <h3 class="text-lg font-bold text-white group-hover:text-amber-300 transition-colors">Tactical Strike Arsenal Specification</h3>
-              <p class="text-xs text-slate-300 mt-2 leading-relaxed">
-                Connects environmental telemetry directly to physical gear execution: hook sizes, line test, presentation cadence, calibrated weights, and live commercial affiliate inventory lookup.
-              </p>
-            </div>
-            <div class="pt-4 mt-4 border-t border-slate-700/80 flex items-center justify-between text-[11px] text-slate-400 font-mono">
-              <span>Commercial Ecosystem</span>
-              <span class="text-amber-400 font-semibold">SKU Mapping</span>
             </div>
           </div>
         </div>
@@ -2338,50 +2461,50 @@
     // Capability Tabs Data
     const CAPABILITY_DATA = {
       "multi-radio": {
-        title: "Sub-GHz LoRa Mesh Telemetry Framing",
-        badge: "BLE GATT & USB-Serial Bridge",
-        desc: "MeshMule-Core implements a lightweight binary telemetry protocol engineered for 902–928 MHz (US ISM) and 868 MHz (EU) LoRa transceivers. Rather than sending verbose JSON payloads that saturate low-bitrate sub-GHz channels, sensor observations are packed into compact binary frames with CRC-16/CCITT integrity verification.",
+        title: "Compact 915 MHz LoRa Radio Messaging",
+        badge: "Bluetooth & USB-C Phone Bridge",
+        desc: "MeshMule-Core connects your smartphone to standard 915 MHz (US) and 868 MHz (EU) LoRa radios. Instead of sending bloated text messages that clog slow long-range radio channels, it packs GPS coordinates, battery level, and sensor readings into tiny 24–38 byte packets with built-in error checking.",
         bullets: [
-          "Direct Bluetooth Low Energy (BLE GATT) and WebSerial / USB-OTG hardware transport",
-          "Compact 24–38 byte binary frames minimizing LoRa time-on-air and duty-cycle contention",
-          "Deterministic packet deduplication and hop-count tracking across peer relay nodes",
-          "Open-source TypeScript reference implementation in 49Caliber-Labs/MeshMule-core"
+          "Pairs directly with your phone over Bluetooth Low Energy (BLE) or a USB-C cable",
+          "Tiny 24–38 byte packets cut radio airtime by ~90% so messages punch through deep canyons",
+          "Automatic hop-by-hop relay across ridge repeaters with duplicate message filtering",
+          "Free MIT open-source TypeScript library in 49Caliber-Labs/MeshMule-core"
         ],
         icon: "radio"
       },
       "body-worn": {
-        title: "Distributed Barometric Phased-Array (\u2207P)",
-        badge: "Multi-Node Pressure Gradient Solver",
-        desc: "A single barometer can only measure local pressure change over time (\u2202P/\u2202t). By synchronizing barometric readings across three or more geographically separated mesh nodes, MeshMule-Core solves the horizontal spatial pressure gradient vector (\u2207P) via least-squares plane fitting to estimate approaching front velocity and bearing without internet weather radar.",
+        title: "Multi-Radio Barometric Weather Front Tracking (\u2207P)",
+        badge: "Off-Grid Storm & Wind-Shift Alerts",
+        desc: "A single barometer only tells you pressure is dropping where you stand. By comparing barometric pressure across three or more radios spread along a trail, waterway, or park basin, MeshMule-Core calculates which direction a weather front is coming from and how fast it is moving—with zero cell service.",
         bullets: [
-          "Hypsometric altitude normalization removing terrain elevation bias across nodes",
-          "Least-squares planar regression solving (\u2202P/\u2202x, \u2202P/\u2202y) in hPa/km",
-          "Automated squall and rapid pressure-drop alert thresholds for marine and backcountry teams",
-          "Fuses phone MEMS barometer readings with external I2C BMP280/BME680 sensor nodes"
+          "Automatically adjusts for each hiker, boat, or station's elevation above sea level",
+          "Calculates approaching storm speed and compass direction across 3+ nearby nodes",
+          "Triggers early squall and wind-shift warnings for anglers, hikers, and trail crews",
+          "Combines your phone's built-in barometer with external BMP280/BME680 weather sensors"
         ],
         icon: "user-check"
       },
       "multimodal-sensors": {
-        title: "Sub-GHz RF Link-Attenuation Tomography",
-        badge: "Atmospheric Moisture Sensing",
-        desc: "Every packet exchanged between LoRa mesh peers carries hardware-level Received Signal Strength Indicator (RSSI) and Signal-to-Noise Ratio (SNR) metadata. Our tomography module compares observed link budgets against calibrated free-space baselines to infer localized path-integrated atmospheric moisture and foliage attenuation anomalies.",
+        title: "Rain & Moisture Sensing from Radio Signal Strength",
+        badge: "Zero-Hardware Rain Squall Detection",
+        desc: "Every message sent between LoRa radios automatically records signal strength (RSSI) and clarity (SNR). When heavy rain or wet fog rolls between two radios, signal strength drops in a measurable way—letting the network spot rain squalls across a valley using the radios already on the trail.",
         bullets: [
-          "Zero additional RF hardware required—extracts environmental signal from existing mesh heartbeats",
-          "Applies ITU-R P.838-3 specific attenuation coefficients and log-distance path loss baselines",
-          "Spatial grid interpolation highlighting high-attenuation squall corridors across the mesh",
-          "Designed for citizen-science weather networks and offline coastal monitoring"
+          "Requires no extra rain gauge hardware—uses existing radio check-in signals",
+          "Compares live signal strength against clear-weather baselines for each link",
+          "Highlights heavy rain or wet canopy zones across multi-mile trail networks",
+          "Built for citizen-science weather networks, ranches, and coastal monitoring"
         ],
         icon: "activity"
       },
       "contested-rf": {
-        title: "GPS-Denied SAR Trilateration & Dead-Reckoning",
-        badge: "Offline Search & Rescue Localization",
-        desc: "When GNSS signals are obstructed by dense canopy, steep canyon walls, or interference, responder nodes can estimate relative coordinates using peer-to-peer RSSI ranging combined with barometric altitude locking and step-heading dead reckoning.",
+        title: "Off-Grid Canyon Search & Rescue Distance Ranging",
+        badge: "Backcountry Responder Localization R&D",
+        desc: "When steep granite canyon walls or thick redwoods block overhead GPS satellites, rescue teams can estimate a missing hiker's location by combining radio signal distance rings from 3+ relay points with barometric elevation matching.",
         bullets: [
-          "Weighted nonlinear least-squares (WNLLS) trilateration from 3+ known anchor nodes",
-          "Barometric altitude constraint reducing 3D position ambiguity onto a 2D horizontal plane",
-          "Uncertainty covariance ellipse calculation reporting confidence bounds to operators",
-          "Offline emergency distress beacon framing with automatic mesh relay priority"
+          "Estimates location from 3+ known trailhead or ridge radio anchor points",
+          "Uses barometric altitude to lock the searcher's elevation on steep canyon walls",
+          "Shows a clear search-area circle so responders know where to focus first",
+          "Includes a high-priority SOS beacon packet that hops automatically to the trailhead"
         ],
         icon: "shield"
       }
@@ -3789,6 +3912,7 @@ CALIFORNIA & FEDERAL R&D PATHWAYS
       const buttons = {
         all: document.getElementById('tab-all'),
         bitewindow: document.getElementById('tab-bitewindow'),
+        pools: document.getElementById('tab-pools'),
         mesh: document.getElementById('tab-mesh'),
         infrastructure: document.getElementById('tab-infrastructure')
       };

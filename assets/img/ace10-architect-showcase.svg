@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="aceBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="50%" stop-color="#1e1b4b" />
+      <stop offset="100%" stop-color="#090d16" />
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="500" rx="18" fill="url(#aceBg)" />
+
+  <!-- Header -->
+  <rect x="24" y="20" width="752" height="74" rx="14" fill="#0f172a" stroke="#38bdf8" stroke-width="2" />
+  <rect x="40" y="34" width="210" height="22" rx="11" fill="#38bdf8" />
+  <text x="145" y="49" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="900" fill="#0f172a">FREE MIT AI SYSTEM ENGINE</text>
+  <text x="40" y="77" font-family="Arial, sans-serif" font-size="22" font-weight="900" fill="#ffffff">ACE-10: The Architect Council Engine</text>
+
+  <rect x="576" y="34" width="184" height="46" rx="10" fill="#1e293b" stroke="#34d399" stroke-width="1.5" />
+  <text x="668" y="53" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="700" fill="#6ee7b7">DROP-IN RULE FILE</text>
+  <text x="668" y="72" text-anchor="middle" font-family="monospace" font-size="13" font-weight="900" fill="#ffffff">GEMINI.md / CLAUDE.md</text>
+
+  <!-- 4-Gate Pipeline Boxes -->
+  <g font-family="Arial, sans-serif">
+    <rect x="24" y="112" width="176" height="154" rx="12" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5" />
+    <text x="40" y="138" font-family="monospace" font-size="11" font-weight="900" fill="#38bdf8">GATE 01</text>
+    <text x="40" y="160" font-size="14" font-weight="900" fill="#ffffff">First-Principles</text>
+    <text x="40" y="178" font-size="14" font-weight="900" fill="#ffffff">Signal Extraction</text>
+    <text x="40" y="204" font-size="11" fill="#cbd5e1">Strips buzzwords and</text>
+    <text x="40" y="220" font-size="11" fill="#cbd5e1">verifies real inputs</text>
+    <text x="40" y="248" font-family="monospace" font-size="10" font-weight="700" fill="#7dd3fc">Curie + Hypatia</text>
+
+    <rect x="216" y="112" width="176" height="154" rx="12" fill="#1e293b" stroke="#818cf8" stroke-width="1.5" />
+    <text x="232" y="138" font-family="monospace" font-size="11" font-weight="900" fill="#a5b4fc">GATE 02</text>
+    <text x="232" y="160" font-size="14" font-weight="900" fill="#ffffff">Structural &amp; Edge</text>
+    <text x="232" y="178" font-size="14" font-weight="900" fill="#ffffff">Stress Modeling</text>
+    <text x="232" y="204" font-size="11" fill="#cbd5e1">Tests failure points</text>
+    <text x="232" y="220" font-size="11" fill="#cbd5e1">before writing code</text>
+    <text x="232" y="248" font-family="monospace" font-size="10" font-weight="700" fill="#c7d2fe">Tesla + Da Vinci + Lovelace</text>
+
+    <rect x="408" y="112" width="176" height="154" rx="12" fill="#1e293b" stroke="#f59e0b" stroke-width="1.5" />
+    <text x="424" y="138" font-family="monospace" font-size="11" font-weight="900" fill="#fbbf24">GATE 03</text>
+    <text x="424" y="160" font-size="14" font-weight="900" fill="#ffffff">Pragmatic Bedrock</text>
+    <text x="424" y="178" font-size="14" font-weight="900" fill="#ffffff">&amp; BS Audit</text>
+    <text x="424" y="204" font-size="11" fill="#cbd5e1">Cuts bloat, stubs, and</text>
+    <text x="424" y="220" font-size="11" fill="#cbd5e1">over-engineering</text>
+    <text x="424" y="248" font-family="monospace" font-size="10" font-weight="700" fill="#fde68a">Ritchie + Torvalds + Tosh</text>
+
+    <rect x="600" y="112" width="176" height="154" rx="12" fill="#1e293b" stroke="#34d399" stroke-width="1.5" />
+    <text x="616" y="138" font-family="monospace" font-size="11" font-weight="900" fill="#34d399">GATE 04</text>
+    <text x="616" y="160" font-size="14" font-weight="900" fill="#ffffff">Zero-Stub Real</text>
+    <text x="616" y="178" font-size="14" font-weight="900" fill="#ffffff">Execution</text>
+    <text x="616" y="204" font-size="11" fill="#cbd5e1">Delivers complete,</text>
+    <text x="616" y="220" font-size="11" fill="#cbd5e1">runnable production code</text>
+    <text x="616" y="248" font-family="monospace" font-size="10" font-weight="700" fill="#6ee7b7">Aurelius + JFK</text>
+  </g>
+
+  <!-- Anti-Bluffing Callout -->
+  <rect x="24" y="282" width="752" height="90" rx="14" fill="#091526" stroke="#334155" stroke-width="1.5" />
+  <text x="44" y="310" font-family="Arial, sans-serif" font-size="14" font-weight="900" fill="#fbbf24">ZERO-STUB ANTI-BLUFFING PROTOCOL FOR AI CODING AGENTS</text>
+  <text x="44" y="334" font-family="monospace" font-size="12" fill="#e2e8f0">Bans "// ... rest of code", fake mock timers, and unverified completions.</text>
+  <text x="44" y="356" font-family="monospace" font-size="12" fill="#38bdf8">Slash Commands:  /council debate   &bull;   /council stress-test   &bull;   /council synthesis</text>
+
+  <!-- Bottom Compatibility Bar -->
+  <rect x="24" y="386" width="752" height="92" rx="14" fill="#0f172a" stroke="#1e293b" stroke-width="2" />
+  <g font-family="Arial, sans-serif" font-size="13" font-weight="800">
+    <text x="46" y="418" fill="#6ee7b7">✓ Works with Google Gemini, Claude Code, Cursor &amp; Codex</text>
+    <text x="46" y="448" fill="#7dd3fc">✓ 1-Click GEMINI.md Download + Public MIT GitHub Repo</text>
+    <text x="450" y="418" fill="#ffffff">✓ Powers All 49Caliber Labs Software Releases</text>
+    <text x="450" y="448" fill="#fde68a">✓ Free Forever Under MIT Open-Source License</text>
+  </g>
+</svg>
