@@ -432,11 +432,14 @@
         showState('paid');
       }
 
-      async function verifySession(sessionId) {
-        showErrorBox('');
-        showFeedback('');
-        showState('loading', 'Confirming payment directly with Stripe...');
-        setBadge('Verifying...', 'info');
+      async function verifySession(sessionId, attempt) {
+        const currentAttempt = typeof attempt === 'number' ? attempt : 0;
+        if (currentAttempt === 0) {
+          showErrorBox('');
+          showFeedback('');
+          showState('loading', 'Confirming payment directly with Stripe...');
+          setBadge('Verifying...', 'info');
+        }
 
         try {
           const res = await fetch(API_BASE + '/api/fulfill?session_id=' + encodeURIComponent(sessionId), {
@@ -446,6 +449,13 @@
           const data = await res.json();
 
           if (!res.ok || !data.paid) {
+            if (res.status === 404 && currentAttempt < 3) {
+              showState('loading', 'Finalizing Stripe payment confirmation (' + (currentAttempt + 1) + '/3)...');
+              setTimeout(function () {
+                void verifySession(sessionId, currentAttempt + 1);
+              }, 2000);
+              return;
+            }
             showState('auth');
             if (data.pendingSettlement) {
               setBadge('Bank Settlement Pending', 'warn');

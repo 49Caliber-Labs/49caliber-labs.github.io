@@ -246,7 +246,7 @@
 
         const amountFmt = typeof primaryOrder.amountTotal === 'number'
           ? '$' + (primaryOrder.amountTotal / 100).toFixed(2) + ' ' + String(primaryOrder.currency || 'USD').toUpperCase()
-          : '$9.99 USD';
+          : '$10.00 USD';
 
         receiptMeta.innerHTML =
           '<div>Order Session: ' + escapeHtml(primaryOrder.sessionId) + '</div>' +
@@ -286,7 +286,8 @@
         showState('paid');
       }
 
-      async function verifySession(sessionId) {
+      async function verifySession(sessionId, attempt) {
+        const currentAttempt = typeof attempt === 'number' ? attempt : 0;
         showState('loading', 'Confirming payment directly with Stripe...');
         statusBadge.textContent = 'Verifying...';
         statusBadge.className = 'shrink-0 inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-sky-50 text-sky-700 border border-sky-200';
@@ -299,6 +300,13 @@
           const data = await res.json();
 
           if (!res.ok || !data.paid) {
+            if (res.status === 404 && currentAttempt < 3) {
+              showState('loading', 'Finalizing Stripe payment confirmation (' + (currentAttempt + 1) + '/3)...');
+              setTimeout(function () {
+                void verifySession(sessionId, currentAttempt + 1);
+              }, 2000);
+              return;
+            }
             showError(
               res.status === 402 ? 'Unpaid' : 'Verification Issue',
               '<strong>Unable to verify checkout:</strong> ' + escapeHtml(data.error || 'Please confirm your Stripe Checkout session ID or contact jthreet@49caliber.com.')
@@ -309,7 +317,7 @@
           if (typeof window.gtag === 'function') {
             window.gtag('event', 'purchase_verified', {
               transaction_id: data.sessionId,
-              value: typeof data.amountTotal === 'number' ? data.amountTotal / 100 : 9.99,
+              value: typeof data.amountTotal === 'number' ? data.amountTotal / 100 : 10,
               currency: String(data.currency || 'USD').toUpperCase(),
             });
           }
