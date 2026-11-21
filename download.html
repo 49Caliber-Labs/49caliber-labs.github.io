@@ -9,10 +9,9 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-W81F0VN40N');
   </script>
-  <title>BiteWindow Vector7 | Verified Purchase &amp; APK Fulfillment | 49Caliber Labs</title>
+  <title>My Downloads &amp; App Unlock | 49Caliber Labs</title>
   <meta name="robots" content="noindex, nofollow">
   <link rel="icon" type="image/svg+xml" href="./assets/49caliber_logo_crosshairs_animated.svg">
   <script src="https://cdn.tailwindcss.com/3.4.17"></script>
@@ -29,86 +28,140 @@
           <span class="font-light text-base text-sky-600">LABS</span>
         </div>
       </a>
-      <div class="flex items-center gap-4">
-        <a href="./nfl-pool/" class="text-xs font-semibold text-amber-700 hover:text-amber-900">Branham Hills Legacy Football Pool &rarr;</a>
-        <a href="./bitewindow/" class="text-xs font-semibold text-sky-700 hover:text-sky-900">BiteWindow App &rarr;</a>
-      </div>
+      <a href="./index.html#releases" class="text-xs font-semibold text-sky-700 hover:text-sky-900">
+        &larr; Back to Store
+      </a>
     </div>
   </header>
 
-  <main class="flex-1 max-w-3xl w-full mx-auto px-6 py-10 space-y-8">
+  <main class="flex-1 max-w-3xl w-full mx-auto px-6 py-10 space-y-6">
     <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-6 sm:p-8 space-y-6">
       <div class="flex items-start justify-between gap-4 border-b border-slate-100 pb-5">
         <div>
-          <span class="inline-flex items-center gap-1.5 text-xs font-mono uppercase tracking-wider text-sky-700 font-semibold">
-            Stripe Checkout Fulfillment &amp; Account Recovery
+          <span class="inline-flex items-center text-xs font-mono uppercase tracking-wider text-sky-700 font-semibold">
+            49Caliber Labs &bull; Verified Downloads &amp; App Unlock
           </span>
-          <h1 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1">BiteWindow Vector7 &mdash; v1.0.0</h1>
-          <p class="text-sm text-slate-600 mt-1">Verified Android APK &amp; Lifetime Web/PWA Access</p>
+          <h1 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1">My Software &amp; Downloads</h1>
+          <p class="text-sm text-slate-600 mt-1">
+            Verify your checkout email to download your signed Android APK or launch your unlocked Web / PWA app.
+          </p>
         </div>
         <span id="status-badge" class="shrink-0 inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-sky-50 text-sky-700 border border-sky-200">
-          Verifying...
+          Ready
         </span>
       </div>
 
       <!-- Loading state -->
-      <div id="state-loading" class="py-6 space-y-3">
+      <div id="state-loading" class="hidden py-6 space-y-3">
         <div class="flex items-center gap-3 text-slate-700">
           <div class="w-5 h-5 rounded-full border-2 border-sky-600 border-t-transparent animate-spin"></div>
           <span id="loading-message" class="text-sm font-medium">Confirming payment directly with Stripe...</span>
         </div>
-        <p class="text-xs text-slate-500">Hold tight &mdash; your private signed installer link is generated automatically once your purchase is verified.</p>
+        <p class="text-xs text-slate-500">Generating your signed download link and lifetime web unlock token.</p>
       </div>
 
-      <!-- Verified Paid State -->
+      <!-- Paid Fulfillment / Authenticated Orders State -->
       <div id="state-paid" class="hidden space-y-5">
-        <div class="rounded-xl bg-emerald-50 border border-emerald-200 p-4 text-sm text-emerald-900">
-          <strong>Payment Verified:</strong> Thank you for backing 49Caliber Labs. Your lifetime BiteWindow Vector7 release is ready below.
-          <div id="receipt-meta" class="mt-2 text-xs font-mono text-emerald-800 space-y-0.5"></div>
+        <div id="paid-banner" class="rounded-xl bg-emerald-50 border border-emerald-200 p-4 text-sm text-emerald-900">
+          <strong id="paid-banner-title">Payment Verified:</strong>
+          <span id="paid-banner-subtitle">Your 49Caliber Labs software is ready below.</span>
         </div>
 
-        <div class="flex flex-col sm:flex-row gap-3">
-          <a id="apk-download-btn" href="#" class="flex-1 inline-flex items-center justify-center gap-2 rounded-xl bg-sky-600 hover:bg-sky-700 text-white font-semibold text-sm py-3.5 px-5 shadow-sm transition">
-            Download BiteWindow-Vector7-v1.0.0.apk (5.38 MB)
-          </a>
-          <a id="webapp-launch-btn" href="https://49caliber.com/bitewindow/" class="inline-flex items-center justify-center gap-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-semibold text-sm py-3.5 px-5 transition">
-            Launch Live Web / PWA
-          </a>
-        </div>
-
-        <div id="extra-orders" class="hidden space-y-2"></div>
+        <div id="orders-list" class="space-y-4"></div>
 
         <p id="expiry-note" class="text-xs text-slate-500"></p>
 
         <div class="rounded-xl bg-slate-50 border border-slate-200 p-4 space-y-2 text-xs text-slate-700">
-          <div class="font-semibold text-slate-900">Android Sideload Instructions (30 seconds) &amp; iPhone PWA</div>
+          <div class="font-semibold text-slate-900">Install on Android (APK) or iPhone / Desktop (PWA)</div>
           <ol class="list-decimal list-inside space-y-1">
-            <li><strong>Android:</strong> Tap <strong>Download BiteWindow-Vector7-v1.0.0.apk</strong>, open it from <strong>Files</strong> or notifications, and tap <strong>Settings &rarr; Allow from this source &rarr; Install</strong>.</li>
-            <li><strong>iPhone / iPad / Desktop:</strong> Tap <strong>Launch Live Web / PWA</strong> above in Safari, tap <strong>Share &rarr; Add to Home Screen</strong> for full offline-cached access.</li>
+            <li><strong>Android:</strong> Tap <strong>Download Signed Android APK</strong> above, open the downloaded file, and confirm install when prompted.</li>
+            <li><strong>iPhone / iPad / Desktop:</strong> Tap <strong>Launch &amp; Unlock Web App</strong> above in Safari or Chrome, then tap <strong>Share &rarr; Add to Home Screen</strong>.</li>
           </ol>
+        </div>
+
+        <div id="signed-in-bar-paid" class="hidden flex-wrap items-center justify-between gap-3 rounded-xl bg-slate-50 border border-slate-200 px-4 py-3">
+          <div class="text-xs text-slate-700">
+            Signed in as <strong id="paid-email-label" class="font-mono text-sky-700"></strong>
+          </div>
+          <div class="flex items-center gap-2">
+            <button id="paid-refresh-btn" type="button" class="rounded-lg bg-sky-600 hover:bg-sky-700 text-white text-xs font-semibold px-3 py-1.5 transition cursor-pointer">
+              Refresh Orders
+            </button>
+            <button id="paid-signout-btn" type="button" class="rounded-lg border border-slate-300 hover:bg-slate-100 text-slate-700 text-xs font-semibold px-3 py-1.5 transition cursor-pointer">
+              Sign Out
+            </button>
+          </div>
         </div>
       </div>
 
-      <!-- Returning Buyer Sign-In & Manual Recovery State -->
-      <div id="state-error" class="hidden space-y-5">
-        <div id="returning-buyer-panel" class="rounded-2xl border border-sky-200 bg-sky-50/70 p-5 space-y-4">
+      <!-- Email Authentication & Purchase Gate -->
+      <div id="state-auth" class="space-y-5">
+        <div id="error-box" class="hidden rounded-xl bg-amber-50 border border-amber-200 p-4 text-sm text-amber-900 space-y-3"></div>
+
+        <!-- Cross-device email link completion prompt (only shown if user opens email link on another device) -->
+        <form id="email-complete-form" class="hidden rounded-xl border border-sky-300 bg-sky-50 p-4 space-y-3">
+          <div class="text-xs font-bold text-sky-900 uppercase tracking-wider">Confirm Email to Finish Unlock</div>
+          <p class="text-xs text-slate-700">
+            You opened your sign-in link in a new browser or device. Re-enter the email address where you received the link to unlock your downloads:
+          </p>
+          <div class="flex flex-col sm:flex-row gap-2">
+            <input
+              id="email-complete-input"
+              type="email"
+              required
+              placeholder="you@example.com"
+              class="flex-1 rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500"
+            />
+            <button type="submit" class="rounded-lg bg-sky-600 hover:bg-sky-700 text-white text-sm font-semibold px-4 py-2 transition cursor-pointer">
+              Complete Sign-In
+            </button>
+          </div>
+        </form>
+
+        <!-- Primary Email-Authenticated Lookup Panel -->
+        <div class="rounded-2xl border border-sky-200 bg-sky-50/60 p-5 space-y-4">
           <div class="space-y-1">
             <div class="text-xs font-mono uppercase tracking-wider font-bold text-sky-800">
-              Returning Buyer &amp; Cross-Device Unlock
+              Email-Verified Redownload &amp; License Unlock
             </div>
-            <h2 class="text-base font-bold text-slate-900">Sign In With Your Checkout Google Account</h2>
+            <h2 class="text-base font-bold text-slate-900">Sign In With Your Purchase Email</h2>
             <p class="text-xs text-slate-600 leading-relaxed">
-              Already bought BiteWindow Vector7 on another device? Sign in using the Google email tied to your Stripe receipt to restore your Android APK download and PWA access without paying twice.
+              Enter the email address on your Stripe receipt and we&rsquo;ll send a 1-click sign-in link straight to your inbox&mdash;or sign in instantly with Google. Unlocks all your paid BiteWindow Vector7 and Branham Hills Legacy Football Pool downloads.
             </p>
+          </div>
+
+          <form id="email-link-form" class="space-y-2.5">
+            <div class="flex flex-col sm:flex-row gap-2">
+              <input
+                id="email-link-input"
+                type="email"
+                required
+                placeholder="Enter checkout email address..."
+                class="flex-1 rounded-lg border border-slate-300 bg-white px-3.5 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500"
+              />
+              <button
+                id="email-link-submit-btn"
+                type="submit"
+                class="rounded-xl bg-sky-600 hover:bg-sky-700 text-white text-sm font-semibold px-4 py-2.5 shadow-xs transition whitespace-nowrap cursor-pointer"
+              >
+                Send 1-Click Download Link
+              </button>
+            </div>
+          </form>
+
+          <div class="flex items-center gap-3">
+            <div class="h-px flex-1 bg-slate-200"></div>
+            <span class="text-[11px] font-mono uppercase text-slate-400">or</span>
+            <div class="h-px flex-1 bg-slate-200"></div>
           </div>
 
           <div id="signed-out-controls" class="flex flex-wrap items-center gap-3">
             <button
               id="google-signin-btn"
               type="button"
-              class="inline-flex items-center justify-center gap-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-sm font-semibold px-4 py-2.5 shadow-sm transition"
+              class="inline-flex items-center justify-center gap-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-sm font-semibold px-4 py-2.5 shadow-sm transition cursor-pointer"
             >
-              Sign in with Google (Find My Downloads)
+              Continue with Google
             </button>
           </div>
 
@@ -118,221 +171,87 @@
               <div class="text-slate-500">Checked Firestore &amp; live Stripe receipts for this email.</div>
             </div>
             <div class="flex items-center gap-2">
-              <button id="refresh-orders-btn" type="button" class="rounded-lg bg-sky-600 hover:bg-sky-700 text-white text-xs font-semibold px-3 py-1.5 transition">
+              <button id="refresh-orders-btn" type="button" class="rounded-lg bg-sky-600 hover:bg-sky-700 text-white text-xs font-semibold px-3 py-1.5 transition cursor-pointer">
                 Re-check Orders
               </button>
-              <button id="signout-btn" type="button" class="rounded-lg border border-slate-300 hover:bg-slate-100 text-slate-700 text-xs font-semibold px-3 py-1.5 transition">
+              <button id="signout-btn" type="button" class="rounded-lg border border-slate-300 hover:bg-slate-100 text-slate-700 text-xs font-semibold px-3 py-1.5 transition cursor-pointer">
                 Sign Out
               </button>
             </div>
           </div>
 
-          <div id="auth-feedback" class="hidden rounded-xl border border-amber-200 bg-amber-50 p-3 text-xs text-amber-900"></div>
+          <div id="auth-feedback" class="hidden rounded-xl border border-emerald-200 bg-emerald-50 p-3 text-xs text-emerald-950"></div>
         </div>
 
-        <div id="error-box" class="rounded-xl bg-amber-50 border border-amber-200 p-4 text-sm text-amber-900"></div>
+        <!-- Secondary Collapsible Checkout Session ID Verification -->
+        <details class="rounded-xl border border-slate-200 bg-slate-50 px-4 py-3">
+          <summary class="text-xs font-semibold text-slate-700 cursor-pointer select-none">
+            Have a Stripe Checkout Session ID (<code>cs_live_...</code>)? Verify manually
+          </summary>
+          <form id="manual-session-form" class="mt-3 space-y-2.5">
+            <div class="flex flex-col sm:flex-row gap-2">
+              <input
+                id="session-id-input"
+                type="text"
+                placeholder="cs_live_..."
+                class="flex-1 rounded-lg border border-slate-300 bg-white px-3 py-2 text-xs font-mono focus:outline-none focus:ring-2 focus:ring-sky-500"
+                required
+              />
+              <button type="submit" class="rounded-lg bg-slate-900 hover:bg-slate-800 text-white text-xs font-semibold px-4 py-2 transition cursor-pointer">
+                Verify Order
+              </button>
+            </div>
+          </form>
+        </details>
 
-        <form id="manual-session-form" class="space-y-3 pt-1 border-t border-slate-100">
-          <label for="session-id-input" class="block text-xs font-semibold uppercase tracking-wider text-slate-700">
-            Or Verify With Stripe Checkout Session ID
-          </label>
-          <div class="flex flex-col sm:flex-row gap-2">
-            <input
-              id="session-id-input"
-              type="text"
-              placeholder="cs_live_..."
-              class="flex-1 rounded-lg border border-slate-300 px-3 py-2 text-sm font-mono focus:outline-none focus:ring-2 focus:ring-sky-500"
-              required
-            />
-            <button type="submit" class="rounded-lg bg-sky-600 hover:bg-sky-700 text-white text-sm font-semibold px-4 py-2 transition">
-              Verify &amp; Unlock
-            </button>
+        <!-- Clean Direct 1-Click Purchase Bar -->
+        <div class="rounded-2xl border border-slate-200 bg-white p-5 space-y-3">
+          <div class="text-xs font-bold uppercase tracking-wider text-slate-700">
+            Need a Lifetime License? Instant 1-Click Stripe Checkout
           </div>
-          <p class="text-xs text-slate-500">
-            Checked out with a non-Google email (e.g. Apple Hide My Email or Yahoo)? Email your Stripe receipt email or reference to
-            <a href="mailto:jthreet@49caliber.com" class="text-sky-700 underline">jthreet@49caliber.com</a> for immediate manual re-issue.
+          <p class="text-xs text-slate-600">
+            Supports Cards, Apple Pay, US Bank Account (ACH), Link &amp; Cash App. Completing checkout returns straight here with your signed APK download and unlocked Web App.
           </p>
-        </form>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+            <a
+              href="https://buy.stripe.com/5kQ00idBV8fh9NG7DZ4wM00"
+              class="inline-flex items-center justify-center rounded-xl bg-sky-600 hover:bg-sky-700 text-white text-xs font-bold py-3 px-3 text-center transition shadow-xs"
+            >
+              Buy BiteWindow &mdash; $10
+            </a>
+            <a
+              href="https://buy.stripe.com/5kQ14mcxR3Z16BubUf4wM01"
+              class="inline-flex items-center justify-center rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold py-3 px-3 text-center transition shadow-xs"
+            >
+              Legacy Pool Std &mdash; $10 (&le;20)
+            </a>
+            <a
+              href="https://buy.stripe.com/4gMcN469tanp9NG3nJ4wM02"
+              class="inline-flex items-center justify-center rounded-xl bg-amber-600 hover:bg-amber-700 text-white text-xs font-bold py-3 px-3 text-center transition shadow-xs"
+            >
+              Legacy Pool League &mdash; $20 (&le;50)
+            </a>
+          </div>
+        </div>
       </div>
     </div>
-
-    <!-- Branham Hills Legacy Football Pool & Open-Source Umpire Pool Downloads & Lifetime Licensing -->
-    <section id="nfl-pool" class="bg-white rounded-2xl border-2 border-amber-500/60 shadow-sm p-6 sm:p-8 space-y-6">
-      <div class="flex items-start justify-between gap-4 border-b border-slate-100 pb-5">
-        <div>
-          <span class="inline-flex items-center gap-1.5 text-xs font-mono uppercase tracking-wider text-amber-800 font-semibold">
-            Multi-Platform Release Portal &bull; Zero Ads &bull; Free Updates
-          </span>
-          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1">
-            Branham Hills Legacy Football Pool &amp; Open-Source Umpire Pool
-          </h2>
-          <p class="text-sm text-slate-600 mt-1">
-            Package ID: <code class="font-mono text-xs bg-slate-100 px-1.5 py-0.5 rounded">com.caliber49labs.nflpool</code> &bull; Entertainment &amp; bragging rights only.
-          </p>
-        </div>
-        <span class="shrink-0 inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200">
-          v1.0.1 Live
-        </span>
-      </div>
-
-      <!-- Lifetime Tier Comparison -->
-      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-        <div class="rounded-xl border border-emerald-200 bg-emerald-50/70 p-4 space-y-1.5">
-          <div class="text-[11px] font-mono font-bold uppercase text-emerald-800">Umpire Pool (Open Source)</div>
-          <div class="text-2xl font-extrabold text-emerald-700">FREE <span class="text-xs font-semibold text-emerald-900">MIT License</span></div>
-          <p class="text-xs text-slate-600">White-label straight-up pool for youth sports associations &amp; officiating crews.</p>
-        </div>
-
-        <div class="rounded-xl border border-sky-200 bg-sky-50/70 p-4 space-y-1.5">
-          <div class="text-[11px] font-mono font-bold uppercase text-sky-800">Legacy Standard Edition</div>
-          <div class="text-2xl font-extrabold text-slate-900">$9.99 <span class="text-xs font-semibold text-slate-600">Lifetime</span></div>
-          <p class="text-xs text-slate-600">Up to <strong>20 Contenders</strong> &bull; Full Commish Lore Vault, AI dispatches, Elvis Bot &amp; zero ads.</p>
-        </div>
-
-        <div class="rounded-xl border border-amber-300 bg-amber-50/80 p-4 space-y-1.5">
-          <div class="text-[11px] font-mono font-bold uppercase text-amber-900">Legacy League Edition</div>
-          <div class="text-2xl font-extrabold text-amber-800">$19.99 <span class="text-xs font-semibold text-amber-900">Lifetime</span></div>
-          <p class="text-xs text-slate-600">Up to <strong>100 Contenders</strong> &bull; Full Commish Lore Vault, AI dispatches, Elvis Bot &amp; zero ads.</p>
-        </div>
-      </div>
-
-      <!-- Direct Launch & Signed Installer Buttons -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-        <a href="./nfl-pool/" class="inline-flex items-center justify-center gap-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-semibold text-sm py-3.5 px-5 shadow-sm transition">
-          Launch Live Web &amp; iPhone/Android PWA (v1.0.1)
-        </a>
-        <a href="https://github.com/49Caliber-Labs/Branham-Hills-Legacy-Edition-NFL-Pool/releases/download/v1.0.1/branham-hills-nfl-pool-release.apk" class="inline-flex items-center justify-center gap-2 rounded-xl bg-amber-600 hover:bg-amber-700 text-white font-semibold text-sm py-3.5 px-5 shadow-sm transition">
-          Download Signed Android APK (4.19 MB)
-        </a>
-        <a href="./umpire-pool/" class="inline-flex items-center justify-center gap-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-sm py-3 px-5 shadow-sm transition">
-          Launch Free Umpire Pool Web App (MIT)
-        </a>
-        <a href="./nfl-pool/branham-hills-nfl-pool-release.apk" download class="inline-flex items-center justify-center gap-2 rounded-xl border border-slate-300 hover:bg-slate-100 text-slate-800 font-semibold text-sm py-3 px-5 transition">
-          Direct Mirror: Android APK (49caliber.com)
-        </a>
-      </div>
-
-      <!-- Instant Lifetime License Key Activator & Order Recovery -->
-      <div class="rounded-xl bg-sky-50/70 border border-sky-200 p-4 space-y-3">
-        <div class="flex flex-wrap items-center justify-between gap-2">
-          <div class="text-xs font-bold uppercase tracking-wider text-sky-900">
-            Instant Lifetime License Key Activator &amp; Order Recovery
-          </div>
-          <a href="./nfl-pool/privacy.html" class="text-xs font-semibold text-sky-700 hover:underline">
-            Branham Hills Legacy Football Pool Privacy Policy &rarr;
-          </a>
-        </div>
-        <p class="text-xs text-slate-600 leading-relaxed">
-          Enter your Stripe Checkout Session ID (<code>cs_live_...</code>) or Order Reference to generate/recover your lifetime key, or paste an existing <code>DAWSON-...</code> key to verify and launch.
-        </p>
-        <form id="nfl-license-form" class="space-y-2.5">
-          <div class="flex flex-col sm:flex-row gap-2">
-            <input
-              id="nfl-license-input"
-              type="text"
-              placeholder="cs_live_... / Order Ref / DAWSON-..."
-              class="flex-1 rounded-lg border border-slate-300 bg-white px-3 py-2 text-xs font-mono focus:outline-none focus:ring-2 focus:ring-sky-500"
-              required
-            />
-            <select
-              id="nfl-tier-select"
-              aria-label="License Tier"
-              class="rounded-lg border border-slate-300 bg-white px-3 py-2 text-xs font-semibold text-slate-800"
-            >
-              <option value="standard_20">Standard ($9.99 &le;20)</option>
-              <option value="league_100">League ($19.99 &le;100)</option>
-            </select>
-            <button
-              type="submit"
-              class="rounded-lg bg-sky-600 hover:bg-sky-700 text-white text-xs font-semibold px-4 py-2 transition whitespace-nowrap"
-            >
-              Activate / Verify Key
-            </button>
-          </div>
-        </form>
-        <div id="nfl-license-result" class="hidden rounded-xl bg-white border border-emerald-300 p-3.5 space-y-2.5">
-          <div class="flex flex-wrap items-center justify-between gap-2">
-            <div class="text-xs font-semibold text-emerald-800" id="nfl-license-tier-label">Verified Lifetime License Ready</div>
-            <button
-              id="nfl-copy-key-btn"
-              type="button"
-              class="rounded-md bg-slate-100 hover:bg-slate-200 text-slate-800 text-[11px] font-semibold px-2.5 py-1 transition"
-            >
-              Copy Key
-            </button>
-          </div>
-          <div id="nfl-generated-key" class="font-mono text-sm font-bold text-slate-900 bg-slate-50 border border-slate-200 rounded-lg px-3 py-2 select-all"></div>
-          <div class="flex flex-wrap items-center gap-2">
-            <a
-              id="nfl-launch-activate-btn"
-              href="./nfl-pool/"
-              class="inline-flex items-center justify-center rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-semibold px-4 py-2 transition"
-            >
-              Launch &amp; Auto-Activate in App &rarr;
-            </a>
-          </div>
-        </div>
-        <div id="nfl-license-error" class="hidden rounded-lg bg-amber-50 border border-amber-300 px-3 py-2 text-xs text-amber-900"></div>
-      </div>
-
-      <!-- Lifetime License Key Order & Support -->
-      <div class="rounded-xl bg-amber-50 border border-amber-200 p-4 space-y-3">
-        <div class="text-xs font-semibold text-amber-950">
-          Order Branham Hills Legacy Football Pool Lifetime License ($9.99 Standard &le;20 Contenders / $19.99 League &le;100 Contenders)
-        </div>
-        <p class="text-xs text-amber-900 leading-relaxed">
-          All commercial licenses are one-time purchases with lifetime free updates and zero ads ever. Complete checkout below or verify an existing Stripe session above to issue your <code>DAWSON-...</code> key.
-        </p>
-        <div class="flex flex-wrap gap-2.5">
-          <button type="button" id="pool-buy-standard-btn" class="inline-flex items-center justify-center rounded-lg bg-slate-900 hover:bg-slate-800 text-white text-xs font-semibold px-4 py-2 transition">
-            Buy Standard Lifetime ($9.99 &le;20)
-          </button>
-          <button type="button" id="pool-buy-league-btn" class="inline-flex items-center justify-center rounded-lg bg-amber-700 hover:bg-amber-800 text-white text-xs font-semibold px-4 py-2 transition">
-            Buy League Lifetime ($19.99 &le;100)
-          </button>
-          <a href="https://github.com/49Caliber-Labs/Umpire-Pool/releases" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center rounded-lg border border-emerald-600 text-emerald-800 hover:bg-emerald-50 text-xs font-semibold px-4 py-2 transition">
-            Umpire Pool MIT Releases &rarr;
-          </a>
-          <a href="https://github.com/49Caliber-Labs/Branham-Hills-Legacy-Edition-NFL-Pool/releases/tag/v1.0.1" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center rounded-lg border border-slate-300 text-slate-700 hover:bg-white text-xs font-semibold px-4 py-2 transition">
-            Branham Hills Legacy Football Pool GitHub v1.0.1 &rarr;
-          </a>
-        </div>
-        <div id="nfl-checkout-fallback" class="hidden rounded-xl bg-white border border-amber-300 p-3.5 space-y-2.5 text-xs text-slate-700">
-          <div id="nfl-checkout-fallback-title" class="font-bold text-amber-900">Direct Stripe Payment Link Not Yet Attached</div>
-          <p class="text-slate-600 leading-relaxed">
-            Automated Stripe Checkout for <strong id="nfl-checkout-tier-text">Branham Hills Legacy Football Pool</strong> is awaiting its Stripe Payment Link URL. Copy your order request below and send to <a href="mailto:jthreet@49caliber.com" class="underline font-semibold text-sky-700">jthreet@49caliber.com</a>, or use the Email Order button.
-          </p>
-          <div class="flex flex-wrap gap-2">
-            <button type="button" id="nfl-copy-order-btn" class="rounded-lg bg-slate-900 hover:bg-slate-800 text-white text-xs font-semibold px-3 py-1.5 transition">
-              Copy Order Details
-            </button>
-            <a id="nfl-mailto-order-link" href="mailto:jthreet@49caliber.com" class="rounded-lg border border-slate-300 hover:bg-slate-50 text-slate-800 text-xs font-semibold px-3 py-1.5 transition">
-              Open Email App &rarr;
-            </a>
-          </div>
-          <div id="nfl-copy-order-status" class="hidden text-emerald-700 font-semibold"></div>
-        </div>
-      </div>
-
-      <div class="rounded-xl bg-slate-50 border border-slate-200 p-4 space-y-2 text-xs text-slate-700">
-        <div class="font-semibold text-slate-900">Mobile Install Instructions (Android APK &amp; iPhone PWA)</div>
-        <ol class="list-decimal list-inside space-y-1">
-          <li><strong>Android:</strong> Tap <strong>Download Signed Android APK</strong> above, open the downloaded <code>branham-hills-nfl-pool-release.apk</code> from Files, and confirm install when prompted.</li>
-          <li><strong>iPhone / iPad:</strong> Tap <strong>Launch Live Web &amp; iPhone/Android PWA</strong> in Safari, then tap <strong>Share &rarr; Add to Home Screen</strong> for full-screen standalone access.</li>
-        </ol>
-      </div>
-    </section>
   </main>
 
   <footer class="border-t border-slate-200 bg-white py-5 text-center text-xs text-slate-500">
-    49Caliber Labs &bull; Solano County, California &bull; <a href="./privacy.html" class="underline hover:text-slate-700">Privacy &amp; Telemetry Policy</a>
+    49Caliber Labs &bull; Solano County, California &bull;
+    <a href="./privacy.html" class="underline hover:text-slate-700">Privacy &amp; Telemetry Policy</a> &bull;
+    <a href="mailto:jthreet@49caliber.com" class="underline hover:text-slate-700">jthreet@49caliber.com</a>
   </footer>
 
   <script>
     (function () {
-      const API_BASE = window.location.hostname === 'caliber-labs.web.app' || window.location.hostname === 'caliber-labs.firebaseapp.com'
-        ? ''
-        : 'https://caliber-labs.web.app';
+      const API_BASE =
+        window.location.hostname === 'caliber-labs.web.app' ||
+        window.location.hostname === 'caliber-labs.firebaseapp.com'
+          ? ''
+          : 'https://caliber-labs.web.app';
+
+      const EMAIL_STORAGE_KEY = 'caliber_email_for_signin';
 
       const firebaseConfig = {
         apiKey: "AIzaSyB8uGQwb345pBoe291DDZgYm2aC93zqQIE",
@@ -356,14 +275,23 @@
       const stateLoading = document.getElementById('state-loading');
       const loadingMessage = document.getElementById('loading-message');
       const statePaid = document.getElementById('state-paid');
-      const stateError = document.getElementById('state-error');
+      const stateAuth = document.getElementById('state-auth');
       const errorBox = document.getElementById('error-box');
-      const receiptMeta = document.getElementById('receipt-meta');
-      const apkBtn = document.getElementById('apk-download-btn');
-      const extraOrdersEl = document.getElementById('extra-orders');
+      const paidBannerTitle = document.getElementById('paid-banner-title');
+      const paidBannerSubtitle = document.getElementById('paid-banner-subtitle');
+      const ordersListEl = document.getElementById('orders-list');
       const expiryNote = document.getElementById('expiry-note');
-      const manualForm = document.getElementById('manual-session-form');
-      const sessionInput = document.getElementById('session-id-input');
+      const signedInBarPaid = document.getElementById('signed-in-bar-paid');
+      const paidEmailLabel = document.getElementById('paid-email-label');
+      const paidRefreshBtn = document.getElementById('paid-refresh-btn');
+      const paidSignoutBtn = document.getElementById('paid-signout-btn');
+
+      const emailCompleteForm = document.getElementById('email-complete-form');
+      const emailCompleteInput = document.getElementById('email-complete-input');
+      const emailLinkForm = document.getElementById('email-link-form');
+      const emailLinkInput = document.getElementById('email-link-input');
+      const emailLinkSubmitBtn = document.getElementById('email-link-submit-btn');
+
       const googleSigninBtn = document.getElementById('google-signin-btn');
       const signedOutControls = document.getElementById('signed-out-controls');
       const signedInControls = document.getElementById('signed-in-controls');
@@ -371,6 +299,9 @@
       const refreshOrdersBtn = document.getElementById('refresh-orders-btn');
       const signoutBtn = document.getElementById('signout-btn');
       const authFeedback = document.getElementById('auth-feedback');
+
+      const manualForm = document.getElementById('manual-session-form');
+      const sessionInput = document.getElementById('session-id-input');
 
       function escapeHtml(value) {
         return String(value == null ? '' : value)
@@ -381,85 +312,131 @@
           .replace(/'/g, '&#39;');
       }
 
+      function setBadge(text, variant) {
+        statusBadge.textContent = text;
+        if (variant === 'paid') {
+          statusBadge.className = 'shrink-0 inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200';
+        } else if (variant === 'warn') {
+          statusBadge.className = 'shrink-0 inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-amber-50 text-amber-800 border border-amber-200';
+        } else {
+          statusBadge.className = 'shrink-0 inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-sky-50 text-sky-700 border border-sky-200';
+        }
+      }
+
       function showState(mode, loadingText) {
         if (loadingText) {
           loadingMessage.textContent = loadingText;
         }
         stateLoading.classList.toggle('hidden', mode !== 'loading');
         statePaid.classList.toggle('hidden', mode !== 'paid');
-        stateError.classList.toggle('hidden', mode !== 'error');
+        stateAuth.classList.toggle('hidden', mode !== 'auth');
       }
 
-      function showAuthFeedback(htmlMessage) {
+      function showFeedback(htmlMessage, isWarning) {
         if (!htmlMessage) {
           authFeedback.classList.add('hidden');
           authFeedback.innerHTML = '';
           return;
         }
+        authFeedback.className = isWarning
+          ? 'rounded-xl border border-amber-300 bg-amber-50 p-3 text-xs text-amber-950'
+          : 'rounded-xl border border-emerald-200 bg-emerald-50 p-3 text-xs text-emerald-950';
         authFeedback.innerHTML = htmlMessage;
         authFeedback.classList.remove('hidden');
       }
 
-      function showError(badgeText, htmlMessage, isNeutral) {
-        statusBadge.textContent = badgeText;
-        statusBadge.className = isNeutral
-          ? 'shrink-0 inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-sky-50 text-sky-700 border border-sky-200'
-          : 'shrink-0 inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-amber-50 text-amber-800 border border-amber-200';
+      function showErrorBox(htmlMessage, allowRecheckSessionId) {
+        if (!htmlMessage) {
+          errorBox.classList.add('hidden');
+          errorBox.innerHTML = '';
+          return;
+        }
         errorBox.innerHTML = htmlMessage;
-        errorBox.classList.toggle('hidden', !htmlMessage);
-        showState('error');
+        if (allowRecheckSessionId) {
+          const btn = document.createElement('button');
+          btn.type = 'button';
+          btn.className = 'inline-flex items-center rounded-lg bg-amber-800 hover:bg-amber-900 text-white text-xs font-semibold px-3 py-1.5 transition cursor-pointer';
+          btn.textContent = 'Re-check Settlement Status';
+          btn.addEventListener('click', function () {
+            void verifySession(allowRecheckSessionId);
+          });
+          errorBox.appendChild(btn);
+        }
+        errorBox.classList.remove('hidden');
       }
 
-      function renderPaidOrder(primaryOrder, extraOrders) {
-        statusBadge.textContent = 'Verified Paid';
-        statusBadge.className = 'shrink-0 inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200';
+      function renderPaidOrders(orders, signedInEmailAddress) {
+        if (!Array.isArray(orders) || orders.length === 0) return;
 
-        const amountFmt = typeof primaryOrder.amountTotal === 'number'
-          ? '$' + (primaryOrder.amountTotal / 100).toFixed(2) + ' ' + String(primaryOrder.currency || 'USD').toUpperCase()
-          : '$9.99 USD';
+        setBadge('Verified Paid', 'paid');
+        paidBannerTitle.textContent = orders.length > 1
+          ? orders.length + ' Verified Purchases Ready:'
+          : 'Payment Verified:';
+        paidBannerSubtitle.textContent = orders.length > 1
+          ? 'All your signed Android APKs and unlocked Web App links are ready below.'
+          : 'Your lifetime ' + (orders[0].productName || '49Caliber Labs') + ' release is ready below.';
 
-        receiptMeta.innerHTML =
-          '<div>Order Session: ' + escapeHtml(primaryOrder.sessionId) + '</div>' +
-          '<div>Amount Paid: ' + escapeHtml(amountFmt) + (primaryOrder.customerEmailMasked ? ' &bull; Buyer: ' + escapeHtml(primaryOrder.customerEmailMasked) : '') + '</div>';
+        ordersListEl.innerHTML = orders
+          .map(function (order) {
+            const amountFmt = typeof order.amountTotal === 'number'
+              ? '$' + (order.amountTotal / 100).toFixed(2) + ' ' + String(order.currency || 'USD').toUpperCase()
+              : 'Verified Paid';
+            const sizeMb = typeof order.apkSizeBytes === 'number'
+              ? (order.apkSizeBytes / (1024 * 1024)).toFixed(2) + ' MB'
+              : '';
+            const launchHref = order.webLaunchUrl || order.webAppUrl || './index.html';
+            const isPool = order.product === 'nfl-pool';
+            const accentBtn = isPool
+              ? 'bg-amber-600 hover:bg-amber-700 text-white'
+              : 'bg-sky-600 hover:bg-sky-700 text-white';
 
-        apkBtn.href = primaryOrder.downloadUrl;
-        apkBtn.addEventListener('click', function () {
-          if (typeof window.gtag === 'function') {
-            window.gtag('event', 'apk_download_click', {
-              product: 'bitewindow-vector7',
-              version: primaryOrder.version || '1.0.0',
-            });
-          }
-        }, { once: true });
+            return (
+              '<div class="rounded-2xl border border-slate-200 bg-slate-50/70 p-5 space-y-4">' +
+                '<div class="flex flex-wrap items-start justify-between gap-2">' +
+                  '<div>' +
+                    '<div class="text-sm font-extrabold text-slate-900">' + escapeHtml(order.productName || '49Caliber Labs Release') + '</div>' +
+                    '<div class="text-xs font-mono text-slate-600 mt-0.5">' +
+                      'Order: ' + escapeHtml(order.sessionId) + ' &bull; ' + escapeHtml(amountFmt) +
+                      (order.customerEmailMasked ? ' &bull; ' + escapeHtml(order.customerEmailMasked) : '') +
+                    '</div>' +
+                  '</div>' +
+                  (order.maxContenders ? '<span class="px-2.5 py-1 rounded-full text-[11px] font-bold bg-amber-100 text-amber-900">Up to ' + escapeHtml(order.maxContenders) + ' Contenders</span>' : '') +
+                '</div>' +
+                '<div class="flex flex-col sm:flex-row gap-3">' +
+                  '<a href="' + escapeHtml(order.downloadUrl) + '" class="flex-1 inline-flex items-center justify-center gap-2 rounded-xl ' + accentBtn + ' font-semibold text-sm py-3 px-4 shadow-xs transition">' +
+                    'Download ' + escapeHtml(order.apkFilename || 'Android APK') + (sizeMb ? ' (' + escapeHtml(sizeMb) + ')' : '') +
+                  '</a>' +
+                  '<a href="' + escapeHtml(launchHref) + '" class="inline-flex items-center justify-center gap-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-semibold text-sm py-3 px-4 transition">' +
+                    'Launch &amp; Unlock Web App &rarr;' +
+                  '</a>' +
+                '</div>' +
+              '</div>'
+            );
+          })
+          .join('');
 
-        if (Array.isArray(extraOrders) && extraOrders.length > 0) {
-          extraOrdersEl.innerHTML = extraOrders
-            .map(function (order) {
-              return (
-                '<div class="flex items-center justify-between gap-3 rounded-xl border border-slate-200 bg-slate-50 px-4 py-2.5 text-xs">' +
-                '<div class="font-mono text-slate-700">Order ' + escapeHtml(order.sessionId) + '</div>' +
-                '<a href="' + escapeHtml(order.downloadUrl) + '" class="font-semibold text-sky-700 hover:underline">Download APK &darr;</a>' +
-                '</div>'
-              );
-            })
-            .join('');
-          extraOrdersEl.classList.remove('hidden');
+        const firstExp = orders[0].expiresAt;
+        expiryNote.textContent = firstExp
+          ? 'Signed download links expire at ' + new Date(firstExp).toLocaleTimeString() + ' (reload this page anytime to mint a fresh link).'
+          : '';
+
+        if (signedInEmailAddress) {
+          paidEmailLabel.textContent = signedInEmailAddress;
+          signedInBarPaid.classList.remove('hidden');
+          signedInBarPaid.classList.add('flex');
         } else {
-          extraOrdersEl.innerHTML = '';
-          extraOrdersEl.classList.add('hidden');
-        }
-
-        if (primaryOrder.expiresAt) {
-          expiryNote.textContent = 'Signed download link expires at ' + new Date(primaryOrder.expiresAt).toLocaleTimeString() + ' (reload this page anytime to mint a fresh link).';
+          signedInBarPaid.classList.add('hidden');
+          signedInBarPaid.classList.remove('flex');
         }
 
         showState('paid');
       }
 
       async function verifySession(sessionId) {
+        showErrorBox('');
+        showFeedback('');
         showState('loading', 'Confirming payment directly with Stripe...');
-        statusBadge.textContent = 'Verifying...';
-        statusBadge.className = 'shrink-0 inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-sky-50 text-sky-700 border border-sky-200';
+        setBadge('Verifying...', 'info');
 
         try {
           const res = await fetch(API_BASE + '/api/fulfill?session_id=' + encodeURIComponent(sessionId), {
@@ -469,36 +446,46 @@
           const data = await res.json();
 
           if (!res.ok || !data.paid) {
-            showError(
-              res.status === 402 ? 'Unpaid' : 'Verification Issue',
-              '<strong>Unable to verify checkout:</strong> ' + escapeHtml(data.error || 'Please confirm your Stripe Checkout session ID or contact jthreet@49caliber.com.')
-            );
+            showState('auth');
+            if (data.pendingSettlement) {
+              setBadge('Bank Settlement Pending', 'warn');
+              showErrorBox(
+                '<strong>Bank Payment (ACH) Processing:</strong> ' + escapeHtml(data.error || 'Stripe is settling your bank transfer. Check back or sign in with your email once settled.'),
+                sessionId
+              );
+            } else {
+              setBadge(res.status === 402 ? 'Unpaid' : 'Verification Issue', 'warn');
+              showErrorBox(
+                '<strong>Unable to verify checkout:</strong> ' + escapeHtml(data.error || 'Confirm your Stripe Checkout session ID or sign in with your purchase email below.')
+              );
+            }
             return;
           }
 
           if (typeof window.gtag === 'function') {
             window.gtag('event', 'purchase_verified', {
               transaction_id: data.sessionId,
-              value: typeof data.amountTotal === 'number' ? data.amountTotal / 100 : 9.99,
+              value: typeof data.amountTotal === 'number' ? data.amountTotal / 100 : 10,
               currency: String(data.currency || 'USD').toUpperCase(),
             });
           }
 
-          renderPaidOrder(data, []);
+          renderPaidOrders([data], firebaseAuth && firebaseAuth.currentUser ? firebaseAuth.currentUser.email : '');
         } catch (err) {
-          showError(
-            'Connection Error',
-            '<strong>Could not reach fulfillment server:</strong> ' + escapeHtml(err && err.message ? err.message : 'Network error') + '. Reload this page in a few seconds.'
+          showState('auth');
+          setBadge('Connection Error', 'warn');
+          showErrorBox(
+            '<strong>Could not reach fulfillment server:</strong> ' + escapeHtml(err && err.message ? err.message : 'Network error') + '. Reload in a few seconds.'
           );
         }
       }
 
       async function lookupMyDownloads(user) {
         if (!user) return;
-        showAuthFeedback('');
-        showState('loading', 'Checking eligible BiteWindow orders for ' + (user.email || 'your account') + '...');
-        statusBadge.textContent = 'Checking Orders...';
-        statusBadge.className = 'shrink-0 inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-sky-50 text-sky-700 border border-sky-200';
+        showErrorBox('');
+        showFeedback('');
+        showState('loading', 'Looking up verified orders for ' + (user.email || 'your account') + '...');
+        setBadge('Checking Orders...', 'info');
 
         try {
           const idToken = await user.getIdToken(true);
@@ -512,24 +499,28 @@
           const data = await res.json();
 
           if (!res.ok) {
-            showError('Account Check Issue', '', false);
-            showAuthFeedback('<strong>Unable to check account orders:</strong> ' + escapeHtml(data.error || 'Please sign in again or verify using your Stripe session ID below.'));
+            showState('auth');
+            setBadge('Check Issue', 'warn');
+            showFeedback('<strong>Unable to check account orders:</strong> ' + escapeHtml(data.error || 'Please sign in again or enter your session ID.'), true);
             return;
           }
 
           if (data.eligible && Array.isArray(data.orders) && data.orders.length > 0) {
-            renderPaidOrder(data.orders[0], data.orders.slice(1));
+            renderPaidOrders(data.orders, user.email || '');
             return;
           }
 
-          showError('No Match Yet', '', true);
-          showAuthFeedback(
-            '<strong>No paid Stripe order matched ' + escapeHtml(data.emailMasked || user.email) + '.</strong> ' +
-            'If you checked out with a different email address, click <strong>Sign Out</strong> and sign in with that Google account, or paste your Stripe <code>cs_live_...</code> Checkout Session ID below.'
+          showState('auth');
+          setBadge('No Paid Orders Yet', 'info');
+          showFeedback(
+            '<strong>No completed purchase matched ' + escapeHtml(data.emailMasked || user.email) + '.</strong> ' +
+            'If you checked out using a different email address (or paid via US Bank ACH still clearing), sign out and verify that email, or enter your Stripe session ID below.',
+            true
           );
         } catch (err) {
-          showError('Connection Error', '', false);
-          showAuthFeedback('<strong>Network error looking up eligible downloads:</strong> ' + escapeHtml(err && err.message ? err.message : 'Please try again.'));
+          showState('auth');
+          setBadge('Connection Error', 'warn');
+          showFeedback('<strong>Network error looking up downloads:</strong> ' + escapeHtml(err && err.message ? err.message : 'Please try again.'), true);
         }
       }
 
@@ -538,7 +529,7 @@
           signedOutControls.classList.add('hidden');
           signedInControls.classList.remove('hidden');
           signedInControls.classList.add('flex');
-          signedInEmail.textContent = user.email || 'Verified User';
+          signedInEmail.textContent = user.email || 'Verified Email';
         } else {
           signedOutControls.classList.remove('hidden');
           signedInControls.classList.add('hidden');
@@ -547,23 +538,103 @@
         }
       }
 
+      async function finishEmailLinkSignIn(email) {
+        const cleanEmail = String(email || '').trim();
+        if (!cleanEmail || !firebaseAuth) return;
+        showState('loading', 'Verifying email sign-in link...');
+        setBadge('Signing In...', 'info');
+        try {
+          const cred = await firebaseAuth.signInWithEmailLink(cleanEmail, window.location.href);
+          try { window.localStorage.removeItem(EMAIL_STORAGE_KEY); } catch (_e) {}
+          const cleanedUrl = new URL(window.location.href);
+          ['apiKey', 'oobCode', 'mode', 'lang', 'continueUrl'].forEach(function (k) {
+            cleanedUrl.searchParams.delete(k);
+          });
+          window.history.replaceState({}, '', cleanedUrl.toString());
+          emailCompleteForm.classList.add('hidden');
+          if (cred && cred.user) {
+            updateSignedInUi(cred.user);
+            await lookupMyDownloads(cred.user);
+          }
+        } catch (err) {
+          showState('auth');
+          setBadge('Sign-In Issue', 'warn');
+          showFeedback('<strong>Could not complete email link sign-in:</strong> ' + escapeHtml(err && err.message ? err.message : 'Request a fresh link below.'), true);
+        }
+      }
+
       if (firebaseAuth) {
+        const isEmailCallback = firebaseAuth.isSignInWithEmailLink(window.location.href);
+        if (isEmailCallback) {
+          let storedEmail = '';
+          try { storedEmail = window.localStorage.getItem(EMAIL_STORAGE_KEY) || ''; } catch (_e) {}
+          if (storedEmail) {
+            void finishEmailLinkSignIn(storedEmail);
+          } else {
+            emailCompleteForm.classList.remove('hidden');
+            showState('auth');
+          }
+        }
+
+        if (emailCompleteForm) {
+          emailCompleteForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            void finishEmailLinkSignIn(emailCompleteInput.value);
+          });
+        }
+
+        if (emailLinkForm) {
+          emailLinkForm.addEventListener('submit', async function (e) {
+            e.preventDefault();
+            const targetEmail = (emailLinkInput.value || '').trim();
+            if (!targetEmail) return;
+
+            emailLinkSubmitBtn.disabled = true;
+            emailLinkSubmitBtn.textContent = 'Sending Link...';
+            showFeedback('');
+            showErrorBox('');
+
+            try {
+              await firebaseAuth.sendSignInLinkToEmail(targetEmail, {
+                url: window.location.origin + '/download.html',
+                handleCodeInApp: true,
+              });
+              try { window.localStorage.setItem(EMAIL_STORAGE_KEY, targetEmail); } catch (_e) {}
+              setBadge('Check Inbox', 'info');
+              showFeedback(
+                '<strong>1-click download link sent to ' + escapeHtml(targetEmail) + '.</strong> Open your email inbox (check Spam/Promotions if needed) and tap the link to unlock your downloads.',
+                false
+              );
+            } catch (err) {
+              setBadge('Send Failed', 'warn');
+              showFeedback(
+                '<strong>Could not send email sign-in link:</strong> ' + escapeHtml(err && err.message ? err.message : 'Please try Continue with Google or use another email.'),
+                true
+              );
+            } finally {
+              emailLinkSubmitBtn.disabled = false;
+              emailLinkSubmitBtn.textContent = 'Send 1-Click Download Link';
+            }
+          });
+        }
+
         firebaseAuth.getRedirectResult().catch(function (err) {
           if (err && err.message) {
-            showAuthFeedback('<strong>Sign-in notice:</strong> ' + escapeHtml(err.message));
+            showFeedback('<strong>Sign-in notice:</strong> ' + escapeHtml(err.message), true);
           }
         });
 
         firebaseAuth.onAuthStateChanged(function (user) {
           updateSignedInUi(user);
           const params = new URLSearchParams(window.location.search);
-          if (user && !params.get('session_id')) {
-            lookupMyDownloads(user);
+          if (user && !params.get('session_id') && !firebaseAuth.isSignInWithEmailLink(window.location.href)) {
+            void lookupMyDownloads(user);
           }
         });
 
         googleSigninBtn.addEventListener('click', async function () {
-          showAuthFeedback('');
+          showFeedback('');
+          showErrorBox('');
           const provider = new window.firebase.auth.GoogleAuthProvider();
           provider.setCustomParameters({ prompt: 'select_account' });
           try {
@@ -578,32 +649,39 @@
               return;
             }
             if (code === 'auth/unauthorized-domain') {
-              showAuthFeedback(
-                '<strong>Domain Authorization Pending:</strong> Complete Google Sign-In directly on our primary Firebase portal: ' +
-                '<a href="https://caliber-labs.web.app/download.html" class="underline font-semibold text-sky-800">caliber-labs.web.app/download.html &rarr;</a>'
+              showFeedback(
+                '<strong>Open Primary Portal for Google Sign-In:</strong> ' +
+                '<a href="https://caliber-labs.web.app/download.html" class="underline font-semibold text-sky-800">caliber-labs.web.app/download.html &rarr;</a>',
+                true
               );
               return;
             }
             if (code !== 'auth/popup-closed-by-user' && code !== 'auth/cancelled-popup-request') {
-              showAuthFeedback('<strong>Sign-in error:</strong> ' + escapeHtml(err && err.message ? err.message : 'Unable to sign in cleanly.'));
+              showFeedback('<strong>Sign-in error:</strong> ' + escapeHtml(err && err.message ? err.message : 'Unable to sign in cleanly.'), true);
             }
           }
         });
 
-        refreshOrdersBtn.addEventListener('click', function () {
+        const handleRefresh = function () {
           if (firebaseAuth.currentUser) {
-            lookupMyDownloads(firebaseAuth.currentUser);
+            void lookupMyDownloads(firebaseAuth.currentUser);
           }
-        });
-
-        signoutBtn.addEventListener('click', async function () {
+        };
+        const handleSignOut = async function () {
           await firebaseAuth.signOut();
-          showAuthFeedback('');
-          showError('Sign In / Verify', '', true);
-        });
+          showFeedback('');
+          showErrorBox('');
+          setBadge('Ready', 'info');
+          showState('auth');
+        };
+
+        refreshOrdersBtn.addEventListener('click', handleRefresh);
+        paidRefreshBtn.addEventListener('click', handleRefresh);
+        signoutBtn.addEventListener('click', handleSignOut);
+        paidSignoutBtn.addEventListener('click', handleSignOut);
       } else {
         googleSigninBtn.disabled = true;
-        googleSigninBtn.textContent = 'Sign-In Unavailable Offline';
+        emailLinkSubmitBtn.disabled = true;
       }
 
       manualForm.addEventListener('submit', function (e) {
@@ -613,256 +691,19 @@
         const nextUrl = new URL(window.location.href);
         nextUrl.searchParams.set('session_id', sid);
         window.history.replaceState({}, '', nextUrl.toString());
-        verifySession(sid);
+        void verifySession(sid);
       });
 
       const params = new URLSearchParams(window.location.search);
       const sessionId = params.get('session_id');
-      const productParam = params.get('product');
-      if (sessionId && productParam !== 'nfl-pool') {
+      if (sessionId) {
         sessionInput.value = sessionId;
-        verifySession(sessionId);
-      } else if (firebaseAuth && firebaseAuth.currentUser) {
+        void verifySession(sessionId);
+      } else if (firebaseAuth && firebaseAuth.currentUser && !firebaseAuth.isSignInWithEmailLink(window.location.href)) {
         updateSignedInUi(firebaseAuth.currentUser);
-        lookupMyDownloads(firebaseAuth.currentUser);
-      } else {
-        showError('Sign In / Verify', '', true);
-      }
-
-      // Branham Hills Legacy Football Pool Stripe Payment Links & Instant License Verifier
-      // Paste your live Stripe Payment Link URLs below once created in Stripe Dashboard:
-      // Redirect URL in Stripe Payment Link settings:
-      //   Standard ($9.99): https://49caliber.com/download.html?session_id={CHECKOUT_SESSION_ID}&product=nfl-pool&tier=standard_20
-      //   League ($19.99):  https://49caliber.com/download.html?session_id={CHECKOUT_SESSION_ID}&product=nfl-pool&tier=league_100
-      const POOL_CHECKOUT_URLS = {
-        standard_20: '',
-        league_100: ''
-      };
-
-      const poolBuyStdBtn = document.getElementById('pool-buy-standard-btn');
-      const poolBuyLgeBtn = document.getElementById('pool-buy-league-btn');
-      const checkoutFallbackEl = document.getElementById('nfl-checkout-fallback');
-      const checkoutFallbackTitle = document.getElementById('nfl-checkout-fallback-title');
-      const checkoutTierText = document.getElementById('nfl-checkout-tier-text');
-      const copyOrderBtn = document.getElementById('nfl-copy-order-btn');
-      const mailtoOrderLink = document.getElementById('nfl-mailto-order-link');
-      const copyOrderStatus = document.getElementById('nfl-copy-order-status');
-      let pendingOrderText = '';
-
-      function startPoolCheckout(tier) {
-        const cleanTier = tier === 'league_100' ? 'league_100' : 'standard_20';
-        const stripeUrl = POOL_CHECKOUT_URLS[cleanTier];
-        if (stripeUrl) {
-          window.open(stripeUrl, '_blank', 'noopener,noreferrer');
-          return;
-        }
-        const tierDesc = cleanTier === 'league_100'
-          ? 'Branham Hills Legacy Football Pool — League Edition ($19.99 Lifetime, up to 100 contenders, zero ads)'
-          : 'Branham Hills Legacy Football Pool — Standard Edition ($9.99 Lifetime, up to 20 contenders, zero ads)';
-        const subject = cleanTier === 'league_100'
-          ? 'Branham Hills Legacy Football Pool - League Edition ($19.99) Order'
-          : 'Branham Hills Legacy Football Pool - Standard Edition ($9.99) Order';
-        const body = 'Hello 49Caliber Labs,\n\nI would like to purchase the ' + tierDesc + '.';
-        pendingOrderText = 'To: jthreet@49caliber.com\nSubject: ' + subject + '\n\n' + body;
-
-        if (checkoutFallbackTitle) {
-          checkoutFallbackTitle.textContent = 'Stripe Checkout Link Pending for ' + (cleanTier === 'league_100' ? 'League ($19.99)' : 'Standard ($9.99)');
-        }
-        if (checkoutTierText) checkoutTierText.textContent = tierDesc;
-        if (mailtoOrderLink) {
-          mailtoOrderLink.href = 'mailto:jthreet@49caliber.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-        }
-        if (copyOrderStatus) copyOrderStatus.classList.add('hidden');
-        if (checkoutFallbackEl) {
-          checkoutFallbackEl.classList.remove('hidden');
-          checkoutFallbackEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-        }
-      }
-
-      if (poolBuyStdBtn) poolBuyStdBtn.addEventListener('click', function () { startPoolCheckout('standard_20'); });
-      if (poolBuyLgeBtn) poolBuyLgeBtn.addEventListener('click', function () { startPoolCheckout('league_100'); });
-      if (copyOrderBtn) {
-        copyOrderBtn.addEventListener('click', async function () {
-          if (!pendingOrderText) return;
-          try {
-            await navigator.clipboard.writeText(pendingOrderText);
-            if (copyOrderStatus) {
-              copyOrderStatus.textContent = 'Copied order request to clipboard — paste into any email to jthreet@49caliber.com';
-              copyOrderStatus.classList.remove('hidden');
-            }
-          } catch (_err) {
-            if (copyOrderStatus) {
-              copyOrderStatus.textContent = 'Clipboard blocked — email jthreet@49caliber.com directly.';
-              copyOrderStatus.classList.remove('hidden');
-            }
-          }
-        });
-      }
-
-      function nflFnv1a32(input) {
-        let hash = 0x811c9dc5;
-        for (let i = 0; i < input.length; i += 1) {
-          hash ^= input.charCodeAt(i);
-          hash = Math.imul(hash, 0x01000193) >>> 0;
-        }
-        return hash >>> 0;
-      }
-
-      function nflComputeChecksum(tierPrefix, block) {
-        const normalizedBlock = String(block || '').toUpperCase().replace(/[^A-Z0-9]/g, '').slice(0, 4);
-        const hash = nflFnv1a32(tierPrefix + ':' + normalizedBlock + ':49CALIBER-LEGACY-1986');
-        return hash.toString(36).toUpperCase().padStart(4, '0').slice(-4);
-      }
-
-      function nflGenerateKey(tier, seed) {
-        const tierPrefix = tier === 'league_100' ? 'LGE100' : 'STD20';
-        const blockHash = nflFnv1a32('SEED:' + tierPrefix + ':' + String(seed || 'DEFAULT').trim());
-        const block = blockHash.toString(36).toUpperCase().padStart(4, '0').slice(-4);
-        const checksum = nflComputeChecksum(tierPrefix, block);
-        return 'DAWSON-' + tierPrefix + '-' + block + '-' + checksum;
-      }
-
-      function nflVerifyKey(key) {
-        const normalized = String(key || '').trim().toUpperCase();
-        if (normalized === 'DAWSON-STD20-49CL-1986') {
-          return { valid: true, tier: 'standard_20', normalizedKey: normalized };
-        }
-        if (normalized === 'DAWSON-LGE100-49CL-1986') {
-          return { valid: true, tier: 'league_100', normalizedKey: normalized };
-        }
-        const match = normalized.match(/^DAWSON-(STD20|LGE100)-([A-Z0-9]{4})-([A-Z0-9]{4})$/);
-        if (!match) {
-          return { valid: false, tier: null, normalizedKey: normalized };
-        }
-        const prefix = match[1];
-        const block = match[2];
-        const checksum = match[3];
-        if (nflComputeChecksum(prefix, block) !== checksum) {
-          return { valid: false, tier: null, normalizedKey: normalized };
-        }
-        return {
-          valid: true,
-          tier: prefix === 'LGE100' ? 'league_100' : 'standard_20',
-          normalizedKey: normalized
-        };
-      }
-
-      const nflForm = document.getElementById('nfl-license-form');
-      const nflInput = document.getElementById('nfl-license-input');
-      const nflTierSelect = document.getElementById('nfl-tier-select');
-      const nflResultEl = document.getElementById('nfl-license-result');
-      const nflTierLabelEl = document.getElementById('nfl-license-tier-label');
-      const nflKeyEl = document.getElementById('nfl-generated-key');
-      const nflLaunchBtn = document.getElementById('nfl-launch-activate-btn');
-      const nflCopyKeyBtn = document.getElementById('nfl-copy-key-btn');
-      const nflErrorEl = document.getElementById('nfl-license-error');
-
-      async function activateOrVerifyNflSeed(rawInput, selectedTier) {
-        const trimmed = String(rawInput || '').trim();
-        nflErrorEl.classList.add('hidden');
-        nflResultEl.classList.add('hidden');
-
-        if (!trimmed) return;
-
-        if (trimmed.toUpperCase().startsWith('DAWSON-')) {
-          const check = nflVerifyKey(trimmed);
-          if (!check.valid || !check.tier) {
-            nflErrorEl.textContent = 'Invalid or checksum-mismatched DAWSON license key. Verify every character or enter your Stripe session ID.';
-            nflErrorEl.classList.remove('hidden');
-            return;
-          }
-          nflTierLabelEl.textContent = check.tier === 'league_100'
-            ? 'Verified League Edition ($19.99 Lifetime • Up to 100 Contenders)'
-            : 'Verified Standard Edition ($9.99 Lifetime • Up to 20 Contenders)';
-          nflKeyEl.textContent = check.normalizedKey;
-          nflLaunchBtn.href = './nfl-pool/?license=' + encodeURIComponent(check.normalizedKey);
-          nflResultEl.classList.remove('hidden');
-          return;
-        }
-
-        if (/^cs_(live|test)_[A-Za-z0-9]+$/.test(trimmed)) {
-          try {
-            const res = await fetch(API_BASE + '/api/fulfill?session_id=' + encodeURIComponent(trimmed), {
-              method: 'GET',
-              headers: { 'Accept': 'application/json' },
-            });
-            const data = await res.json();
-            if (!res.ok || !data.paid) {
-              nflErrorEl.textContent = data.error || 'Stripe Checkout session is unpaid or not found.';
-              nflErrorEl.classList.remove('hidden');
-              return;
-            }
-            const verifiedTier = (typeof data.amountTotal === 'number' && data.amountTotal >= 1900)
-              ? 'league_100'
-              : (selectedTier === 'league_100' ? 'league_100' : 'standard_20');
-            const generated = nflGenerateKey(verifiedTier, data.sessionId);
-            nflTierLabelEl.textContent = verifiedTier === 'league_100'
-              ? 'Stripe-Verified League Edition ($19.99 Lifetime • Up to 100 Contenders)'
-              : 'Stripe-Verified Standard Edition ($9.99 Lifetime • Up to 20 Contenders)';
-            nflKeyEl.textContent = generated;
-            nflLaunchBtn.href = './nfl-pool/?license=' + encodeURIComponent(generated);
-            nflResultEl.classList.remove('hidden');
-            return;
-          } catch (err) {
-            nflErrorEl.textContent = 'Could not verify Stripe session with fulfillment API: ' + (err && err.message ? err.message : 'Network error');
-            nflErrorEl.classList.remove('hidden');
-            return;
-          }
-        }
-
-        if (trimmed.length < 4) {
-          nflErrorEl.textContent = 'Enter a full Stripe Checkout Session ID (cs_live_...) or a DAWSON-... license key.';
-          nflErrorEl.classList.remove('hidden');
-          return;
-        }
-
-        const tier = selectedTier === 'league_100' ? 'league_100' : 'standard_20';
-        const generated = nflGenerateKey(tier, trimmed);
-        nflTierLabelEl.textContent = tier === 'league_100'
-          ? 'Issued League Edition Key ($19.99 Lifetime • Up to 100 Contenders)'
-          : 'Issued Standard Edition Key ($9.99 Lifetime • Up to 20 Contenders)';
-        nflKeyEl.textContent = generated;
-        nflLaunchBtn.href = './nfl-pool/?license=' + encodeURIComponent(generated);
-        nflResultEl.classList.remove('hidden');
-      }
-
-      if (nflForm) {
-        nflForm.addEventListener('submit', function (e) {
-          e.preventDefault();
-          void activateOrVerifyNflSeed(nflInput.value, nflTierSelect.value);
-        });
-      }
-
-      if (nflCopyKeyBtn) {
-        nflCopyKeyBtn.addEventListener('click', async function () {
-          const keyText = nflKeyEl.textContent || '';
-          if (!keyText) return;
-          try {
-            await navigator.clipboard.writeText(keyText);
-            nflCopyKeyBtn.textContent = 'Copied!';
-            setTimeout(function () { nflCopyKeyBtn.textContent = 'Copy Key'; }, 2000);
-          } catch (_err) {}
-        });
-      }
-
-      const checkoutParam = params.get('checkout');
-      if (checkoutParam === 'standard_20' || checkoutParam === 'league_100') {
-        startPoolCheckout(checkoutParam);
-      }
-
-      if (productParam === 'nfl-pool') {
-        const tierParam = params.get('tier');
-        if (tierParam === 'league_100' || tierParam === 'league') {
-          nflTierSelect.value = 'league_100';
-        }
-        if (sessionId) {
-          nflInput.value = sessionId;
-          void activateOrVerifyNflSeed(sessionId, nflTierSelect.value);
-        }
-        const nflSection = document.getElementById('nfl-pool');
-        if (nflSection) {
-          nflSection.scrollIntoView({ behavior: 'smooth' });
-        }
+        void lookupMyDownloads(firebaseAuth.currentUser);
+      } else if (!firebaseAuth || !firebaseAuth.isSignInWithEmailLink(window.location.href)) {
+        showState('auth');
       }
     })();
   </script>
